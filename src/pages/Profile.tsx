@@ -44,9 +44,16 @@ function signalBorderClass(level: string) {
   return "";
 }
 
+function signalGradientStyle(level: string): React.CSSProperties {
+  if (level === "STRONG") return { background: 'linear-gradient(to bottom, var(--accent-light) 0px, var(--card-bg) 48px)' };
+  if (level === "WEAK") return { background: 'linear-gradient(to bottom, #FDF0EE 0px, var(--card-bg) 48px)' };
+  return {};
+}
+
 function SectionHeader({ title }: { title: string }) {
   return (
     <div className="flex items-center gap-2 mb-6">
+      <div className="w-1.5 h-1.5 bg-[var(--accent)] shrink-0" />
       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--neutral)] shrink-0">
         {title}
       </span>
@@ -71,15 +78,11 @@ function AboutBioBlock({ text }: { text: string }) {
 }
 
 export default function Profile() {
-  // DATA SOURCE: Currently using static mock from /data/executives.ts
-  // TO CONNECT BACKEND: Replace the import with a call to the service functions in /services/api.ts
-  // See /services/api.ts for the full interface contract
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const exec = getExecutiveById(id ?? "");
   const profile = getParameterProfileById(id ?? "");
 
-  // Service line state — shared between Outreach Draft and DealGauge
   const SERVICE_LINES = [
     'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
     'Managed Services', 'Security & Compliance', 'Infrastructure',
@@ -125,9 +128,11 @@ export default function Profile() {
       {/* ─── SECTION 1: IDENTITY HEADER ─── */}
       <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
         <div className="flex-1">
-          <h1 className="font-display text-[40px] md:text-[56px] leading-[1.05]">{exec.name}</h1>
+          {/* Accent eyebrow line */}
+          <div className="w-12 h-px bg-[var(--accent)] mb-3" />
+          <h1 className="font-display text-[72px] xl:text-[80px] leading-[1] tracking-[-3px]">{exec.name}</h1>
           <p className="text-base text-[var(--neutral)] mt-2">
-            {exec.title} · {exec.company} · {exec.location}
+            {exec.title} <span className="text-[var(--accent)]">·</span> <span className="text-[var(--ink)] font-medium">{exec.company}</span> <span className="text-[var(--accent)]">·</span> {exec.location}
           </p>
           {exec.areasOfFocus.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
@@ -153,7 +158,11 @@ export default function Profile() {
             </div>
           )}
         </div>
-        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6 text-center">
+        {/* Gauge — no box, floats on page bg */}
+        <div className="shrink-0 text-center border-b border-[var(--border)] pb-4">
+          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--accent)] mb-2">
+            FIT: {selectedLine.toUpperCase()}
+          </p>
           <DealGauge score={fitScore} classification={exec.hclClassification} label={`FIT: ${selectedLine.toUpperCase()}`} />
           <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
             Showing fit score for {selectedLine} · Base score: {exec.hclScore}
@@ -220,7 +229,11 @@ export default function Profile() {
           const param = profile?.[key];
           if (!param) return null;
           return (
-            <div key={key} className={`border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)] ${signalBorderClass(param.signalLevel)}`}>
+            <div
+              key={key}
+              className={`border border-[var(--border)] rounded-sm p-5 ${signalBorderClass(param.signalLevel)}`}
+              style={signalGradientStyle(param.signalLevel)}
+            >
               <div className="flex items-center justify-between mb-2">
                 <p className="text-[13px] font-medium">{label}</p>
                 <span className={`font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[param.signalLevel]}`}>
@@ -245,9 +258,12 @@ export default function Profile() {
         <div>
           <p className="text-sm mb-3">Vision & Philosophy</p>
           {exec.visionQuotes.length > 0 ? (
-            <div className="space-y-3">
+            <div className="space-y-5">
               {exec.visionQuotes.map((q, i) => (
-                <blockquote key={i} className="font-display italic text-base border-l-2 border-[var(--accent)] pl-4">
+                <blockquote key={i} className="relative pl-6 font-display italic text-base border-l-2 border-[var(--accent)]">
+                  <span className="absolute top-0 left-0 font-display text-[64px] leading-none text-[var(--accent)] opacity-30 pointer-events-none select-none" style={{ fontStyle: 'normal' }}>
+                    &#x201C;
+                  </span>
                   {q}
                 </blockquote>
               ))}

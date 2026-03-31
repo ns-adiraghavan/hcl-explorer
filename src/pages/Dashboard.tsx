@@ -9,8 +9,6 @@ const classificationStyles: Record<string, string> = {
 };
 
 export default function Dashboard() {
-  // DATA SOURCE: Currently using static mock from /data/executives.ts
-  // TO CONNECT BACKEND: Replace the import with a call to the service functions in /services/api.ts
   const navigate = useNavigate();
 
   const proCount = executives.filter((e) => e.hclClassification === "Pro").length;
@@ -39,22 +37,23 @@ export default function Dashboard() {
       {/* Header */}
       <div className="flex items-start justify-between mb-10">
         <div>
-          <h1 className="font-display text-4xl md:text-5xl leading-tight">Account Intelligence</h1>
-          <p className="font-mono text-xs uppercase tracking-[0.15em] text-[var(--neutral)] mt-2">
+          <h1 className="font-display text-[72px] leading-[1] tracking-[-2px]">Account Intelligence</h1>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--neutral)] mt-2 flex items-center gap-2">
+            <span className="text-[var(--accent)]">|</span>
             HCL Strategic Targets — Active Monitoring
           </p>
         </div>
         <p className="font-mono text-[11px] text-[var(--neutral)] pt-2 hidden md:block">{today}</p>
       </div>
 
-      {/* Summary bar */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        {stats.map((s) => (
+      {/* Summary bar — asymmetric: first card 1.5x width */}
+      <div className="grid grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 mb-10">
+        {stats.map((s, i) => (
           <div
             key={s.label}
-            className="border border-[var(--border)] rounded-sm px-6 py-4"
+            className={`border border-[var(--border)] rounded-sm px-6 py-4 ${i === 0 ? 'col-span-2 md:col-span-1' : ''}`}
           >
-            <p className="font-mono text-2xl font-medium">{s.value}</p>
+            <p className={`font-mono font-medium ${i === 0 ? 'text-[48px] leading-none' : 'text-2xl'}`}>{s.value}</p>
             <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--neutral)] mt-1">
               {s.label}
             </p>
@@ -88,8 +87,11 @@ export default function Dashboard() {
                 {exec.title} · {exec.company}
               </p>
 
+              {/* Editorial break */}
+              <div className="h-px bg-[var(--border)] mb-5" />
+
               {/* Deal interest score */}
-              <p className="font-mono text-4xl text-[var(--accent)] leading-none">
+              <p className="font-mono text-[52px] leading-none text-[var(--accent)] transition-colors duration-150 group-hover:text-[var(--ink)]">
                 {profile?.dealInterestScore ?? exec.hclScore}
               </p>
               <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mt-1 mb-4">

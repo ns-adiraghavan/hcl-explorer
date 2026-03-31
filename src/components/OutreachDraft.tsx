@@ -20,7 +20,7 @@ function highlightTerms(text: string, terms: string[]): string {
     const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     result = result.replace(
       new RegExp(escaped, 'gi'),
-      '<mark style="background:var(--accent-light);color:var(--accent);border-radius:0;padding:0 3px">$&</mark>'
+      '<mark style="background:transparent;border-bottom:2px solid var(--accent);border-radius:0;padding:0">$&</mark>'
     );
   }
   return result;
@@ -72,12 +72,12 @@ export default function OutreachDraft({ exec, profile, selectedLine, onLineChang
       </div>
 
       {/* Memo card */}
-      <div className="bg-white border border-[var(--border)] rounded-sm px-10 py-8 shadow-[0_2px_12px_rgba(0,0,0,0.06)] relative">
+      <div className="bg-white border border-[var(--border)] rounded-sm px-10 py-8 shadow-[0_2px_12px_rgba(0,0,0,0.06)] relative border-t-[3px] border-t-[var(--accent)]" style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}>
         {/* Subject */}
-        <p className="font-mono text-[11px] uppercase text-[var(--neutral)] mb-1">Subject Line</p>
-        <p className="text-sm font-medium mb-6">{draft.subject}</p>
-
-        <div className="h-px bg-[var(--border)] mb-6" />
+        <div className="bg-[#F7F5F0] -mx-10 px-10 py-3 mb-5">
+          <p className="font-mono text-[11px] uppercase text-[var(--neutral)] mb-1">Subject Line</p>
+          <p className="text-sm font-medium">{draft.subject}</p>
+        </div>
 
         {/* Body */}
         <div className="space-y-5">
