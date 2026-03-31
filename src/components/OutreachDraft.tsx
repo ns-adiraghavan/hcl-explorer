@@ -83,7 +83,7 @@ export default function OutreachDraft({ exec, profile, selectedLine, onLineChang
         <div className="space-y-5">
           {draft.body.map((paragraph, i) => (
             <p
-              key={`${selected}-${i}`}
+              key={`${selectedLine}-${i}`}
               className="text-[15px] leading-[1.7]"
               dangerouslySetInnerHTML={{
                 __html: highlightTerms(paragraph, highlightKeys),
