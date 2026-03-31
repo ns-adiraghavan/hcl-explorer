@@ -29,34 +29,21 @@ function highlightTerms(text: string, terms: string[]): string {
 interface Props {
   exec: Executive;
   profile?: HCLParameterProfile;
+  selectedLine: string;
+  onLineChange: (line: string) => void;
 }
 
-export default function OutreachDraft({ exec, profile }: Props) {
-  // Default to highest-confidence opportunity area's best matching service line
-  const defaultLine = useMemo(() => {
-    if (!profile?.opportunityAreas.length) return SERVICE_LINES[0];
-    const topArea = profile.opportunityAreas.reduce((best, o) =>
-      o.confidenceScore > best.confidenceScore ? o : best
-    );
-    // Try to match area name to a service line
-    const match = SERVICE_LINES.find((sl) =>
-      sl.toLowerCase().includes(topArea.area.split(' ')[0].toLowerCase()) ||
-      topArea.area.toLowerCase().includes(sl.split(' ')[0].toLowerCase())
-    );
-    return match ?? SERVICE_LINES[0];
-  }, [profile]);
-
-  const [selected, setSelected] = useState(defaultLine);
+export default function OutreachDraft({ exec, profile, selectedLine, onLineChange }: Props) {
   const [copied, setCopied] = useState(false);
 
-  const draft = useMemo(() => buildDraft(exec, selected), [exec, selected]);
+  const draft = useMemo(() => buildDraft(exec, selectedLine), [exec, selectedLine]);
 
   const challenge =
     exec.challenges.length > 0 && !exec.challenges[0].startsWith('[')
       ? exec.challenges[0]
       : '';
 
-  const highlightKeys = [challenge, selected].filter(Boolean);
+  const highlightKeys = [challenge, selectedLine].filter(Boolean);
 
   const handleCopy = () => {
     const plain = `Subject: ${draft.subject}\n\n${draft.body.join('\n\n')}`;
@@ -72,9 +59,9 @@ export default function OutreachDraft({ exec, profile }: Props) {
         {SERVICE_LINES.map((line) => (
           <button
             key={line}
-            onClick={() => setSelected(line)}
+            onClick={() => onLineChange(line)}
             className={`px-4 py-1.5 rounded-full text-[13px] transition-colors duration-150 ${
-              selected === line
+              selectedLine === line
                 ? 'bg-[var(--accent)] text-[var(--accent-light)]'
                 : 'border border-[var(--border)] hover:border-[var(--accent)]'
             }`}
@@ -96,7 +83,7 @@ export default function OutreachDraft({ exec, profile }: Props) {
         <div className="space-y-5">
           {draft.body.map((paragraph, i) => (
             <p
-              key={`${selected}-${i}`}
+              key={`${selectedLine}-${i}`}
               className="text-[15px] leading-[1.7]"
               dangerouslySetInnerHTML={{
                 __html: highlightTerms(paragraph, highlightKeys),

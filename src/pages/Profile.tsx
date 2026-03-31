@@ -1,9 +1,11 @@
+import { useState, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
 import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
+import { getServiceLineScore } from "@/utils/buildDraft";
 
 const classificationBadge: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
@@ -60,6 +62,31 @@ export default function Profile() {
   const exec = getExecutiveById(id ?? "");
   const profile = getParameterProfileById(id ?? "");
 
+  // Service line state — shared between Outreach Draft and DealGauge
+  const SERVICE_LINES = [
+    'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
+    'Managed Services', 'Security & Compliance', 'Infrastructure',
+  ];
+
+  const defaultLine = useMemo(() => {
+    if (!profile?.opportunityAreas.length) return SERVICE_LINES[0];
+    const topArea = profile.opportunityAreas.reduce((best, o) =>
+      o.confidenceScore > best.confidenceScore ? o : best
+    );
+    const match = SERVICE_LINES.find((sl) =>
+      sl.toLowerCase().includes(topArea.area.split(' ')[0].toLowerCase()) ||
+      topArea.area.toLowerCase().includes(sl.split(' ')[0].toLowerCase())
+    );
+    return match ?? SERVICE_LINES[0];
+  }, [profile]);
+
+  const [selectedLine, setSelectedLine] = useState(defaultLine);
+
+  const fitScore = useMemo(() => {
+    if (!profile) return exec?.hclScore ?? 0;
+    return getServiceLineScore(profile, selectedLine);
+  }, [profile, selectedLine, exec]);
+
   if (!exec) {
     return (
       <div className="p-10">
@@ -95,8 +122,11 @@ export default function Profile() {
             </div>
           )}
         </div>
-        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6">
-          <DealGauge score={profile?.dealInterestScore ?? exec.hclScore} classification={exec.hclClassification} />
+        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6 text-center">
+          <DealGauge score={fitScore} classification={exec.hclClassification} label={`FIT: ${selectedLine.toUpperCase()}`} />
+          <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
+            Showing fit score for {selectedLine} · Base score: {exec.hclScore}
+          </p>
         </div>
       </div>
 
@@ -298,7 +328,7 @@ export default function Profile() {
 
       {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
       <SectionHeader title="Outreach Draft" />
-      <OutreachDraft exec={exec} profile={profile} />
+      <OutreachDraft exec={exec} profile={profile} selectedLine={selectedLine} onLineChange={setSelectedLine} />
     </div>
   );
 }
