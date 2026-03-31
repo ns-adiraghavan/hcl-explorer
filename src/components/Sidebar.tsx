@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { executives } from "@/data/executives";
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, Menu, X } from "lucide-react";
 
 function getInitials(name: string) {
   return name
@@ -17,14 +18,12 @@ const classificationDotColor: Record<string, string> = {
   Anti: "bg-sidebar-dot-anti",
 };
 
-export default function Sidebar() {
-  const navigate = useNavigate();
+function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) {
   const location = useLocation();
-
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-60 bg-sidebar-bg text-sidebar-text flex flex-col z-50">
+    <>
       {/* Logo */}
       <div className="px-5 pt-6 pb-4">
         <h1 className="font-display text-xl leading-tight">CXOWorld</h1>
@@ -48,32 +47,21 @@ export default function Sidebar() {
             return (
               <li key={exec.id}>
                 <button
-                  onClick={() => navigate(`/profile/${exec.id}`)}
+                  onClick={() => onNavigate(`/profile/${exec.id}`)}
                   className={`w-full flex items-center gap-3 px-2 py-2 rounded-sm text-left transition-colors
                     ${active
                       ? "bg-sidebar-active border-l-2 border-accent"
                       : "border-l-2 border-transparent hover:bg-sidebar-active/50"
                     }`}
                 >
-                  {/* Initials avatar */}
                   <span className="shrink-0 w-7 h-7 rounded-full bg-accent text-accent-foreground font-mono text-[11px] flex items-center justify-center">
                     {getInitials(exec.name)}
                   </span>
-
-                  {/* Info */}
                   <div className="min-w-0 flex-1">
-                    <p className="font-sans text-[13px] leading-tight truncate">
-                      {exec.name}
-                    </p>
-                    <p className="font-mono text-[10px] text-sidebar-muted truncate">
-                      {exec.company}
-                    </p>
+                    <p className="font-sans text-[13px] leading-tight truncate">{exec.name}</p>
+                    <p className="font-mono text-[10px] text-sidebar-muted truncate">{exec.company}</p>
                   </div>
-
-                  {/* Classification dot */}
-                  <span
-                    className={`shrink-0 w-2 h-2 rounded-full ${classificationDotColor[exec.hclClassification] ?? "bg-sidebar-dot-neutral"}`}
-                  />
+                  <span className={`shrink-0 w-2 h-2 rounded-full ${classificationDotColor[exec.hclClassification] ?? "bg-sidebar-dot-neutral"}`} />
                 </button>
               </li>
             );
@@ -85,7 +73,7 @@ export default function Sidebar() {
       <div className="px-3 pb-5">
         <div className="mx-2 mb-3 border-t border-sidebar-border" />
         <button
-          onClick={() => navigate("/")}
+          onClick={() => onNavigate("/")}
           className={`w-full flex items-center gap-3 px-2 py-2 rounded-sm text-left transition-colors
             ${isActive("/")
               ? "bg-sidebar-active border-l-2 border-accent"
@@ -96,6 +84,46 @@ export default function Sidebar() {
           <span className="font-sans text-[13px]">Dashboard</span>
         </button>
       </div>
-    </aside>
+    </>
+  );
+}
+
+export default function Sidebar() {
+  const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleNav = (path: string) => {
+    navigate(path);
+    setMobileOpen(false);
+  };
+
+  return (
+    <>
+      {/* Mobile top bar */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 h-12 bg-sidebar-bg text-sidebar-text flex items-center px-4">
+        <button onClick={() => setMobileOpen(true)}>
+          <Menu className="w-5 h-5" />
+        </button>
+        <span className="font-display text-base ml-3">CXOWorld</span>
+      </div>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div className="md:hidden fixed inset-0 z-[60]">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileOpen(false)} />
+          <aside className="relative w-60 h-full bg-sidebar-bg text-sidebar-text flex flex-col">
+            <button onClick={() => setMobileOpen(false)} className="absolute top-4 right-4">
+              <X className="w-5 h-5 text-sidebar-muted" />
+            </button>
+            <SidebarContent onNavigate={handleNav} />
+          </aside>
+        </div>
+      )}
+
+      {/* Desktop sidebar */}
+      <aside className="hidden md:flex fixed left-0 top-0 h-screen w-60 bg-sidebar-bg text-sidebar-text flex-col z-50">
+        <SidebarContent onNavigate={handleNav} />
+      </aside>
+    </>
   );
 }

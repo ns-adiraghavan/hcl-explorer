@@ -33,9 +33,15 @@ const parameterLabels: { key: keyof Pick<HCLParameterProfile, "publicPersona" | 
   { key: "contentInteraction", label: "Content Interaction" },
 ];
 
+function signalBorderClass(level: string) {
+  if (level === "STRONG") return "border-l-2 border-l-[var(--accent)]";
+  if (level === "WEAK") return "border-l-2 border-l-[var(--risk)]";
+  return "";
+}
+
 function SectionHeader({ title }: { title: string }) {
   return (
-    <div className="flex items-center gap-4 mb-6">
+    <div className="flex items-center gap-2 mb-6">
       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--neutral)] shrink-0">
         {title}
       </span>
@@ -62,16 +68,16 @@ export default function Profile() {
   }
 
   return (
-    <div className="p-10 max-w-5xl">
+    <div className="p-6 md:p-10 max-w-5xl">
       {/* Back nav */}
       <button onClick={() => navigate("/")} className="font-mono text-[11px] text-[var(--accent)] flex items-center gap-1 mb-8 hover:underline">
         <ArrowLeft className="w-3.5 h-3.5" /> All Targets
       </button>
 
       {/* ─── SECTION 1: IDENTITY HEADER ─── */}
-      <div className="flex items-start justify-between gap-8 mb-8">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
         <div className="flex-1">
-          <h1 className="font-display text-[56px] leading-[1.05]">{exec.name}</h1>
+          <h1 className="font-display text-[40px] md:text-[56px] leading-[1.05]">{exec.name}</h1>
           <p className="text-base text-[var(--neutral)] mt-2">
             {exec.title} · {exec.company} · {exec.location}
           </p>
@@ -85,7 +91,7 @@ export default function Profile() {
             </div>
           )}
         </div>
-        <div className="shrink-0">
+        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6">
           <DealGauge score={profile?.dealInterestScore ?? exec.hclScore} classification={exec.hclClassification} />
         </div>
       </div>
@@ -94,7 +100,7 @@ export default function Profile() {
 
       {/* ─── SECTION 2: HCL INTELLIGENCE SIGNALS ─── */}
       <SectionHeader title="HCL Signals" />
-      <div className="grid grid-cols-2 gap-4 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         {/* Classification card */}
         <div className="border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)]">
           <p className="text-sm mb-4">Engagement Classification</p>
@@ -138,12 +144,12 @@ export default function Profile() {
 
       {/* ─── SECTION 3: PARAMETER BREAKDOWN ─── */}
       <SectionHeader title="Parameter Analysis" />
-      <div className="grid grid-cols-2 gap-4 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         {parameterLabels.map(({ key, label }) => {
           const param = profile?.[key];
           if (!param) return null;
           return (
-            <div key={key} className="border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)]">
+            <div key={key} className={`border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)] ${signalBorderClass(param.signalLevel)}`}>
               <div className="flex items-center justify-between mb-2">
                 <p className="text-[13px] font-medium">{label}</p>
                 <span className={`font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[param.signalLevel]}`}>
@@ -163,7 +169,7 @@ export default function Profile() {
 
       {/* ─── SECTION 4: PROFILE INSIGHTS ─── */}
       <SectionHeader title="Profile Insights" />
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Vision quotes */}
         <div>
           <p className="text-sm mb-3">Vision & Philosophy</p>
@@ -200,7 +206,7 @@ export default function Profile() {
 
       {/* Strategies */}
       {exec.strategies.length > 0 && (
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           {exec.strategies.map((s, i) => (
             <div key={i} className="border border-[var(--border)] rounded-sm p-4 bg-[var(--card-bg)]">
               <span className="font-mono text-[10px] text-[var(--neutral)]">{String(i + 1).padStart(2, "0")}</span>
@@ -260,7 +266,7 @@ export default function Profile() {
       {/* ─── SECTION 6: SOCIAL PULSE ─── */}
       <SectionHeader title="Social Pulse" />
       {exec.socialPosts.length > 0 ? (
-        <div className="grid grid-cols-2 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {exec.socialPosts.map((post, i) => {
             const Icon = platformIcon[post.platform] ?? Globe;
             return (
