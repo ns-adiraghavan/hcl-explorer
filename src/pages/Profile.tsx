@@ -293,6 +293,12 @@ export default function Profile() {
       ) : (
         <p className="text-sm italic text-[var(--neutral)] mb-10">No recent social activity tracked.</p>
       )}
+
+      <div className="h-px bg-[var(--border)] mb-10" />
+
+      {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
+      <SectionHeader title="Outreach Draft" />
+      <OutreachDraft exec={exec} profile={profile} />
     </div>
   );
 }
