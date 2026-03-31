@@ -22,16 +22,29 @@ export async function getAllExecutives(): Promise<Executive[]> {
 
 export async function getExecutive(id: string): Promise<Executive | undefined> {
   if (USE_MOCK) {
-    const { getExecutiveById } = await import('../data/executives');
-    return getExecutiveById(id);
+    const { executives } = await import('../data/executives');
+    const exact = executives.find(e => e.id === id);
+    if (exact) return exact;
+    return executives.find(e =>
+      id.includes(e.id) || e.id.includes(id) ||
+      e.linkedIn.toLowerCase().includes(id.toLowerCase())
+    );
   }
   return fetchJSON<Executive>(`/api/executives/${id}`);
 }
 
 export async function getHCLProfile(id: string): Promise<HCLParameterProfile | undefined> {
   if (USE_MOCK) {
-    const { getParameterProfileById } = await import('../data/hcl-parameters');
-    return getParameterProfileById(id);
+    const { hclParameterProfiles } = await import('../data/hcl-parameters');
+    const exact = hclParameterProfiles.find(p => p.executiveId === id);
+    if (exact) return exact;
+    const { executives } = await import('../data/executives');
+    const exec = executives.find(e =>
+      id.includes(e.id) || e.id.includes(id) ||
+      e.linkedIn.toLowerCase().includes(id.toLowerCase())
+    );
+    if (exec) return hclParameterProfiles.find(p => p.executiveId === exec.id);
+    return undefined;
   }
   return fetchJSON<HCLParameterProfile>(`/api/hcl-parameters/${id}`);
 }
