@@ -262,7 +262,7 @@ export default function Profile() {
       {exec.socialPosts.length > 0 ? (
         <div className="grid grid-cols-2 gap-4 mb-10">
           {exec.socialPosts.map((post, i) => {
-            const Icon = platformIcon[post.platform] ?? Linkedin;
+            const Icon = platformIcon[post.platform] ?? Globe;
             return (
               <div key={i} className="border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)]">
                 <div className="flex items-center gap-2 mb-2">
