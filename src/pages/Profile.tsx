@@ -3,6 +3,7 @@ import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
 import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
+import OutreachDraft from "@/components/OutreachDraft";
 
 const classificationBadge: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
