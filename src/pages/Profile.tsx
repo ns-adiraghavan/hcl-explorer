@@ -7,6 +7,7 @@ import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-pa
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
 import { getServiceLineScore } from "@/utils/buildDraft";
+import BDIntelligence from "@/components/BDIntelligence";
 
 const classificationBadge: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
