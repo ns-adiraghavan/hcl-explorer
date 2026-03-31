@@ -3,6 +3,7 @@ import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
 import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
+import OutreachDraft from "@/components/OutreachDraft";
 
 const classificationBadge: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
@@ -292,6 +293,12 @@ export default function Profile() {
       ) : (
         <p className="text-sm italic text-[var(--neutral)] mb-10">No recent social activity tracked.</p>
       )}
+
+      <div className="h-px bg-[var(--border)] mb-10" />
+
+      {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
+      <SectionHeader title="Outreach Draft" />
+      <OutreachDraft exec={exec} profile={profile} />
     </div>
   );
 }
