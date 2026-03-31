@@ -25,12 +25,13 @@ function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) 
   return (
     <>
       {/* Logo */}
-      <div className="px-5 pt-6 pb-4">
-        <h1 className="font-display text-xl leading-tight">CXOWorld</h1>
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent mt-1">
-          HCL Intelligence View
-        </p>
+      <div className="px-5 pt-6 pb-4 flex items-center gap-2">
+        <div className="w-0.5 h-4 bg-accent shrink-0" />
+        <h1 className="font-display text-[22px] leading-tight">CXOWorld</h1>
       </div>
+      <p className="px-5 font-mono text-[10px] uppercase tracking-[0.2em] text-accent mb-4">
+        HCL Intelligence View
+      </p>
 
       {/* Divider */}
       <div className="mx-5 border-t border-sidebar-border" />
@@ -41,8 +42,8 @@ function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) 
           Tracked Targets
         </p>
 
-        <ul className="space-y-0.5">
-          {executives.map((exec) => {
+        <ul>
+          {executives.map((exec, i) => {
             const active = isActive(`/profile/${exec.id}`);
             return (
               <li key={exec.id}>
@@ -61,8 +62,14 @@ function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) 
                     <p className="font-sans text-[13px] leading-tight truncate">{exec.name}</p>
                     <p className="font-mono text-[10px] text-sidebar-muted truncate">{exec.company}</p>
                   </div>
-                  <span className={`shrink-0 w-2 h-2 rounded-full ${classificationDotColor[exec.hclClassification] ?? "bg-sidebar-dot-neutral"}`} />
+                  <span className={`shrink-0 w-2 h-2 rounded-full ${classificationDotColor[exec.hclClassification] ?? "bg-sidebar-dot-neutral"} ${exec.hclClassification === 'Pro' ? 'animate-pulse-dot' : ''}`} />
                 </button>
+                {/* Centered separator between items */}
+                {i < executives.length - 1 && (
+                  <div className="flex justify-center py-0.5">
+                    <div className="w-[60%] h-px bg-sidebar-border" />
+                  </div>
+                )}
               </li>
             );
           })}
