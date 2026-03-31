@@ -48,6 +48,27 @@ export interface Executive {
     engagement?: string;
   }[];
   
+  // LinkedIn-sourced enrichment
+  aboutBio?: string;           // Full LinkedIn About section text
+  skills?: string[];           // Top 10 endorsed skills
+  recommendations?: {
+    text: string;
+    from: string;              // "Name, Title at Company"
+    relationship?: string;     // e.g. "worked with directly"
+  }[];
+  articlesWritten?: {
+    title: string;
+    date: string;
+    url?: string;
+    excerpt?: string;
+  }[];
+  featuredLinks?: {
+    label: string;
+    url: string;
+  }[];
+  volunteering?: string[];
+  languages?: string[];
+
   // HCL Intelligence Layer (computed from HCL parameters)
   hclScore: number; // 0–100
   hclClassification: 'Pro' | 'Neutral' | 'Anti';
