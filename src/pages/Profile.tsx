@@ -122,8 +122,11 @@ export default function Profile() {
             </div>
           )}
         </div>
-        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6">
-          <DealGauge score={profile?.dealInterestScore ?? exec.hclScore} classification={exec.hclClassification} />
+        <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6 text-center">
+          <DealGauge score={fitScore} classification={exec.hclClassification} label={`FIT: ${selectedLine.toUpperCase()}`} />
+          <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
+            Showing fit score for {selectedLine} · Base score: {exec.hclScore}
+          </p>
         </div>
       </div>
 
