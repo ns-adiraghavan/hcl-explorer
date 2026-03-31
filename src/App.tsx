@@ -1,13 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 
 const App = () => (
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/profile/:id" element={<Profile />} />
-    </Routes>
+    <div className="flex min-h-screen">
+      <Sidebar />
+      <main className="flex-1 ml-60">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/profile/:id" element={<Profile />} />
+        </Routes>
+      </main>
+    </div>
   </BrowserRouter>
 );
 
