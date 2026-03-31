@@ -141,6 +141,13 @@ export const executives: Executive[] = [
     education: [],
     awards: [],
     socialPosts: [],
+    aboutBio: "[LinkedIn About — awaiting scrape]",
+    skills: [],
+    recommendations: [],
+    articlesWritten: [],
+    featuredLinks: [],
+    volunteering: [],
+    languages: [],
     hclScore: 58,
     hclClassification: "Neutral",
     hclClassificationReason: [
