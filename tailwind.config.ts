@@ -56,6 +56,14 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+          bg: "hsl(var(--sidebar-bg))",
+          text: "hsl(var(--sidebar-text))",
+          muted: "hsl(var(--sidebar-muted))",
+          label: "hsl(var(--sidebar-label))",
+          active: "hsl(var(--sidebar-active))",
+          "dot-pro": "hsl(var(--sidebar-dot-pro))",
+          "dot-neutral": "hsl(var(--sidebar-dot-neutral))",
+          "dot-anti": "hsl(var(--sidebar-dot-anti))",
         },
       },
       borderRadius: {
@@ -84,8 +92,13 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      fontFamily: {
+        sans: ['Geist', 'sans-serif'],
+        display: ['"Instrument Serif"', 'serif'],
+        mono: ['"DM Mono"', 'monospace'],
       },
     },
+  },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

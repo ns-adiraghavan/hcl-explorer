@@ -22,6 +22,17 @@
   --card: 40 33% 97%;
   --card-foreground: 60 4% 5%;
   --radius: 0.5rem;
+
+  /* Sidebar tokens */
+  --sidebar-bg: 0 0% 5%;
+  --sidebar-text: 40 20% 95%;
+  --sidebar-border: 60 4% 16%;
+  --sidebar-label: 60 4% 34%;
+  --sidebar-muted: 50 4% 54%;
+  --sidebar-active: 0 0% 10%;
+  --sidebar-dot-pro: 155 50% 30%;
+  --sidebar-dot-neutral: 40 60% 55%;
+  --sidebar-dot-anti: 4 66% 47%;
 }
 
 @layer base {
