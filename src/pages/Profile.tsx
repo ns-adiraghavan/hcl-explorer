@@ -299,6 +299,20 @@ export default function Profile() {
         </div>
       )}
 
+      {/* Skills */}
+      {exec.skills && exec.skills.length > 0 && (
+        <div className="mb-8">
+          <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mb-2">Known Expertise</p>
+          <div className="flex flex-wrap gap-1.5">
+            {exec.skills.slice(0, 8).map((s) => (
+              <span key={s} className="font-mono text-[10px] bg-[var(--accent-light)] text-[var(--accent)] px-2 py-0.5 rounded-sm">
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Career timeline */}
       {exec.careerJourney.length > 0 ? (
         <div className="relative pl-6 mb-10">
