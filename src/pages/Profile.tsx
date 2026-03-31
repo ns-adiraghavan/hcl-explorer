@@ -51,7 +51,9 @@ function SectionHeader({ title }: { title: string }) {
 }
 
 export default function Profile() {
-  const { id } = useParams<{ id: string }>();
+  // DATA SOURCE: Currently using static mock from /data/executives.ts
+  // TO CONNECT BACKEND: Replace the import with a call to the service functions in /services/api.ts
+  // See /services/api.ts for the full interface contract
   const navigate = useNavigate();
   const exec = getExecutiveById(id ?? "");
   const profile = getParameterProfileById(id ?? "");

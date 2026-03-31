@@ -9,7 +9,9 @@ const classificationStyles: Record<string, string> = {
 };
 
 export default function Dashboard() {
-  const navigate = useNavigate();
+  // DATA SOURCE: Currently using static mock from /data/executives.ts
+  // TO CONNECT BACKEND: Replace the import with a call to the service functions in /services/api.ts
+  // See /services/api.ts for the full interface contract
 
   const proCount = executives.filter((e) => e.hclClassification === "Pro").length;
 
