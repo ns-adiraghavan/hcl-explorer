@@ -33,20 +33,20 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="p-10">
+    <div className="p-6 md:p-10">
       {/* Header */}
       <div className="flex items-start justify-between mb-10">
         <div>
-          <h1 className="font-display text-5xl leading-tight">Account Intelligence</h1>
+          <h1 className="font-display text-4xl md:text-5xl leading-tight">Account Intelligence</h1>
           <p className="font-mono text-xs uppercase tracking-[0.15em] text-[var(--neutral)] mt-2">
             HCL Strategic Targets — Active Monitoring
           </p>
         </div>
-        <p className="font-mono text-[11px] text-[var(--neutral)] pt-2">{today}</p>
+        <p className="font-mono text-[11px] text-[var(--neutral)] pt-2 hidden md:block">{today}</p>
       </div>
 
       {/* Summary bar */}
-      <div className="grid grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         {stats.map((s) => (
           <div
             key={s.label}
@@ -61,7 +61,7 @@ export default function Dashboard() {
       </div>
 
       {/* Executive grid */}
-      <div className="grid grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {executives.map((exec) => {
           const profile = hclParameterProfiles.find((p) => p.executiveId === exec.id);
           const topOpps = profile?.opportunityAreas.slice(0, 2) ?? [];
@@ -70,7 +70,7 @@ export default function Dashboard() {
             <button
               key={exec.id}
               onClick={() => navigate(`/profile/${exec.id}`)}
-              className="text-left border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)] transition-colors duration-200 hover:border-[var(--accent)] group"
+              className="text-left border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)] transition-all duration-200 hover:border-[var(--accent)] hover:-translate-y-0.5 group"
             >
               {/* Top row: name + badge */}
               <div className="flex items-start justify-between mb-1">
