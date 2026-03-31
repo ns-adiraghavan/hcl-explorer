@@ -328,7 +328,7 @@ export default function Profile() {
 
       {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
       <SectionHeader title="Outreach Draft" />
-      <OutreachDraft exec={exec} profile={profile} />
+      <OutreachDraft exec={exec} profile={profile} selectedLine={selectedLine} onLineChange={setSelectedLine} />
     </div>
   );
 }
