@@ -1,4 +1,25 @@
 import type { Executive } from '@/data/executives';
+import type { HCLParameterProfile } from '@/data/hcl-parameters';
+
+export function getServiceLineScore(profile: HCLParameterProfile, serviceLine: string): number {
+  const slLower = serviceLine.toLowerCase();
+  const slFirst = slLower.split(' ')[0];
+
+  for (const opp of profile.opportunityAreas) {
+    const areaLower = opp.area.toLowerCase();
+    // Direct match
+    if (areaLower.includes(slFirst) || slLower.includes(areaLower.split(' ')[0])) {
+      // Check if it's a tight match or adjacent
+      const words = areaLower.split(/[\s\/&]+/).filter(Boolean);
+      const slWords = slLower.split(/[\s\/&]+/).filter(Boolean);
+      const directMatch = slWords.some((w) => words.includes(w)) && words.some((w) => slWords.includes(w));
+      if (directMatch) return opp.confidenceScore;
+      return Math.round(opp.confidenceScore * 0.85);
+    }
+  }
+
+  return Math.round(profile.dealInterestScore * 0.6);
+}
 
 export function buildDraft(
   exec: Executive,
