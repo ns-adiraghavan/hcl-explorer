@@ -17,9 +17,9 @@ const signalBadge: Record<string, string> = {
 };
 
 const platformIcon: Record<string, React.ElementType> = {
-  linkedin: Linkedin,
-  twitter: Twitter,
-  instagram: Instagram,
+  linkedin: Globe,
+  twitter: MessageCircle,
+  instagram: Globe,
 };
 
 const parameterLabels: { key: keyof Pick<HCLParameterProfile, "publicPersona" | "psychographicMindset" | "digitalActivity" | "topicAffinity" | "painPointIndicators" | "ecosystemVendorExposure" | "eventPresence" | "contentInteraction">; label: string }[] = [
