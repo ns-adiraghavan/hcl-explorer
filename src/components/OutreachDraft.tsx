@@ -59,9 +59,9 @@ export default function OutreachDraft({ exec, profile, selectedLine, onLineChang
         {SERVICE_LINES.map((line) => (
           <button
             key={line}
-            onClick={() => setSelected(line)}
+            onClick={() => onLineChange(line)}
             className={`px-4 py-1.5 rounded-full text-[13px] transition-colors duration-150 ${
-              selected === line
+              selectedLine === line
                 ? 'bg-[var(--accent)] text-[var(--accent-light)]'
                 : 'border border-[var(--border)] hover:border-[var(--accent)]'
             }`}
