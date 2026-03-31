@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
