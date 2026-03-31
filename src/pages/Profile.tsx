@@ -54,6 +54,21 @@ function SectionHeader({ title }: { title: string }) {
   );
 }
 
+function AboutBioBlock({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="mb-6">
+      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mb-2">In Their Own Words</p>
+      <p className={`text-[15px] leading-[1.8] ${expanded ? '' : 'line-clamp-4'}`}>{text}</p>
+      {text.length > 300 && (
+        <button onClick={() => setExpanded(!expanded)} className="font-mono text-[11px] text-[var(--accent)] mt-1 hover:underline">
+          {expanded ? 'Show less' : 'Read more'}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function Profile() {
   // DATA SOURCE: Currently using static mock from /data/executives.ts
   // TO CONNECT BACKEND: Replace the import with a call to the service functions in /services/api.ts
