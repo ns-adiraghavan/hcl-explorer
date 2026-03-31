@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, AlertTriangle, Linkedin, Twitter, Instagram } from "lucide-react";
+import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
 import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
