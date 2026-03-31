@@ -207,6 +207,12 @@ export default function Profile() {
 
       <div className="h-px bg-[var(--border)] mb-10" />
 
+      {/* ─── BD INTELLIGENCE ─── */}
+      <SectionHeader title="BD Intelligence" />
+      <BDIntelligence exec={exec} profile={profile} />
+
+      <div className="h-px bg-[var(--border)] mb-10" />
+
       {/* ─── SECTION 3: PARAMETER BREAKDOWN ─── */}
       <SectionHeader title="Parameter Analysis" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
