@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
 import { getExecutiveById } from "@/data/executives";
@@ -49,6 +50,21 @@ function SectionHeader({ title }: { title: string }) {
         {title}
       </span>
       <div className="flex-1 h-px bg-[var(--border)]" />
+    </div>
+  );
+}
+
+function AboutBioBlock({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="mb-6">
+      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mb-2">In Their Own Words</p>
+      <p className={`text-[15px] leading-[1.8] ${expanded ? '' : 'line-clamp-4'}`}>{text}</p>
+      {text.length > 300 && (
+        <button onClick={() => setExpanded(!expanded)} className="font-mono text-[11px] text-[var(--accent)] mt-1 hover:underline">
+          {expanded ? 'Show less' : 'Read more'}
+        </button>
+      )}
     </div>
   );
 }
@@ -119,6 +135,20 @@ export default function Profile() {
                   {a}
                 </span>
               ))}
+            </div>
+          )}
+          {/* Pull-quote from recommendations */}
+          {exec.recommendations && exec.recommendations.length > 0 && (
+            <div className="mt-5">
+              <p className="font-display italic text-[15px] text-[var(--neutral)] leading-relaxed">
+                <span className="text-[var(--accent)] text-xl mr-1">&#x201C;</span>
+                {exec.recommendations[0].text.length > 160
+                  ? `${exec.recommendations[0].text.slice(0, 160)}…`
+                  : exec.recommendations[0].text}
+              </p>
+              <p className="font-mono text-[10px] text-[var(--neutral)] mt-1">
+                — {exec.recommendations[0].from}
+              </p>
             </div>
           )}
         </div>
@@ -238,6 +268,11 @@ export default function Profile() {
         </div>
       </div>
 
+      {/* About Bio — In Their Own Words */}
+      {exec.aboutBio && !exec.aboutBio.startsWith('[') && (
+        <AboutBioBlock text={exec.aboutBio} />
+      )}
+
       {/* Strategies */}
       {exec.strategies.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
@@ -276,6 +311,20 @@ export default function Profile() {
               <p className="font-mono text-[10px] uppercase text-[var(--neutral)] mt-0.5">Net Worth</p>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Skills */}
+      {exec.skills && exec.skills.length > 0 && (
+        <div className="mb-8">
+          <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mb-2">Known Expertise</p>
+          <div className="flex flex-wrap gap-1.5">
+            {exec.skills.slice(0, 8).map((s) => (
+              <span key={s} className="font-mono text-[10px] bg-[var(--accent-light)] text-[var(--accent)] px-2 py-0.5 rounded-sm">
+                {s}
+              </span>
+            ))}
+          </div>
         </div>
       )}
 
@@ -322,6 +371,38 @@ export default function Profile() {
         </div>
       ) : (
         <p className="text-sm italic text-[var(--neutral)] mb-10">No recent social activity tracked.</p>
+      )}
+
+      {/* ─── WRITTEN INTELLIGENCE ─── */}
+      {exec.articlesWritten && exec.articlesWritten.length > 0 && (
+        <>
+          <div className="h-px bg-[var(--border)] mb-10" />
+          <SectionHeader title="Written Intelligence" />
+          <div className="mb-10">
+            {exec.articlesWritten.map((article, i) => (
+              <div
+                key={i}
+                className={`py-4 ${i < exec.articlesWritten!.length - 1 ? 'border-b border-[var(--border)]' : ''}`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0 flex-1">
+                    {article.url ? (
+                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[var(--accent)] flex items-center gap-1">
+                        {article.title} <ExternalLink className="w-3 h-3 shrink-0" />
+                      </a>
+                    ) : (
+                      <p className="text-sm">{article.title}</p>
+                    )}
+                    {article.excerpt && (
+                      <p className="text-[13px] text-[var(--neutral)] truncate mt-0.5">{article.excerpt}</p>
+                    )}
+                  </div>
+                  <span className="font-mono text-[10px] text-[var(--neutral)] shrink-0">{article.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
       )}
 
       <div className="h-px bg-[var(--border)] mb-10" />
