@@ -62,6 +62,31 @@ export default function Profile() {
   const exec = getExecutiveById(id ?? "");
   const profile = getParameterProfileById(id ?? "");
 
+  // Service line state — shared between Outreach Draft and DealGauge
+  const SERVICE_LINES = [
+    'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
+    'Managed Services', 'Security & Compliance', 'Infrastructure',
+  ];
+
+  const defaultLine = useMemo(() => {
+    if (!profile?.opportunityAreas.length) return SERVICE_LINES[0];
+    const topArea = profile.opportunityAreas.reduce((best, o) =>
+      o.confidenceScore > best.confidenceScore ? o : best
+    );
+    const match = SERVICE_LINES.find((sl) =>
+      sl.toLowerCase().includes(topArea.area.split(' ')[0].toLowerCase()) ||
+      topArea.area.toLowerCase().includes(sl.split(' ')[0].toLowerCase())
+    );
+    return match ?? SERVICE_LINES[0];
+  }, [profile]);
+
+  const [selectedLine, setSelectedLine] = useState(defaultLine);
+
+  const fitScore = useMemo(() => {
+    if (!profile) return exec?.hclScore ?? 0;
+    return getServiceLineScore(profile, selectedLine);
+  }, [profile, selectedLine, exec]);
+
   if (!exec) {
     return (
       <div className="p-10">
