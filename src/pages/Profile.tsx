@@ -358,6 +358,38 @@ export default function Profile() {
         <p className="text-sm italic text-[var(--neutral)] mb-10">No recent social activity tracked.</p>
       )}
 
+      {/* ─── WRITTEN INTELLIGENCE ─── */}
+      {exec.articlesWritten && exec.articlesWritten.length > 0 && (
+        <>
+          <div className="h-px bg-[var(--border)] mb-10" />
+          <SectionHeader title="Written Intelligence" />
+          <div className="mb-10">
+            {exec.articlesWritten.map((article, i) => (
+              <div
+                key={i}
+                className={`py-4 ${i < exec.articlesWritten!.length - 1 ? 'border-b border-[var(--border)]' : ''}`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="min-w-0 flex-1">
+                    {article.url ? (
+                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[var(--accent)] flex items-center gap-1">
+                        {article.title} <ExternalLink className="w-3 h-3 shrink-0" />
+                      </a>
+                    ) : (
+                      <p className="text-sm">{article.title}</p>
+                    )}
+                    {article.excerpt && (
+                      <p className="text-[13px] text-[var(--neutral)] truncate mt-0.5">{article.excerpt}</p>
+                    )}
+                  </div>
+                  <span className="font-mono text-[10px] text-[var(--neutral)] shrink-0">{article.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
       <div className="h-px bg-[var(--border)] mb-10" />
 
       {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
