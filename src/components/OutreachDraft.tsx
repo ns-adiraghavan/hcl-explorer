@@ -43,7 +43,7 @@ export default function OutreachDraft({ exec, profile, selectedLine, onLineChang
       ? exec.challenges[0]
       : '';
 
-  const highlightKeys = [challenge, selected].filter(Boolean);
+  const highlightKeys = [challenge, selectedLine].filter(Boolean);
 
   const handleCopy = () => {
     const plain = `Subject: ${draft.subject}\n\n${draft.body.join('\n\n')}`;
