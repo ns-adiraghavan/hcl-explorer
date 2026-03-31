@@ -122,6 +122,20 @@ export default function Profile() {
               ))}
             </div>
           )}
+          {/* Pull-quote from recommendations */}
+          {exec.recommendations && exec.recommendations.length > 0 && (
+            <div className="mt-5">
+              <p className="font-display italic text-[15px] text-[var(--neutral)] leading-relaxed">
+                <span className="text-[var(--accent)] text-xl mr-1">&#x201C;</span>
+                {exec.recommendations[0].text.length > 160
+                  ? `${exec.recommendations[0].text.slice(0, 160)}…`
+                  : exec.recommendations[0].text}
+              </p>
+              <p className="font-mono text-[10px] text-[var(--neutral)] mt-1">
+                — {exec.recommendations[0].from}
+              </p>
+            </div>
+          )}
         </div>
         <div className="shrink-0 rounded-lg bg-[#F0EDE6] p-6 text-center">
           <DealGauge score={fitScore} classification={exec.hclClassification} label={`FIT: ${selectedLine.toUpperCase()}`} />
