@@ -7,6 +7,7 @@ import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-pa
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
 import { getServiceLineScore } from "@/utils/buildDraft";
+import BDIntelligence from "@/components/BDIntelligence";
 
 const classificationBadge: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
@@ -203,6 +204,12 @@ export default function Profile() {
           )}
         </div>
       </div>
+
+      <div className="h-px bg-[var(--border)] mb-10" />
+
+      {/* ─── BD INTELLIGENCE ─── */}
+      <SectionHeader title="BD Intelligence" />
+      <BDIntelligence exec={exec} profile={profile} />
 
       <div className="h-px bg-[var(--border)] mb-10" />
 
