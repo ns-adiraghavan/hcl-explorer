@@ -127,6 +127,14 @@ export default function Profile() {
     return getServiceLineScore(profile, selectedLine);
   }, [profile, selectedLine, exec]);
 
+  if (loading) {
+    return (
+      <div className="p-6 md:p-10 flex items-center justify-center min-h-[50vh]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--neutral)]">Loading profile…</p>
+      </div>
+    );
+  }
+
   if (!exec) {
     return (
       <div className="p-10">
