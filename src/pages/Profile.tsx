@@ -306,7 +306,7 @@ export default function Profile() {
           <p className="text-sm mb-3">Challenges</p>
           {(exec.challenges?.length ?? 0) > 0 ? (
             <ul className="space-y-2">
-              {exec.challenges.map((c, i) => (
+              {(exec.challenges ?? []).map((c, i) => (
                 <li key={i} className="flex items-start gap-2 text-[13px]">
                   <AlertTriangle className="w-3.5 h-3.5 text-[var(--risk)] mt-0.5 shrink-0" />
                   {c}
