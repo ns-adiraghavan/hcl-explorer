@@ -287,7 +287,7 @@ export default function Profile() {
           <p className="text-sm mb-3">Vision & Philosophy</p>
           {(exec.visionQuotes?.length ?? 0) > 0 ? (
             <div className="space-y-5">
-              {exec.visionQuotes.map((q, i) => (
+              {(exec.visionQuotes ?? []).map((q, i) => (
                 <blockquote key={i} className="relative pl-6 font-display italic text-base border-l-2 border-[var(--accent)]">
                   <span className="absolute top-0 left-0 font-display text-[64px] leading-none text-[var(--accent)] opacity-30 pointer-events-none select-none" style={{ fontStyle: 'normal' }}>
                     &#x201C;
