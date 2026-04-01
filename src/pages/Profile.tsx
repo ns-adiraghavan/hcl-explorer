@@ -195,15 +195,31 @@ export default function Profile() {
             </div>
           )}
         </div>
-        {/* Gauge — no box, floats on page bg */}
-        <div className="shrink-0 text-center border-b border-[var(--border)] pb-4">
+        {/* Gauge + service line selector */}
+        <div className="shrink-0 text-center">
           <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--accent)] mb-2">
             FIT: {selectedLine.toUpperCase()}
           </p>
           <DealGauge score={fitScore} classification={exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'} label={`FIT: ${selectedLine.toUpperCase()}`} />
-          <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
-            Showing fit score for {selectedLine} · Base score: {exec.hclScore ?? profile?.dealInterestScore ?? 0}
+          <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[240px]">
+            Showing fit score for {selectedLine} · Base: {exec.hclScore ?? profile?.dealInterestScore ?? 0}
           </p>
+          {/* Service line pills */}
+          <div className="flex flex-wrap justify-center gap-1.5 mt-4 max-w-[320px]">
+            {SERVICE_LINES.map((line) => (
+              <button
+                key={line}
+                onClick={() => setSelectedLine(line)}
+                className={`font-mono text-[10px] px-3 py-1 rounded-full border transition-colors duration-150 ${
+                  selectedLine === line
+                    ? 'bg-[var(--accent)] text-[var(--accent-light)] border-[var(--accent)]'
+                    : 'bg-[var(--card-bg)] text-[var(--neutral)] border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--ink)]'
+                }`}
+              >
+                {line}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
