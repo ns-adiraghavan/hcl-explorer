@@ -277,7 +277,7 @@ export default function Profile() {
                   {param.signalLevel}
                 </span>
               </div>
-              <p className="text-[12px] text-[var(--neutral)] leading-relaxed mb-3 line-clamp-2">{param.summary}</p>
+              <p className="text-[12px] text-[var(--neutral)] leading-relaxed mb-3">{param.summary}</p>
               <span className="font-mono text-[10px] bg-[var(--accent-light)] text-[var(--accent)] px-2 py-0.5 rounded-sm">
                 {param.derivedSignal}
               </span>
