@@ -206,11 +206,11 @@ export default function Profile() {
         {/* Classification card */}
         <div className="border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)]">
           <p className="text-sm mb-4">Engagement Classification</p>
-          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${classificationBadge[exec.hclClassification]}`}>
-            {exec.hclClassification}
+          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${classificationBadge[(exec.hclClassification ?? profile?.overallClassification ?? 'Neutral')]}`}>
+            {exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'}
           </span>
           <ul className="space-y-2">
-            {exec.hclClassificationReason.map((r, i) => (
+            {(exec.hclClassificationReason ?? profile?.hclClassificationReason ?? []).map((r, i) => (
               <li key={i} className="text-[13px] text-[var(--neutral)] flex gap-2">
                 <span className="text-[var(--accent)] mt-0.5">•</span> {r}
               </li>
