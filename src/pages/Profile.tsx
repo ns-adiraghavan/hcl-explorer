@@ -123,7 +123,7 @@ export default function Profile() {
   const [selectedLine, setSelectedLine] = useState(defaultLine);
 
   const fitScore = useMemo(() => {
-    if (!profile) return exec?.hclScore ?? 0;
+    if (!profile) return (exec as any)?.hclScore ?? 0;
     return getServiceLineScore(profile, selectedLine);
   }, [profile, selectedLine, exec]);
 
