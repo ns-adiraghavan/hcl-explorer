@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
+import { generateProfilePdf } from "@/utils/generateProfilePdf";
 import { getExecutive, getHCLProfile } from "@/services/api";
 import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
