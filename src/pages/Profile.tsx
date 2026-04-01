@@ -164,7 +164,7 @@ export default function Profile() {
           </p>
           {(exec.areasOfFocus?.length ?? 0) > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
-              {exec.areasOfFocus.map((a) => (
+              {(exec.areasOfFocus ?? []).map((a) => (
                 <span key={a} className="font-mono text-[11px] border border-[var(--border)] rounded-full px-3 py-1">
                   {a}
                 </span>
