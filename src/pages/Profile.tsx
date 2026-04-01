@@ -380,7 +380,7 @@ export default function Profile() {
       )}
 
       {/* Career timeline */}
-      {exec.careerJourney.length > 0 ? (
+      {(exec.careerJourney?.length ?? 0) > 0 ? (
         <div className="relative pl-6 mb-10">
           <div className="absolute left-2 top-1 bottom-1 w-px bg-[var(--border)]" />
           {exec.careerJourney.map((c, i) => (
