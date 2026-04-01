@@ -1,9 +1,10 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
-import { getExecutiveById } from "@/data/executives";
-import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
+import { getExecutive, getHCLProfile } from "@/services/api";
+import type { Executive } from "@/types/executive";
+import type { HCLParameterProfile } from "@/types/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
 import { getServiceLineScore } from "@/utils/buildDraft";
@@ -80,8 +81,27 @@ function AboutBioBlock({ text }: { text: string }) {
 export default function Profile() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const exec = getExecutiveById(id ?? "");
-  const profile = getParameterProfileById(id ?? "");
+  const [exec, setExec] = useState<Executive | null>(null);
+  const [profile, setProfile] = useState<HCLParameterProfile | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const [e, p] = await Promise.all([
+          getExecutive(id ?? ""),
+          getHCLProfile(id ?? ""),
+        ]);
+        setExec(e ?? null);
+        setProfile(p ?? null);
+      } catch (err) {
+        console.error("Failed to load profile:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, [id]);
 
   const SERVICE_LINES = [
     'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
@@ -106,6 +126,14 @@ export default function Profile() {
     if (!profile) return exec?.hclScore ?? 0;
     return getServiceLineScore(profile, selectedLine);
   }, [profile, selectedLine, exec]);
+
+  if (loading) {
+    return (
+      <div className="p-6 md:p-10 flex items-center justify-center min-h-[50vh]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--neutral)]">Loading profile…</p>
+      </div>
+    );
+  }
 
   if (!exec) {
     return (

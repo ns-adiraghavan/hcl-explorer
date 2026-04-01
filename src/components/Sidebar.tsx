@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { executives } from "@/data/executives";
+import { getAllExecutives } from "@/services/api";
+import type { Executive } from "@/types/executive";
 import { LayoutDashboard, Menu, X } from "lucide-react";
 
 function getInitials(name: string) {
@@ -18,7 +19,7 @@ const classificationDotColor: Record<string, string> = {
   Anti: "bg-sidebar-dot-anti",
 };
 
-function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) {
+function SidebarContent({ onNavigate, executives }: { onNavigate: (path: string) => void; executives: Executive[] }) {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
 
@@ -98,6 +99,11 @@ function SidebarContent({ onNavigate }: { onNavigate: (path: string) => void }) 
 export default function Sidebar() {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [executives, setExecutives] = useState<Executive[]>([]);
+
+  useEffect(() => {
+    getAllExecutives().then(setExecutives).catch(console.error);
+  }, []);
 
   const handleNav = (path: string) => {
     navigate(path);
@@ -122,14 +128,14 @@ export default function Sidebar() {
             <button onClick={() => setMobileOpen(false)} className="absolute top-4 right-4">
               <X className="w-5 h-5 text-sidebar-muted" />
             </button>
-            <SidebarContent onNavigate={handleNav} />
+            <SidebarContent onNavigate={handleNav} executives={executives} />
           </aside>
         </div>
       )}
 
       {/* Desktop sidebar */}
       <aside className="hidden md:flex fixed left-0 top-0 h-screen w-60 bg-sidebar-bg text-sidebar-text flex-col z-50">
-        <SidebarContent onNavigate={handleNav} />
+        <SidebarContent onNavigate={handleNav} executives={executives} />
       </aside>
     </>
   );

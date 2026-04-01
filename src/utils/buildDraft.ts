@@ -1,5 +1,5 @@
-import type { Executive } from '@/data/executives';
-import type { HCLParameterProfile } from '@/data/hcl-parameters';
+import type { Executive } from '@/types/executive';
+import type { HCLParameterProfile } from '@/types/hcl-parameters';
 
 export function getServiceLineScore(profile: HCLParameterProfile, serviceLine: string): number {
   const slLower = serviceLine.toLowerCase();

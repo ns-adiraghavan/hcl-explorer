@@ -1,0 +1,49 @@
+{
+  "executiveId": "christopher-kemmerer",
+  "publicPersona": {
+    "signalLevel": "MODERATE",
+    "summary": "Technology leadership background. Role suggests infrastructure and operations responsibility.",
+    "derivedSignal": "Infra role → Cost / Managed services opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "WEAK",
+    "summary": "Limited public content. Tone appears measured and analytical — not overtly innovation-focused.",
+    "derivedSignal": "Conservative tone → Slower conversion"
+  },
+  "digitalActivity": {
+    "signalLevel": "WEAK",
+    "summary": "Low public LinkedIn activity. Primarily passive consumer of content.",
+    "derivedSignal": "Passive consumer → Neutral"
+  },
+  "topicAffinity": {
+    "signalLevel": "MODERATE",
+    "summary": "Some engagement with technology and operations topics. Partial HCL overlap.",
+    "derivedSignal": "Adjacent topics → Neutral"
+  },
+  "painPointIndicators": {
+    "signalLevel": "MODERATE",
+    "summary": "Role context implies scalability and cost management as live concerns.",
+    "derivedSignal": "Cost concerns → Managed services"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "WEAK",
+    "summary": "No strong vendor signals visible publicly.",
+    "derivedSignal": "No engagement → Greenfield opportunity"
+  },
+  "eventPresence": {
+    "signalLevel": "WEAK",
+    "summary": "No conference participation visible in public record.",
+    "derivedSignal": "No presence → Low engagement"
+  },
+  "contentInteraction": {
+    "signalLevel": "WEAK",
+    "summary": "Generic engagement only. No HCL-adjacent content interaction.",
+    "derivedSignal": "Generic engagement → Neutral signal"
+  },
+  "opportunityAreas": [
+    { "area": "Managed Services", "type": "Tactical", "confidenceScore": 48 },
+    { "area": "Infrastructure Modernization", "type": "Emerging", "confidenceScore": 42 }
+  ],
+  "overallClassification": "Neutral",
+  "dealInterestScore": 58
+}

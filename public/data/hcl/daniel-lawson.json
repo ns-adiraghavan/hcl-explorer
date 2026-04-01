@@ -1,0 +1,50 @@
+{
+  "executiveId": "daniel-lawson",
+  "publicPersona": {
+    "signalLevel": "MODERATE",
+    "summary": "Operations and infrastructure background. Career signals cost optimization and efficiency focus.",
+    "derivedSignal": "Infra → Cost / Managed services opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "MODERATE",
+    "summary": "Efficiency and results-oriented language. Pragmatic rather than visionary in public tone.",
+    "derivedSignal": "Efficiency mindset → Cost optimization opportunity"
+  },
+  "digitalActivity": {
+    "signalLevel": "MODERATE",
+    "summary": "Moderate LinkedIn presence. Regular but not high-frequency posting.",
+    "derivedSignal": "Moderate activity → Nurture candidate"
+  },
+  "topicAffinity": {
+    "signalLevel": "MODERATE",
+    "summary": "Infrastructure and cloud content engagement. Some overlap with HCL managed services.",
+    "derivedSignal": "Adjacent topics → Moderate opportunity"
+  },
+  "painPointIndicators": {
+    "signalLevel": "STRONG",
+    "summary": "Explicit engagement with content about legacy systems and managed cost reduction.",
+    "derivedSignal": "Legacy issues → Modernization / managed services"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "MODERATE",
+    "summary": "Multi-vendor environment implied. No strong single-vendor lock-in.",
+    "derivedSignal": "Multi-vendor → Entry opportunity"
+  },
+  "eventPresence": {
+    "signalLevel": "WEAK",
+    "summary": "Limited public conference participation visible.",
+    "derivedSignal": "Low presence → Indirect engagement preferred"
+  },
+  "contentInteraction": {
+    "signalLevel": "MODERATE",
+    "summary": "Engages with operational efficiency and technology content.",
+    "derivedSignal": "Moderate engagement → Neutral / Convertible"
+  },
+  "opportunityAreas": [
+    { "area": "Managed Services", "type": "Strategic", "confidenceScore": 62 },
+    { "area": "Infrastructure / Cloud", "type": "Tactical", "confidenceScore": 58 },
+    { "area": "Cost Optimization", "type": "Strategic", "confidenceScore": 70 }
+  ],
+  "overallClassification": "Neutral",
+  "dealInterestScore": 65
+}

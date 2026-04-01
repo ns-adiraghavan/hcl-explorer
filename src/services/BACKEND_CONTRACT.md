@@ -1,271 +1,80 @@
-# Backend Contract
+# Data Architecture
 
-## CXOWorld × HCL Frontend ↔ API
+## CXOWorld × HCL Frontend
 
-This file is the single source of truth for the backend developer
-and scraping team. The frontend expects exactly these endpoints,
-field names, and types. Do not rename fields — match this contract
-precisely to avoid silent failures.
+Data is served as static JSON files from `/public/data/`.
+No backend server required. No environment variables needed.
 
 ---
 
-## How to go live
+## File structure
 
-1. Set `VITE_USE_MOCK=false` in `.env`
-2. Set `VITE_API_BASE_URL=https://your-api.com` in `.env`
-3. Done. No component changes needed.
+```
+/public/data/
+  index.json                    ← Executive index (id + name)
+  executives/
+    {id}.json                   ← Full Executive profile
+  hcl/
+    {id}.json                   ← HCL parameter profile
+```
+
+## How it works
+
+1. `getAllExecutives()` fetches `/data/index.json`, then loads
+   each executive JSON in parallel.
+2. `getExecutive(id)` fetches `/data/executives/{id}.json` directly.
+   Includes fuzzy matching — strips trailing hash suffixes so
+   `amit-kapoor-a07348` resolves to `amit-kapoor.json`.
+3. `getHCLProfile(id)` fetches `/data/hcl/{id}.json` with the
+   same fuzzy matching.
+
+## To add a new executive
+
+1. Create `/public/data/executives/{slug}.json` matching the
+   Executive interface in `/src/types/executive.ts`.
+2. Create `/public/data/hcl/{slug}.json` matching the
+   HCLParameterProfile interface in `/src/types/hcl-parameters.ts`.
+3. Add `{ "id": "{slug}", "name": "Full Name" }` to
+   `/public/data/index.json`.
+
+No code changes needed.
 
 ---
 
-## Endpoints
+## Type contracts
 
-### GET /api/executives
+### Executive — `/src/types/executive.ts`
 
-Returns all tracked executives as an array.
-
-Response: `Executive[]`
-
-### GET /api/executives/:id
-
-Returns a single executive by id slug (e.g. "amit-kapoor").
-
-Response: `Executive`
-
-Error if not found: 404
-
-### GET /api/hcl-parameters/:id
-
-Returns the HCL parameter profile for an executive by id slug.
-
-Response: `HCLParameterProfile`
-
-Error if not found: 404
-
----
-
-## Executive — field contract
-
-All fields marked \* are required. All others are optional but
-should be populated where data is available — the frontend
-renders them conditionally and degrades gracefully if absent.
+All fields marked \* are required. Others are optional but rendered
+conditionally where available.
 
 ```
 id*                string    URL-safe slug. e.g. "amit-kapoor"
-                             Must be consistent across both endpoints.
-
-name*              string    Full name. e.g. "Amit Kapoor"
+name*              string    Full name
 title*             string    Current job title
 company*           string    Current employer
 location*          string    City, Country
 linkedIn*          string    Full LinkedIn profile URL
-
-photo              string    Direct image URL for headshot.
-                             If absent, UI shows initials avatar.
-email              string    Professional email if available.
+photo              string    Direct image URL for headshot
+email              string    Professional email if available
 ```
 
-### LinkedIn-scraped fields
+See `/src/types/executive.ts` for the complete interface.
 
-```
-aboutBio           string    Full LinkedIn About section text.
+### HCLParameterProfile — `/src/types/hcl-parameters.ts`
 
-skills             string[]  Up to 10 endorsed skills.
-                             e.g. ["Cloud Strategy", "AI", "CX"]
-
-recommendations    object[]  Each object:
-                               text*        string  Full recommendation text
-                               from*        string  "Name, Title at Company"
-                               relationship string  e.g. "worked directly"
-
-articlesWritten    object[]  Each object:
-                               title*   string
-                               date*    string  ISO 8601. e.g. "2025-11-04"
-                               url      string
-                               excerpt  string  First 200 chars of article
-
-featuredLinks      object[]  Each object:
-                               label*  string
-                               url*    string
-
-socialPosts        object[]  Each object:
-                               platform*   "linkedin" | "instagram" | "twitter"
-                               text*       string  Full post text
-                               date*       string  ISO 8601
-                               engagement  string  e.g. "1,363 likes"
-                             Note: likes per post not publicly
-                             available via scrape — use total
-                             engagement string where visible.
-
-languages          string[]  e.g. ["English", "Hindi"]
-volunteering       string[]  e.g. ["Board Member, NGO Name"]
-```
-
-### Profile intelligence fields
-
-These are research-derived, not scraped directly.
-Populated by Netscribes research team post-scrape.
-
-```
-areasOfFocus*      string[]  5 tags. Strategic priority themes.
-visionQuotes*      string[]  3–5 verbatim or paraphrased belief statements.
-strategies*        string[]  5 items. Distilled strategic approaches.
-challenges*        string[]  5 items. Current pain points.
-opportunities*     string[]  5 items. Executive's own stated growth areas.
-trendsInsights*    string[]  5 items. Macro trends relevant to their context.
-competitorsPartners string[] 5 items. Named competitors and partners.
-productsTechnologies string[] 5 items. Technologies actively deployed.
-targetMarkets      string[]  5 items. Customer segments and geographies.
-kpiMetrics*        string[]  5 items. Quantified scale/performance metrics.
-decisionInsights*  string[]  5 items. Decision-making frameworks inferred.
-risksThreats*      string[]  5 items. Organizational vulnerabilities.
-```
-
-### Biographical fields
-
-```
-bio                string    One-paragraph leadership summary.
-dob                string    ISO 8601 date or year only. e.g. "1966-10-17"
-nationality        string    e.g. "American"
-netWorth           string    e.g. "$530 Million"
-
-careerJourney      object[]  Each object:
-                               role*     string
-                               company*  string
-                               from*     string  e.g. "Feb 2014"
-                               to*       string  e.g. "Present"
-                             IMPORTANT: company field is scanned
-                             against HCL competitor list. Spelling
-                             must match entries in
-                             /src/utils/competitors.ts exactly.
-
-education          object[]  Each object:
-                               degree*      string
-                               institution* string
-                               years*       string  e.g. "1985–1989"
-
-awards             string[]  Named awards and honors.
-```
-
-### Company fields
-
-```
-annualRevenue      string    e.g. "$681 billion"
-teamSize           string    e.g. "2,100,000"
-```
-
-### Video / Event fields
-
-```
-videoGallery       object[]  Each object:
-                               title*        string
-                               source*       string  e.g. "YouTube",
-                                                     "AWS Summit 2024"
-                               date*         string  ISO 8601
-                               url           string  Direct video URL
-                               thumbnailUrl  string  Direct image URL
-                               tier*         "direct" | "conference"
-                                             | "inferred"
-                             tier="direct":     confirmed on-camera appearance
-                             tier="conference": listed as speaker/attendee,
-                                                no video confirmed
-                             tier="inferred":   no record found
-
-lastUpdated*       string    ISO 8601. Date this profile was last enriched.
-```
-
----
-
-## HCLParameterProfile — field contract
-
-```
-executiveId*            string   Must match Executive.id exactly.
-```
-
-### 8 Parameter scores
-
-Each parameter is an object with:
-
-```
-signalLevel*    "STRONG" | "MODERATE" | "WEAK"
-summary*        string   2-sentence human-readable finding.
-derivedSignal*  string   1-line implication. e.g. "Innovation focus → Pro"
-```
-
-Parameters:
-
-```
-publicPersona*
-psychographicMindset*
-digitalActivity*
-topicAffinity*
-painPointIndicators*
-ecosystemVendorExposure*
-eventPresence*
-contentInteraction*
-```
-
-### Output fields
-
-```
-opportunityAreas*       object[]  Each object:
-                                    area*            string
-                                    type*            "Strategic" |
-                                                     "Tactical" |
-                                                     "Emerging"
-                                    confidenceScore* number  0–100
-
-overallClassification*  "Pro" | "Neutral" | "Anti"
-dealInterestScore*      number   0–100. Used in gauge component.
-```
-
----
-
-## Data sourcing guide for scraping team
-
-**SCRAPED FROM LINKEDIN:**
-
-name, title, company, location, linkedIn, photo, aboutBio,
-skills, recommendations, articlesWritten, featuredLinks,
-socialPosts, languages, volunteering, careerJourney, education,
-awards, videoGallery (tier="conference" from event mentions in posts)
-
-**SCRAPED FROM PUBLIC WEB:**
-
-email (company website / press releases)
-annualRevenue, teamSize (company filings / Crunchbase)
-netWorth (Forbes, Bloomberg where available)
-videoGallery (tier="direct" from YouTube search by name)
-kpiMetrics (earnings calls, annual reports, press)
-competitorsPartners (company website, press releases)
-
-**RESEARCH-DERIVED (Netscribes team):**
-
-areasOfFocus, visionQuotes, strategies, challenges,
-opportunities, trendsInsights, productsTechnologies,
-targetMarkets, decisionInsights, risksThreats,
-all HCLParameterProfile fields
-
-**NOT AVAILABLE / DO NOT ATTEMPT:**
-
-- LinkedIn likes per post (not public)
-- LinkedIn connection count (requires login)
-- LinkedIn follows (requires login)
-- Private or connection-gated profile content
+See `/src/types/hcl-parameters.ts` for the complete interface.
 
 ---
 
 ## Competitor name matching
 
 The frontend scans `careerJourney[].company` against a hardcoded
-list in `/src/utils/competitors.ts`. Your scraper must return
-company names that match this list spelling exactly:
+list in `/src/utils/competitors.ts`. JSON data must use exact
+spelling from that list:
 
 ```
 Accenture, TCS, Tata Consultancy, Wipro, Infosys,
 Cognizant, Capgemini, IBM, Deloitte, EY, PWC,
 KPMG, DXC, Unisys, NTT Data, LTIMindtree
 ```
-
-If a company name from LinkedIn is a variant (e.g. "Tata
-Consultancy Services" instead of "TCS"), normalize it to
-the list entry before returning from the API.

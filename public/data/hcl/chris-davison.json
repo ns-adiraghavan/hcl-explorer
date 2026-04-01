@@ -1,0 +1,49 @@
+{
+  "executiveId": "chris-davison",
+  "publicPersona": {
+    "signalLevel": "MODERATE",
+    "summary": "Security and compliance background. Role maps to HCL security / risk service lines.",
+    "derivedSignal": "Risk role → Security / Compliance opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "WEAK",
+    "summary": "Limited public content. Risk-averse framing where visible.",
+    "derivedSignal": "Risk-averse tone → Slower conversion / Neutral"
+  },
+  "digitalActivity": {
+    "signalLevel": "WEAK",
+    "summary": "Low LinkedIn activity. Primarily passive.",
+    "derivedSignal": "Passive consumer → Neutral"
+  },
+  "topicAffinity": {
+    "signalLevel": "MODERATE",
+    "summary": "Security and compliance topics — adjacent to HCL but not primary growth area.",
+    "derivedSignal": "Adjacent topics → Moderate opportunity"
+  },
+  "painPointIndicators": {
+    "signalLevel": "MODERATE",
+    "summary": "Compliance and regulatory complexity implied by role context.",
+    "derivedSignal": "Compliance concerns → Security / managed risk opportunity"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "WEAK",
+    "summary": "No strong vendor engagement visible.",
+    "derivedSignal": "No engagement → Greenfield"
+  },
+  "eventPresence": {
+    "signalLevel": "WEAK",
+    "summary": "No conference participation visible publicly.",
+    "derivedSignal": "No presence → Low engagement"
+  },
+  "contentInteraction": {
+    "signalLevel": "WEAK",
+    "summary": "Minimal content interaction visible.",
+    "derivedSignal": "Weak signal → Deprioritize or nurture slowly"
+  },
+  "opportunityAreas": [
+    { "area": "Security / Compliance", "type": "Tactical", "confidenceScore": 52 },
+    { "area": "Managed Risk Services", "type": "Emerging", "confidenceScore": 38 }
+  ],
+  "overallClassification": "Neutral",
+  "dealInterestScore": 44
+}

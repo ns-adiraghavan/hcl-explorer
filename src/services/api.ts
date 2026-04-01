@@ -1,50 +1,46 @@
-import type { Executive } from '../data/executives';
-import type { HCLParameterProfile } from '../data/hcl-parameters';
+import type { Executive } from '@/types/executive';
+import type { HCLParameterProfile } from '@/types/hcl-parameters';
 
-const USE_MOCK = import.meta.env.VITE_USE_MOCK !== 'false';
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
-
-async function fetchJSON<T>(path: string): Promise<T> {
-  const res = await fetch(`${BASE_URL}${path}`, {
-    headers: { 'Content-Type': 'application/json' }
-  });
-  if (!res.ok) throw new Error(`API ${res.status}: ${path}`);
+async function loadJSON<T>(path: string): Promise<T> {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
   return res.json() as Promise<T>;
 }
 
 export async function getAllExecutives(): Promise<Executive[]> {
-  if (USE_MOCK) {
-    const { executives } = await import('../data/executives');
-    return executives;
-  }
-  return fetchJSON<Executive[]>('/api/executives');
+  const index = await loadJSON<{ executives: { id: string; name: string }[] }>(
+    '/data/index.json'
+  );
+  const profiles = await Promise.all(
+    index.executives.map(e =>
+      loadJSON<Executive>(`/data/executives/${e.id}.json`)
+    )
+  );
+  return profiles;
 }
 
 export async function getExecutive(id: string): Promise<Executive | undefined> {
-  if (USE_MOCK) {
-    const { executives } = await import('../data/executives');
-    const exact = executives.find(e => e.id === id);
-    if (exact) return exact;
-    return executives.find(e =>
-      id.includes(e.id) || e.id.includes(id) ||
-      e.linkedIn.toLowerCase().includes(id.toLowerCase())
-    );
+  const normalised = id.replace(/-[a-z0-9]{5,}$/, '');
+  try {
+    return await loadJSON<Executive>(`/data/executives/${normalised}.json`);
+  } catch {
+    try {
+      return await loadJSON<Executive>(`/data/executives/${id}.json`);
+    } catch {
+      return undefined;
+    }
   }
-  return fetchJSON<Executive>(`/api/executives/${id}`);
 }
 
 export async function getHCLProfile(id: string): Promise<HCLParameterProfile | undefined> {
-  if (USE_MOCK) {
-    const { hclParameterProfiles } = await import('../data/hcl-parameters');
-    const exact = hclParameterProfiles.find(p => p.executiveId === id);
-    if (exact) return exact;
-    const { executives } = await import('../data/executives');
-    const exec = executives.find(e =>
-      id.includes(e.id) || e.id.includes(id) ||
-      e.linkedIn.toLowerCase().includes(id.toLowerCase())
-    );
-    if (exec) return hclParameterProfiles.find(p => p.executiveId === exec.id);
-    return undefined;
+  const normalised = id.replace(/-[a-z0-9]{5,}$/, '');
+  try {
+    return await loadJSON<HCLParameterProfile>(`/data/hcl/${normalised}.json`);
+  } catch {
+    try {
+      return await loadJSON<HCLParameterProfile>(`/data/hcl/${id}.json`);
+    } catch {
+      return undefined;
+    }
   }
-  return fetchJSON<HCLParameterProfile>(`/api/hcl-parameters/${id}`);
 }

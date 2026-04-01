@@ -1,6 +1,6 @@
 import { BarChart2, ArrowRight } from 'lucide-react';
-import type { Executive } from '@/data/executives';
-import type { HCLParameterProfile } from '@/data/hcl-parameters';
+import type { Executive } from '@/types/executive';
+import type { HCLParameterProfile } from '@/types/hcl-parameters';
 import { HCL_COMPETITORS } from '@/utils/competitors';
 
 interface Props {

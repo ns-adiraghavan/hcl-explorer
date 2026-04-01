@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Copy, Check } from 'lucide-react';
-import type { Executive } from '@/data/executives';
-import type { HCLParameterProfile } from '@/data/hcl-parameters';
+import type { Executive } from '@/types/executive';
+import type { HCLParameterProfile } from '@/types/hcl-parameters';
 import { buildDraft } from '@/utils/buildDraft';
 
 const SERVICE_LINES = [

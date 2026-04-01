@@ -1,0 +1,50 @@
+{
+  "executiveId": "scott-lawrence",
+  "publicPersona": {
+    "signalLevel": "STRONG",
+    "summary": "Digital and CX leadership background. Role directly maps to HCL CX and cloud service lines.",
+    "derivedSignal": "Digital → AI / CX / Cloud opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "STRONG",
+    "summary": "Innovation-first language. Actively advocates for technology-led transformation.",
+    "derivedSignal": "Innovation focus → Pro / Convertible"
+  },
+  "digitalActivity": {
+    "signalLevel": "STRONG",
+    "summary": "High LinkedIn activity. Original posts on CX, AI, and digital strategy.",
+    "derivedSignal": "Active thought leader → High-value target"
+  },
+  "topicAffinity": {
+    "signalLevel": "STRONG",
+    "summary": "Posts and engages heavily with CX, cloud, and AI topics — all core HCL service areas.",
+    "derivedSignal": "Direct match → Immediate opportunity"
+  },
+  "painPointIndicators": {
+    "signalLevel": "MODERATE",
+    "summary": "Engages with scalability and CX efficiency challenges.",
+    "derivedSignal": "Scalability → Cloud / AI transformation"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "MODERATE",
+    "summary": "Multi-vendor engagement. No strong competitor lock-in identified.",
+    "derivedSignal": "Multi-vendor → Entry opportunity"
+  },
+  "eventPresence": {
+    "signalLevel": "STRONG",
+    "summary": "Speaker or participant at CX and technology conferences.",
+    "derivedSignal": "Speaker → High-value, Pro/Convertible"
+  },
+  "contentInteraction": {
+    "signalLevel": "STRONG",
+    "summary": "Deep engagement with HCL-adjacent content. Comments on AI and CX transformation posts.",
+    "derivedSignal": "Deep HCL-adjacent engagement → Strong Pro signal"
+  },
+  "opportunityAreas": [
+    { "area": "CX / AI", "type": "Strategic", "confidenceScore": 85 },
+    { "area": "Cloud Transformation", "type": "Strategic", "confidenceScore": 78 },
+    { "area": "Digital Strategy", "type": "Tactical", "confidenceScore": 72 }
+  ],
+  "overallClassification": "Pro",
+  "dealInterestScore": 81
+}

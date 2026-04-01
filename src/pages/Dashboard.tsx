@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { executives } from "@/data/executives";
-import { hclParameterProfiles } from "@/data/hcl-parameters";
+import { getAllExecutives } from "@/services/api";
+import type { Executive } from "@/types/executive";
+import type { HCLParameterProfile } from "@/types/hcl-parameters";
 
 const classificationStyles: Record<string, string> = {
   Pro: "bg-[var(--accent)] text-[var(--accent-light)]",
@@ -10,16 +12,49 @@ const classificationStyles: Record<string, string> = {
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const [executives, setExecutives] = useState<Executive[]>([]);
+  const [hclProfiles, setHclProfiles] = useState<HCLParameterProfile[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const execs = await getAllExecutives();
+        setExecutives(execs);
+        // Load HCL profiles in parallel
+        const { getHCLProfile } = await import("@/services/api");
+        const profiles = await Promise.all(
+          execs.map(e => getHCLProfile(e.id))
+        );
+        setHclProfiles(profiles.filter((p): p is HCLParameterProfile => p != null));
+      } catch (err) {
+        console.error("Failed to load data:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="p-6 md:p-10 flex items-center justify-center min-h-[50vh]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--neutral)]">Loading intelligence…</p>
+      </div>
+    );
+  }
 
   const proCount = executives.filter((e) => e.hclClassification === "Pro").length;
 
   const allOpportunities = new Set(
-    hclParameterProfiles.flatMap((p) => p.opportunityAreas.map((o) => o.area))
+    hclProfiles.flatMap((p) => p.opportunityAreas.map((o) => o.area))
   );
 
-  const lastUpdated = executives.reduce((latest, e) =>
-    e.lastUpdated > latest ? e.lastUpdated : latest, executives[0].lastUpdated
-  );
+  const lastUpdated = executives.length > 0
+    ? executives.reduce((latest, e) =>
+        e.lastUpdated > latest ? e.lastUpdated : latest, executives[0].lastUpdated
+      )
+    : "—";
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long", year: "numeric", month: "long", day: "numeric",
@@ -64,7 +99,7 @@ export default function Dashboard() {
       {/* Executive grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {executives.map((exec) => {
-          const profile = hclParameterProfiles.find((p) => p.executiveId === exec.id);
+          const profile = hclProfiles.find((p) => p.executiveId === exec.id);
           const topOpps = profile?.opportunityAreas.slice(0, 2) ?? [];
 
           return (

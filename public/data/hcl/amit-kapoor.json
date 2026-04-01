@@ -1,0 +1,50 @@
+{
+  "executiveId": "amit-kapoor",
+  "publicPersona": {
+    "signalLevel": "STRONG",
+    "summary": "Senior role at a tech-forward organization. Career history shows consistent digital and AI exposure.",
+    "derivedSignal": "Digital background → AI / CX opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "STRONG",
+    "summary": "Public posts reflect innovation-first language. References transformation and people-plus-tech framing.",
+    "derivedSignal": "Innovation mindset → Pro / Convertible"
+  },
+  "digitalActivity": {
+    "signalLevel": "MODERATE",
+    "summary": "Regular LinkedIn activity. Mix of original posts and engagement with sector content.",
+    "derivedSignal": "Active thought leader → High influence"
+  },
+  "topicAffinity": {
+    "signalLevel": "STRONG",
+    "summary": "Posts on AI, digital transformation, and cloud closely align with HCL service areas.",
+    "derivedSignal": "Direct topic match → Immediate opportunity"
+  },
+  "painPointIndicators": {
+    "signalLevel": "MODERATE",
+    "summary": "Engages with content about legacy modernization and scalability challenges.",
+    "derivedSignal": "Legacy issues → Modernization opportunity"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "MODERATE",
+    "summary": "Multi-vendor engagement detected. No strong competitor lock-in.",
+    "derivedSignal": "Multi-vendor → Entry opportunity"
+  },
+  "eventPresence": {
+    "signalLevel": "MODERATE",
+    "summary": "Participates in industry forums. Some conference attendance visible.",
+    "derivedSignal": "Attendee → Nurture opportunity"
+  },
+  "contentInteraction": {
+    "signalLevel": "STRONG",
+    "summary": "Active engagement with AI and digital transformation content. Commenting, not just liking.",
+    "derivedSignal": "Deep engagement → High-value signal"
+  },
+  "opportunityAreas": [
+    { "area": "AI / Cloud", "type": "Strategic", "confidenceScore": 78 },
+    { "area": "CX Transformation", "type": "Tactical", "confidenceScore": 65 },
+    { "area": "Digital Modernization", "type": "Emerging", "confidenceScore": 55 }
+  ],
+  "overallClassification": "Pro",
+  "dealInterestScore": 72
+}
