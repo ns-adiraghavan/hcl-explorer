@@ -327,7 +327,7 @@ export default function Profile() {
       {/* Strategies */}
       {(exec.strategies?.length ?? 0) > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {exec.strategies.map((s, i) => (
+          {(exec.strategies ?? []).map((s, i) => (
             <div key={i} className="border border-[var(--border)] rounded-sm p-4 bg-[var(--card-bg)]">
               <span className="font-mono text-[10px] text-[var(--neutral)]">{String(i + 1).padStart(2, "0")}</span>
               <p className="text-[13px] mt-1">{s}</p>
