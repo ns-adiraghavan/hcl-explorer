@@ -162,7 +162,7 @@ export default function Profile() {
           <p className="text-base text-[var(--neutral)] mt-2">
             {exec.title} <span className="text-[var(--accent)]">·</span> <span className="text-[var(--ink)] font-medium">{exec.company}</span> <span className="text-[var(--accent)]">·</span> {exec.location}
           </p>
-          {exec.areasOfFocus.length > 0 && (
+          {(exec.areasOfFocus?.length ?? 0) > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
               {exec.areasOfFocus.map((a) => (
                 <span key={a} className="font-mono text-[11px] border border-[var(--border)] rounded-full px-3 py-1">
