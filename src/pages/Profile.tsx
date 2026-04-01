@@ -399,7 +399,7 @@ export default function Profile() {
 
       {/* ─── SECTION 6: SOCIAL PULSE ─── */}
       <SectionHeader title="Social Pulse" />
-      {exec.socialPosts.length > 0 ? (
+      {(exec.socialPosts?.length ?? 0) > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {exec.socialPosts.map((post, i) => {
             const Icon = platformIcon[post.platform] ?? Globe;
