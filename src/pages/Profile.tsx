@@ -1,9 +1,10 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { ExternalLink } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
-import { getExecutiveById } from "@/data/executives";
-import { getParameterProfileById, type HCLParameterProfile } from "@/data/hcl-parameters";
+import { getExecutive, getHCLProfile } from "@/services/api";
+import type { Executive } from "@/types/executive";
+import type { HCLParameterProfile } from "@/types/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
 import { getServiceLineScore } from "@/utils/buildDraft";
