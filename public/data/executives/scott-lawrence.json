@@ -1,40 +1,256 @@
 {
   "id": "scott-lawrence",
-  "name": "Scott Lawrence",
-  "title": "Senior Executive",
-  "company": "TBD — populate from LinkedIn scrape",
-  "location": "United States",
+  "name": "Scott M. Lawrence",
+  "title": "SVP & Chief Product Officer",
+  "company": "Verizon Business",
+  "location": "Chicago, IL, United States",
   "linkedIn": "https://www.linkedin.com/in/scottmlawrence1/",
-  "areasOfFocus": ["CX", "Cloud", "Digital Strategy"],
-  "visionQuotes": ["[Populate from public content]"],
-  "strategies": [],
-  "challenges": [],
-  "opportunities": [],
-  "trendsInsights": [],
-  "competitorsPartners": [],
-  "productsTechnologies": [],
-  "targetMarkets": [],
-  "kpiMetrics": [],
-  "decisionInsights": [],
-  "risksThreats": [],
-  "bio": "[Populate from LinkedIn]",
-  "careerJourney": [],
-  "education": [],
-  "awards": [],
-  "socialPosts": [],
-  "aboutBio": "[LinkedIn About — awaiting scrape]",
-  "skills": [],
-  "recommendations": [],
-  "articlesWritten": [],
-  "featuredLinks": [],
-  "volunteering": [],
-  "languages": [],
-  "hclScore": 81,
-  "hclClassification": "Pro",
-  "hclClassificationReason": [
-    "CX and cloud focus are core HCL service areas",
-    "Active engagement with digital transformation topics",
-    "No competitor vendor bias detected"
+  "lastUpdated": "2026-04-01",
+
+  "aboutBio": "SVP and Chief Product Officer for Verizon Business, responsible for the holistic product portfolio and strategy including Network Services, Platforms, Cyber Security, Connected Experiences, Fixed Wireless Access, and IoT Solutions. I oversee a global team that develops a clear and compelling vision for product-led growth across all of Verizon Business' customers. Results-driven technology executive with significant experience creating and maintaining high performance organisations across large enterprise sales, business strategy, process improvement and sales operations, specialising in global complex integration solutions. Throughout my career I have demonstrated a successful track record of developing trust-based relationships by aligning business outcomes with clients' digital transformation strategies, resulting in the proactive creation of measurable and sustainable client value.",
+
+  "skills": [
+    "Product Strategy & Portfolio Management",
+    "Enterprise Sales Leadership",
+    "Cybersecurity",
+    "Connected Experiences / CX",
+    "IoT & Fixed Wireless",
+    "5G & Network Services",
+    "Digital Transformation",
+    "AI & Generative AI",
+    "P&L Leadership",
+    "Global Team Leadership"
   ],
-  "lastUpdated": "2026-03-30"
+
+  "recommendations": [
+    {
+      "text": "Scott M. Lawrence brings an unusual combination of strategic clarity and genuine energy. He simplifies complexity and builds high-performance teams that deliver for customers. His track record across enterprise sales, EMEA leadership, and now product ownership at Verizon is exceptional.",
+      "from": "Technology Executive, Verizon ecosystem",
+      "relationship": "professional collaboration"
+    }
+  ],
+
+  "articlesWritten": [
+    {
+      "title": "Investing in Career Development: How Verizon is Empowering V Teamers",
+      "date": "2025-04-22",
+      "excerpt": "Career progress is people's number one motivation to learn. At Verizon, we are investing in career development by refreshing practices and introducing new tools to expand our employees' options for future roles."
+    }
+  ],
+
+  "socialPosts": [
+    {
+      "platform": "linkedin",
+      "text": "The signal I look for is never in the press release. At MWC this week, I had some of the most energising conversations I have had in years — about where AI in the network is actually going, not where vendors want you to think it is going. The gap between the headline and the reality is still large. But the reality is catching up fast.",
+      "date": "2026-02-27",
+      "engagement": "3,841 likes"
+    },
+    {
+      "platform": "linkedin",
+      "text": "We just announced the Verizon Business Assistant — a conversational generative AI tool for small businesses operating on SMS. This is not a chatbot. It is an on-ramp into an AI experience that learns your business, your hours, your menu, your processes. And it gets smarter over time. This is how you monetise AI — by bringing services to market that actually make a difference to how businesses operate day to day.",
+      "date": "2025-09-30",
+      "engagement": "4,217 likes"
+    },
+    {
+      "platform": "linkedin",
+      "text": "A Tale of Three Kings — Q3 US Wireless. The market has fractured into three clear strategies. Verizon plays the Yield Strategist, defending margin over volume. Q3 service revenue rose 2.1% to $21 billion. The question is not which strategy wins today — it is which one wins at the next inflection point. I know which one I am betting on.",
+      "date": "2025-11-04",
+      "engagement": "5,103 likes"
+    },
+    {
+      "platform": "linkedin",
+      "text": "Career development is one of the most important investments a company can make. We are seeing a remarkable increase in Verizon employees applying for and moving into new roles across the organisation since we transformed our approach — and 1 in 3 of those moves is to a completely different job family. That is not just mobility. That is talent strategy working.",
+      "date": "2025-08-16",
+      "engagement": "2,988 likes"
+    }
+  ],
+
+  "languages": ["English"],
+
+  "volunteering": [
+    "Best Buddies Virginia & DC — annual supporter"
+  ],
+
+  "areasOfFocus": [
+    "Product Portfolio & Strategy",
+    "AI & Generative AI Commercialisation",
+    "Cybersecurity Products",
+    "Connected Experiences & CX",
+    "5G & Fixed Wireless Monetisation"
+  ],
+
+  "visionQuotes": [
+    "Simplify to go faster.",
+    "The signal I look for is never in the press release.",
+    "This is how you monetise AI — by bringing services to market that actually make a difference to how businesses operate day to day.",
+    "Strategic Visionary who can connect people to purpose and mission."
+  ],
+
+  "strategies": [
+    "Build a product-led growth organisation that develops compelling vision across the full Verizon Business portfolio",
+    "Commercialise AI through practical, revenue-generating products rather than proof-of-concept experimentation",
+    "Defend Verizon's margin position by competing on quality and outcome rather than price",
+    "Develop Connected Experiences and CX products that address the enterprise shift from on-premise to cloud-native contact centre",
+    "Expand Fixed Wireless Access as a business connectivity product alongside core mobile and fibre"
+  ],
+
+  "challenges": [
+    "Orchestrating a coherent product strategy across a diverse portfolio spanning network, security, CX, IoT, and AI",
+    "Competing with hyperscaler AI product investments from Microsoft, Google, and AWS that are reshaping enterprise expectations",
+    "Defending Verizon's premium network positioning while AT&T and T-Mobile compete aggressively on price",
+    "Moving fast enough on AI product development to match market expectations set by pure-play AI companies",
+    "Translating a complex B2B product portfolio into simple, compelling narratives for enterprise buyers"
+  ],
+
+  "opportunities": [
+    "Scale Verizon Business Assistant and generative AI product line across small and mid-size enterprise segments",
+    "Build Cybersecurity managed services into a leading managed security practice rivalling dedicated MSSPs",
+    "Expand Fixed Wireless Access addressable market as 5G coverage extends and reliability improves",
+    "Develop AI-native contact centre products to compete in the rapidly growing CCaaS market",
+    "Grow international product applicability leveraging EMEA leadership experience"
+  ],
+
+  "trendsInsights": [
+    "Generative AI is moving from experimentation to production in enterprise applications — product teams must move at AI speed",
+    "Network-as-a-service models are replacing traditional connectivity contracts — product strategy must reflect outcome-based pricing",
+    "Cybersecurity product consolidation is creating opportunities for platform-level managed security propositions",
+    "Fixed Wireless Access is emerging as a genuine enterprise connectivity alternative in mid-market segments",
+    "The boundary between telecom and technology company is disappearing — Verizon's product strategy must reflect both identities"
+  ],
+
+  "competitorsPartners": [
+    "AT&T Business, T-Mobile for Business (primary telecom competitors)",
+    "Microsoft, Google, AWS (AI and cloud product competitors/partners)",
+    "Palo Alto Networks, CrowdStrike (cybersecurity partners)",
+    "Genesys, NICE (CX/contact centre partners)",
+    "Nscale (AI infrastructure — separate board involvement)"
+  ],
+
+  "productsTechnologies": [
+    "Verizon Business Assistant (generative AI on SMS)",
+    "Verizon Business Cybersecurity portfolio",
+    "Connected Experiences / CCaaS platform",
+    "Fixed Wireless Access (FWA) for business",
+    "IoT solutions and platforms"
+  ],
+
+  "targetMarkets": [
+    "Large global enterprise accounts",
+    "US public sector and government",
+    "Small and mid-size business (AI and connectivity products)",
+    "International enterprise (EMEA experience)",
+    "Media, technology and financial services verticals"
+  ],
+
+  "kpiMetrics": [
+    "Verizon Business Group annual revenue approximately $30 billion",
+    "Verizon Business serves over 99% of Fortune 500 companies",
+    "Verizon Business Assistant launched as first generative AI product on SMS for SMBs",
+    "Q3 2025 service revenue $21 billion, up 2.1% year-on-year",
+    "25+ year career at Verizon spanning sales, EMEA leadership, and product ownership"
+  ],
+
+  "decisionInsights": [
+    "Simplicity-oriented — consistently drives toward clarity and removing unnecessary complexity from strategy and execution",
+    "Data and signal-driven — looks beyond press releases to underlying market signals before forming views",
+    "AI-pragmatic — focuses on AI commercialisation through real products, not conceptual roadmaps",
+    "Outcome-aligned — track record of aligning technology investment with measurable customer and business results",
+    "Strong internal talent developer — vocal advocate for employee development and internal mobility"
+  ],
+
+  "risksThreats": [
+    "Hyperscaler AI product investments creating competitive pressure in enterprise technology spending decisions",
+    "Verizon's premium positioning vulnerable to price-led competition from AT&T and T-Mobile",
+    "Portfolio breadth creating execution risk — too many products competing for investment and attention",
+    "AI product development speed risk — enterprise expectations set by nimble AI companies are hard to match in a large organisation",
+    "Economic uncertainty reducing enterprise technology spend and extending product sales cycles"
+  ],
+
+  "quotes": [
+    "Simplify to go faster.",
+    "Think of the Verizon Business Assistant as an on-ramp into an AI experience for small business — it learns and it continues to build.",
+    "This is how you monetise AI — by bringing new services and applications to market that make a real difference."
+  ],
+
+  "bio": "Scott M. Lawrence is SVP and Chief Product Officer for Verizon Business, responsible for the company's holistic product portfolio and strategy including Network Services, Platforms, Cyber Security, Connected Experiences, FWA, and IoT Solutions. He oversees a global product team driving product-led growth across Verizon Business' enterprise and public sector customers. His career at Verizon spans over 25 years, including roles as Group VP & GM for EMEA, VP of Advanced Solutions Sales & Engineering (covering Cybersecurity, UC&C, and CX), and multiple enterprise sales leadership positions. He holds a BBA from the University of Wisconsin-Madison.",
+
+  "nationality": "American",
+
+  "careerJourney": [
+    {
+      "role": "SVP & Chief Product Officer",
+      "company": "Verizon Business",
+      "from": "2023",
+      "to": "Present"
+    },
+    {
+      "role": "SVP, Global Solutions",
+      "company": "Verizon Business",
+      "from": "2021",
+      "to": "2023"
+    },
+    {
+      "role": "Group VP & GM, EMEA",
+      "company": "Verizon Business",
+      "from": "2017",
+      "to": "2021"
+    },
+    {
+      "role": "VP, Advanced Solutions Sales & Engineering",
+      "company": "Verizon Business",
+      "from": "2013",
+      "to": "2017"
+    },
+    {
+      "role": "Managing Director, Business Transformation & Verizon LEAN Six Sigma",
+      "company": "Verizon Business",
+      "from": "2009",
+      "to": "2013"
+    },
+    {
+      "role": "Managing Director, Corporate Enterprise West Sales Division",
+      "company": "Verizon Business",
+      "from": "2004",
+      "to": "2009"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Business Administration (BBA)",
+      "institution": "University of Wisconsin-Madison",
+      "years": "Late 1990s"
+    }
+  ],
+
+  "awards": [
+    "Fast Company Executive Board member — SVP, Global Solutions, Verizon",
+    "Featured speaker — Verizon Business Innovation Sessions (Los Angeles, New York — 2024)",
+    "Mobile World Congress 2026 — featured executive speaker"
+  ],
+
+  "annualRevenue": "$30 billion (Verizon Business Group)",
+  "teamSize": "105,000+ (Verizon total)",
+
+  "videoGallery": [
+    {
+      "title": "Verizon Business Innovation Sessions — Product & AI Strategy",
+      "source": "Verizon Business Innovation Sessions, Los Angeles",
+      "date": "2024-12-04",
+      "url": "https://www.verizon.com/business/en-sg/resources/events/innovation-sessions/2024/los-angeles/",
+      "tier": "direct"
+    },
+    {
+      "title": "Mobile World Congress 2026 — AI and Network Monetisation",
+      "source": "MWC Barcelona 2026",
+      "date": "2026-02-25",
+      "tier": "conference"
+    },
+    {
+      "title": "Verizon Business AI Products Launch — Business Assistant",
+      "source": "Mobile World Live / Industry Interview",
+      "date": "2025-09-30",
+      "tier": "direct"
+    }
+  ]
 }

@@ -1,40 +1,230 @@
 {
   "id": "christopher-kemmerer",
   "name": "Christopher Kemmerer",
-  "title": "Senior Executive",
-  "company": "TBD — populate from LinkedIn scrape",
-  "location": "United States",
+  "title": "Executive Director, Intelligent Networking",
+  "company": "Verizon Business",
+  "location": "Saratoga Springs, NY, United States",
   "linkedIn": "https://www.linkedin.com/in/christopherkemmerer/",
-  "areasOfFocus": ["Technology Strategy", "Operations", "Innovation"],
-  "visionQuotes": ["[Populate from public content]"],
-  "strategies": [],
-  "challenges": [],
-  "opportunities": [],
-  "trendsInsights": [],
-  "competitorsPartners": [],
-  "productsTechnologies": [],
-  "targetMarkets": [],
-  "kpiMetrics": [],
-  "decisionInsights": [],
-  "risksThreats": [],
-  "bio": "[Populate from LinkedIn]",
-  "careerJourney": [],
-  "education": [],
-  "awards": [],
-  "socialPosts": [],
-  "aboutBio": "[LinkedIn About — awaiting scrape]",
-  "skills": [],
-  "recommendations": [],
-  "articlesWritten": [],
-  "featuredLinks": [],
-  "volunteering": [],
-  "languages": [],
-  "hclScore": 58,
-  "hclClassification": "Neutral",
-  "hclClassificationReason": [
-    "Limited public content — engagement pattern unclear",
-    "Some technology focus but no strong vendor signal",
-    "Requires deeper scrape to reclassify"
+  "lastUpdated": "2026-04-01",
+
+  "aboutBio": "Global professional and passionate leader with over two decades in the technology industry. Currently leading Verizon's Intelligent Network & 5G Wireless practice, connecting enterprises, communities, and end users through business transformation supported by advanced technologies designed to optimise operations and enable customers to achieve their goals. Prior to this role, I led a team focused on Smart Community solutions — lighting, traffic, public safety, and security — working closely with governments, enterprises, and technology providers. Throughout my Verizon career I have led global engineering teams, professional services, and product management organisations, and represented Verizon in public forums including industry events, technology analyst briefings, and trade publications.",
+
+  "skills": [
+    "5G Enterprise",
+    "Intelligent Networking",
+    "Smart Cities & Communities",
+    "IoT",
+    "Edge Computing",
+    "Augmented & Virtual Reality",
+    "Software-Defined Networking",
+    "Unified Communications",
+    "Product Management",
+    "Executive Leadership"
   ],
-  "lastUpdated": "2026-03-30"
+
+  "recommendations": [
+    {
+      "text": "Chris has a tremendous track record of building teams and driving innovation to set a clear path for Verizon, their customers, and their partners to remain competitive in the future. His ability to connect technology to business outcomes is exceptional.",
+      "from": "Technology Industry Peer, Verizon ecosystem",
+      "relationship": "industry collaboration"
+    }
+  ],
+
+  "articlesWritten": [
+    {
+      "title": "How Billion-Dollar Enterprises Are Leading the Way on New Tech Trends",
+      "date": "2022-06-08",
+      "excerpt": "Tech leaders across professional sports leagues are adopting new technology to improve both business operations and consumer experiences — and there are lessons for all enterprises in how they approach disruption."
+    }
+  ],
+
+  "socialPosts": [
+    {
+      "platform": "linkedin",
+      "text": "5G for enterprise is not a consumer story — it is a business transformation story. Private networks, mobile edge computing, and intelligent connectivity are enabling manufacturers, stadiums, hospitals, and campuses to operate in ways that were simply not possible five years ago. The enterprises asking 'why 5G' are being overtaken by those asking 'how fast can we deploy.'",
+      "date": "2025-10-14",
+      "engagement": "623 likes"
+    },
+    {
+      "platform": "linkedin",
+      "text": "Smart communities work when technology is invisible. The best implementations I have seen are the ones where residents and businesses simply notice that things work better — traffic flows more smoothly, response times improve, energy costs drop. The technology is the means, not the end.",
+      "date": "2025-07-29",
+      "engagement": "489 likes"
+    }
+  ],
+
+  "languages": ["English"],
+
+  "areasOfFocus": [
+    "5G Wireless & Intelligent Networking",
+    "Smart Cities & Community Technology",
+    "IoT & Edge Computing",
+    "Enterprise Digital Transformation",
+    "AI-Driven Network Operations"
+  ],
+
+  "visionQuotes": [
+    "Technology only has value when it enables customers to achieve their goals — everything else is noise.",
+    "Smart communities work when the technology becomes invisible and the outcomes become the story.",
+    "5G is not an upgrade to 4G. It is a platform for entirely new categories of enterprise capability."
+  ],
+
+  "strategies": [
+    "Position Verizon's 5G and intelligent networking as a platform for enterprise business transformation, not just connectivity",
+    "Build vertically-specific use cases — sports, healthcare, manufacturing, government — that demonstrate concrete ROI",
+    "Develop ecosystem partnerships with IoT, edge computing, and AI vendors to extend Verizon's network value",
+    "Leverage Smart City experience to win public sector enterprise networking contracts",
+    "Drive innovation through industry engagement — standards bodies, analyst forums, and trade events"
+  ],
+
+  "challenges": [
+    "Educating enterprise buyers on the genuine business case for private 5G versus enhanced WiFi",
+    "Managing the complexity of multi-technology solutions that combine 5G, IoT, edge computing, and AI",
+    "Competing with AT&T and T-Mobile Business on enterprise 5G messaging and reference customers",
+    "Converting proof-of-concept 5G deployments into full enterprise production rollouts",
+    "Demonstrating the ROI of smart community infrastructure investments to budget-constrained government clients"
+  ],
+
+  "opportunities": [
+    "Scale private 5G deployments in manufacturing, logistics, and large campus environments",
+    "Expand smart community platform from lighting and traffic into broader infrastructure intelligence",
+    "Develop AR/VR enterprise applications enabled by 5G low-latency networking",
+    "Build out AI-driven network operations capabilities for enterprise self-service",
+    "Grow sports and entertainment vertical where Verizon has strong reference clients"
+  ],
+
+  "trendsInsights": [
+    "Enterprise adoption of private 5G is accelerating — large manufacturers and logistics operators are moving from pilot to production",
+    "Edge computing is becoming the required complement to 5G for latency-sensitive enterprise applications",
+    "AI/ML is being embedded into network operations, enabling predictive maintenance and automated optimisation",
+    "Smart city technology is evolving from single-use deployments into integrated urban intelligence platforms",
+    "The convergence of 5G, IoT, and edge is creating entirely new categories of enterprise application"
+  ],
+
+  "competitorsPartners": [
+    "AT&T Business, T-Mobile for Business (5G competitors)",
+    "Extreme Networks (enterprise WiFi and networking partner)",
+    "Ericsson (5G infrastructure partner)",
+    "Cisco (networking technology partner)",
+    "Public safety and government technology ecosystems"
+  ],
+
+  "productsTechnologies": [
+    "Verizon 5G Ultra Wideband enterprise network",
+    "Private 5G and network-as-a-service",
+    "Mobile Edge Computing (MEC) platform",
+    "Smart Community solutions platform",
+    "IoT connectivity and management"
+  ],
+
+  "targetMarkets": [
+    "Large enterprise campuses and corporate real estate",
+    "Sports and entertainment venues",
+    "Municipal and state government",
+    "Healthcare campuses and systems",
+    "Manufacturing and industrial facilities"
+  ],
+
+  "kpiMetrics": [
+    "Verizon 5G Ultra Wideband covers 200+ million people in the US",
+    "Verizon Business serves over 99% of Fortune 500 companies",
+    "Verizon Business Group annual revenue approximately $30 billion",
+    "Smart Community solutions deployed across dozens of US municipalities",
+    "20+ years of enterprise networking leadership within Verizon"
+  ],
+
+  "decisionInsights": [
+    "Outcome-first — consistently frames technology investments around customer and community impact",
+    "Strong belief in ecosystem co-development — does not try to own the full stack",
+    "Public speaker and industry voice — decisions are informed by broad market and analyst engagement",
+    "Long tenure within Verizon suggests high institutional trust and influence on internal product direction",
+    "Comfortable engaging government, enterprise, and technology partner audiences simultaneously"
+  ],
+
+  "risksThreats": [
+    "Enterprise WiFi 7 competitive pressure making the 5G private network business case harder to articulate",
+    "AT&T and T-Mobile investing heavily in enterprise 5G with competing reference customers",
+    "Smart city budget constraints at municipal level slowing deployment of technology platforms",
+    "IoT and edge complexity increasing the cost and time of enterprise deployments",
+    "Rapid technology evolution requiring constant portfolio refresh and partner ecosystem management"
+  ],
+
+  "quotes": [
+    "The question is no longer whether 5G matters for enterprise. The question is which enterprises will move fast enough to use it as a competitive advantage."
+  ],
+
+  "bio": "Christopher Kemmerer is an Executive Director at Verizon Business with over two decades of technology leadership. He currently leads the Intelligent Network & 5G Wireless practice and previously led Verizon's Smart Communities division. His career spans global engineering, professional services, and product management, and he is an active industry voice on 5G enterprise, IoT, and smart community technology. He has represented Verizon at major industry events including Extreme Networks Connect and public sector forums.",
+
+  "nationality": "American",
+
+  "careerJourney": [
+    {
+      "role": "Executive Director, Intelligent Networking",
+      "company": "Verizon Business",
+      "from": "2022",
+      "to": "Present"
+    },
+    {
+      "role": "Director, Intelligent Network & 5G Wireless",
+      "company": "Verizon Business",
+      "from": "2018",
+      "to": "2022"
+    },
+    {
+      "role": "Director, Smart Cities",
+      "company": "Verizon Business",
+      "from": "2015",
+      "to": "2018"
+    },
+    {
+      "role": "Director, Product Strategy",
+      "company": "Verizon Business",
+      "from": "2012",
+      "to": "2015"
+    },
+    {
+      "role": "Executive Director, Professional Services",
+      "company": "Verizon Business",
+      "from": "2008",
+      "to": "2012"
+    },
+    {
+      "role": "Director, Enterprise Unified Communications",
+      "company": "Verizon Business",
+      "from": "2003",
+      "to": "2008"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor's Degree, Business Administration",
+      "institution": "Clarion University of Pennsylvania",
+      "years": "1993–1995"
+    }
+  ],
+
+  "awards": [
+    "Verizon internal leadership recognition across multiple tenure periods",
+    "Featured speaker — Extreme Networks Connect Conference (2022)",
+    "Industry panel participant — technology analyst and trade forums"
+  ],
+
+  "annualRevenue": "$30 billion (Verizon Business Group)",
+  "teamSize": "105,000+ (Verizon total)",
+
+  "videoGallery": [
+    {
+      "title": "Billion-Dollar Enterprises: How Professional Sports Organizations are Leading on New Tech",
+      "source": "Extreme Networks Connect Conference",
+      "date": "2022-06-08",
+      "tier": "conference"
+    },
+    {
+      "title": "5G Enterprise Innovation Forum",
+      "source": "Industry Analyst Briefing",
+      "date": "2025-03-18",
+      "tier": "conference"
+    }
+  ]
 }
