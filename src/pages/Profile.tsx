@@ -81,8 +81,27 @@ function AboutBioBlock({ text }: { text: string }) {
 export default function Profile() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const exec = getExecutiveById(id ?? "");
-  const profile = getParameterProfileById(id ?? "");
+  const [exec, setExec] = useState<Executive | null>(null);
+  const [profile, setProfile] = useState<HCLParameterProfile | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const [e, p] = await Promise.all([
+          getExecutive(id ?? ""),
+          getHCLProfile(id ?? ""),
+        ]);
+        setExec(e ?? null);
+        setProfile(p ?? null);
+      } catch (err) {
+        console.error("Failed to load profile:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, [id]);
 
   const SERVICE_LINES = [
     'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
