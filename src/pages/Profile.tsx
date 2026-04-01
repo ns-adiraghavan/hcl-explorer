@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
+import { generateProfilePdf } from "@/utils/generateProfilePdf";
 import { getExecutive, getHCLProfile } from "@/services/api";
 import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
@@ -149,9 +150,17 @@ export default function Profile() {
   return (
     <div className="p-6 md:p-10 max-w-5xl">
       {/* Back nav */}
-      <button onClick={() => navigate("/")} className="font-mono text-[11px] text-[var(--accent)] flex items-center gap-1 mb-8 hover:underline">
-        <ArrowLeft className="w-3.5 h-3.5" /> All Targets
-      </button>
+      <div className="flex items-center justify-between mb-8">
+        <button onClick={() => navigate("/")} className="font-mono text-[11px] text-[var(--accent)] flex items-center gap-1 hover:underline">
+          <ArrowLeft className="w-3.5 h-3.5" /> All Targets
+        </button>
+        <button
+          onClick={() => generateProfilePdf(exec, profile)}
+          className="font-mono text-[11px] border border-[var(--border)] rounded-sm px-3 py-1.5 flex items-center gap-1.5 hover:bg-[var(--card-bg)] transition-colors"
+        >
+          <Download className="w-3.5 h-3.5" /> Download PDF
+        </button>
+      </div>
 
       {/* ─── SECTION 1: IDENTITY HEADER ─── */}
       <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
