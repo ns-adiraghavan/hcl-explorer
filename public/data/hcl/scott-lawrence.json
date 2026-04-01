@@ -1,50 +1,67 @@
 {
   "executiveId": "scott-lawrence",
+
   "publicPersona": {
     "signalLevel": "STRONG",
-    "summary": "Digital and CX leadership background. Role directly maps to HCL CX and cloud service lines.",
-    "derivedSignal": "Digital → AI / CX / Cloud opportunity"
+    "summary": "SVP and Chief Product Officer at Verizon Business, responsible for the full product portfolio including Cybersecurity, Connected Experiences, AI products, and IoT. C-suite product leader with 25+ years at Verizon and broad market visibility.",
+    "derivedSignal": "CPO-level with AI, CX, and Security portfolio → Strategic partnership opportunity across HCL's core service lines"
   },
+
   "psychographicMindset": {
     "signalLevel": "STRONG",
-    "summary": "Innovation-first language. Actively advocates for technology-led transformation.",
-    "derivedSignal": "Innovation focus → Pro / Convertible"
+    "summary": "Simplicity-oriented, signal-driven, AI-pragmatic. Posts reflect a genuine conviction that AI commercialisation happens through real products, not roadmaps. Fast mover who believes in moving before press releases signal the trend.",
+    "derivedSignal": "AI-pragmatic, fast-mover mindset → HCL AI practice and co-innovation model will resonate strongly"
   },
+
   "digitalActivity": {
     "signalLevel": "STRONG",
-    "summary": "High LinkedIn activity. Original posts on CX, AI, and digital strategy.",
-    "derivedSignal": "Active thought leader → High-value target"
+    "summary": "Very high LinkedIn activity generating 3,000–5,000 likes per post. Active speaker at MWC 2026, Verizon Innovation Sessions, and industry AI forums. Highest digital profile in the tracked set.",
+    "derivedSignal": "Highest digital visibility in tracked set → Highest-value engagement target, outreach referencing specific posts essential"
   },
+
   "topicAffinity": {
     "signalLevel": "STRONG",
-    "summary": "Posts and engages heavily with CX, cloud, and AI topics — all core HCL service areas.",
-    "derivedSignal": "Direct match → Immediate opportunity"
+    "summary": "Posting on generative AI, AI product commercialisation, cybersecurity, CX, IoT, and product-led growth — the most comprehensive overlap with HCL service lines of any profile in this set. Topic alignment is exceptional.",
+    "derivedSignal": "Broadest and deepest topic overlap in tracked set → Immediate multi-line strategic opportunity"
   },
+
   "painPointIndicators": {
-    "signalLevel": "MODERATE",
-    "summary": "Engages with scalability and CX efficiency challenges.",
-    "derivedSignal": "Scalability → Cloud / AI transformation"
+    "signalLevel": "STRONG",
+    "summary": "Key challenges include moving fast enough on AI product development, competing with hyperscalers, defending premium positioning, and managing portfolio breadth. HCL's AI engineering, managed services, and co-development capabilities address each.",
+    "derivedSignal": "AI speed and portfolio complexity → HCL AI engineering and product co-development is directly addressable"
   },
+
   "ecosystemVendorExposure": {
-    "signalLevel": "MODERATE",
-    "summary": "Multi-vendor engagement. No strong competitor lock-in identified.",
-    "derivedSignal": "Multi-vendor → Entry opportunity"
+    "signalLevel": "STRONG",
+    "summary": "Works with Microsoft, Google, AWS, Palo Alto, and Genesys as platform partners. Also has board-level involvement with Nscale (AI infrastructure). No dominant HCL competitor in managed services or AI engineering layer.",
+    "derivedSignal": "Multi-hyperscaler environment, no incumbent competitor → Strategic AI co-development and managed services opportunity"
   },
+
   "eventPresence": {
     "signalLevel": "STRONG",
-    "summary": "Speaker or participant at CX and technology conferences.",
-    "derivedSignal": "Speaker → High-value, Pro/Convertible"
+    "summary": "Featured speaker at MWC Barcelona 2026, Verizon Business Innovation Sessions, and Mobile World Live. Highest conference visibility of all five tracked profiles.",
+    "derivedSignal": "Top-tier conference speaker → Engage via MWC follow-up or Verizon Innovation Sessions ecosystem"
   },
+
   "contentInteraction": {
     "signalLevel": "STRONG",
-    "summary": "Deep engagement with HCL-adjacent content. Comments on AI and CX transformation posts.",
-    "derivedSignal": "Deep HCL-adjacent engagement → Strong Pro signal"
+    "summary": "Posts consistently generate 3,000–5,000 likes and attract C-suite level responses. Content is original, analytical, and market-leading — not corporate communications output.",
+    "derivedSignal": "C-suite peer engagement at scale → Approach as a strategic peer with market intelligence, not a vendor with a pitch"
   },
+
   "opportunityAreas": [
-    { "area": "CX / AI", "type": "Strategic", "confidenceScore": 85 },
-    { "area": "Cloud Transformation", "type": "Strategic", "confidenceScore": 78 },
-    { "area": "Digital Strategy", "type": "Tactical", "confidenceScore": 72 }
+    { "area": "AI & Analytics", "type": "Strategic", "confidenceScore": 91 },
+    { "area": "CX / AI", "type": "Strategic", "confidenceScore": 88 },
+    { "area": "Cybersecurity", "type": "Strategic", "confidenceScore": 82 },
+    { "area": "Managed Services", "type": "Tactical", "confidenceScore": 71 }
   ],
+
   "overallClassification": "Pro",
-  "dealInterestScore": 81
+  "dealInterestScore": 91,
+
+  "hclClassificationReason": [
+    "Broadest and deepest topic overlap in the tracked set — AI, CX, Security, and product strategy all map to HCL core capabilities",
+    "AI-pragmatic CPO actively commercialising generative AI products — HCL's AI engineering practice is a direct fit",
+    "Highest-profile conference speaker in tracked set — warmest engagement pathway via MWC or industry AI forums"
+  ]
 }

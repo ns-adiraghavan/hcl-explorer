@@ -1,49 +1,66 @@
 {
   "executiveId": "chris-davison",
+
   "publicPersona": {
     "signalLevel": "MODERATE",
-    "summary": "Security and compliance background. Role maps to HCL security / risk service lines.",
-    "derivedSignal": "Risk role → Security / Compliance opportunity"
+    "summary": "Executive Leader at Verizon with 28 years of experience across Business Transformation, Vendor Management, and Consumer/Government Operations. Recently transitioned out of Verizon — current role to confirm via scrape. Strategic, operational, and transformation-focused background.",
+    "derivedSignal": "Business transformation and operations leadership → Transformation consulting and managed services opportunity"
   },
+
   "psychographicMindset": {
-    "signalLevel": "WEAK",
-    "summary": "Limited public content. Risk-averse framing where visible.",
-    "derivedSignal": "Risk-averse tone → Slower conversion / Neutral"
+    "signalLevel": "STRONG",
+    "summary": "Public posts reflect a values-driven, people-first leadership philosophy with a strong emphasis on readiness, resilience, and organisational culture. Thoughtful and introspective in communication — not a fast-mover, but a considered and credible leader.",
+    "derivedSignal": "Values-led, readiness-oriented mindset → Lead with cultural alignment and long-term transformation narrative"
   },
+
   "digitalActivity": {
-    "signalLevel": "WEAK",
-    "summary": "Low LinkedIn activity. Primarily passive.",
-    "derivedSignal": "Passive consumer → Neutral"
+    "signalLevel": "MODERATE",
+    "summary": "Regular LinkedIn posts generating 1,000–3,000 likes on leadership, transformation, and readiness themes. High engagement relative to posting frequency — content resonates strongly with a professional audience.",
+    "derivedSignal": "High-resonance content, moderate frequency → Engage via content reference and leadership community overlap"
   },
+
   "topicAffinity": {
     "signalLevel": "MODERATE",
-    "summary": "Security and compliance topics — adjacent to HCL but not primary growth area.",
-    "derivedSignal": "Adjacent topics → Moderate opportunity"
+    "summary": "Business transformation, vendor management, and operational excellence topics — adjacent to HCL's consulting and managed services capabilities. Less direct overlap with technology-specific HCL service lines.",
+    "derivedSignal": "Transformation and operations topics → HCL consulting, change management, and transformation advisory opportunity"
   },
+
   "painPointIndicators": {
     "signalLevel": "MODERATE",
-    "summary": "Compliance and regulatory complexity implied by role context.",
-    "derivedSignal": "Compliance concerns → Security / managed risk opportunity"
+    "summary": "Key themes around organisational readiness, managing complexity in large corporations, and vendor ecosystem rationalisation — all areas where HCL's transformation advisory and managed services capabilities are relevant.",
+    "derivedSignal": "Organisational complexity and vendor rationalisation → HCL transformation and managed services entry point"
   },
+
   "ecosystemVendorExposure": {
     "signalLevel": "WEAK",
-    "summary": "No strong vendor engagement visible.",
-    "derivedSignal": "No engagement → Greenfield"
+    "summary": "Limited public vendor signal given Verizon transition. Career focus on internal operations and vendor management suggests experience evaluating large enterprise vendors — will apply rigorous scrutiny to HCL.",
+    "derivedSignal": "Vendor management background → Expect rigorous due diligence, prepare strong reference and outcome evidence"
   },
+
   "eventPresence": {
     "signalLevel": "WEAK",
-    "summary": "No conference participation visible publicly.",
-    "derivedSignal": "No presence → Low engagement"
+    "summary": "Limited public conference presence visible. Engagement is primarily through LinkedIn content rather than industry event participation. Lower external visibility than other profiles in the set.",
+    "derivedSignal": "Low event presence → Engage via LinkedIn content engagement or peer network introduction"
   },
+
   "contentInteraction": {
-    "signalLevel": "WEAK",
-    "summary": "Minimal content interaction visible.",
-    "derivedSignal": "Weak signal → Deprioritize or nurture slowly"
+    "signalLevel": "MODERATE",
+    "summary": "Posts on readiness, leadership, and transformation generate strong engagement from a professional audience. Content is personal and reflective — indicating genuine thought leadership rather than corporate positioning.",
+    "derivedSignal": "Personal, values-driven content → Outreach acknowledging leadership perspective will differentiate HCL"
   },
+
   "opportunityAreas": [
-    { "area": "Security / Compliance", "type": "Tactical", "confidenceScore": 52 },
-    { "area": "Managed Risk Services", "type": "Emerging", "confidenceScore": 38 }
+    { "area": "Managed Services", "type": "Tactical", "confidenceScore": 58 },
+    { "area": "Digital Transformation Advisory", "type": "Strategic", "confidenceScore": 62 },
+    { "area": "Vendor Management Optimisation", "type": "Emerging", "confidenceScore": 49 }
   ],
+
   "overallClassification": "Neutral",
-  "dealInterestScore": 44
+  "dealInterestScore": 54,
+
+  "hclClassificationReason": [
+    "Business transformation and vendor management background is adjacent to HCL's consulting and managed services capabilities",
+    "Current role unclear following Verizon transition — classification may upgrade significantly with fresh data post-scrape",
+    "Values-led, readiness-oriented mindset requires a long-term relationship approach rather than transactional outreach"
+  ]
 }

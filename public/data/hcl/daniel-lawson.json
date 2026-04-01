@@ -1,50 +1,67 @@
 {
   "executiveId": "daniel-lawson",
+
   "publicPersona": {
-    "signalLevel": "MODERATE",
-    "summary": "Operations and infrastructure background. Career signals cost optimization and efficiency focus.",
-    "derivedSignal": "Infra → Cost / Managed services opportunity"
+    "signalLevel": "STRONG",
+    "summary": "SVP of Global Solutions at Verizon Business Group, leading Security, CX, UC&C, and complex deal practices across Global Enterprise and Public Sector. One of the most senior and publicly visible executives in this tracked set — high influence and high reach.",
+    "derivedSignal": "SVP-level, Security and CX portfolio owner → Cybersecurity, CX, and managed services strategic opportunity"
   },
+
   "psychographicMindset": {
-    "signalLevel": "MODERATE",
-    "summary": "Efficiency and results-oriented language. Pragmatic rather than visionary in public tone.",
-    "derivedSignal": "Efficiency mindset → Cost optimization opportunity"
+    "signalLevel": "STRONG",
+    "summary": "Posts reflect a relationship-first, outcome-oriented leadership philosophy grounded in 20+ years of enterprise customer engagement. Comfortable with complexity and long sales cycles — the opposite of a transactional buyer.",
+    "derivedSignal": "Relationship and outcome orientation → HCL's long-term managed services partnership model is a fit"
   },
+
   "digitalActivity": {
-    "signalLevel": "MODERATE",
-    "summary": "Moderate LinkedIn presence. Regular but not high-frequency posting.",
-    "derivedSignal": "Moderate activity → Nurture candidate"
+    "signalLevel": "STRONG",
+    "summary": "High LinkedIn activity generating 700–1,200 likes per post. Active speaker at major industry events including NAB Show and Devoncroft Executive Summit. One of the most digitally active profiles in this tracked set.",
+    "derivedSignal": "High-visibility thought leader → Reference specific content and events in outreach for warm, personalised engagement"
   },
+
   "topicAffinity": {
-    "signalLevel": "MODERATE",
-    "summary": "Infrastructure and cloud content engagement. Some overlap with HCL managed services.",
-    "derivedSignal": "Adjacent topics → Moderate opportunity"
+    "signalLevel": "STRONG",
+    "summary": "Portfolio responsibility covers Cybersecurity, CX/Contact Centre, UC&C, and complex enterprise deals — all directly mapped to HCL service lines. Topic alignment is among the highest in the five-profile set.",
+    "derivedSignal": "Direct portfolio match across Security, CX, and managed services → Immediate and strategic multi-line opportunity"
   },
+
   "painPointIndicators": {
     "signalLevel": "STRONG",
-    "summary": "Explicit engagement with content about legacy systems and managed cost reduction.",
-    "derivedSignal": "Legacy issues → Modernization / managed services"
+    "summary": "Key challenges include competing with pure-play security and CX specialists, converting enterprise customers from point-product to platform buying, and maintaining growth against AT&T. HCL's integrated managed services and AI capabilities address each.",
+    "derivedSignal": "Platform consolidation and competitive pressure → HCL integrated managed services and AI differentiation"
   },
+
   "ecosystemVendorExposure": {
-    "signalLevel": "MODERATE",
-    "summary": "Multi-vendor environment implied. No strong single-vendor lock-in.",
-    "derivedSignal": "Multi-vendor → Entry opportunity"
+    "signalLevel": "STRONG",
+    "summary": "Works with Palo Alto Networks, CrowdStrike, Cisco, Genesys, and AWS across portfolio. No dominant HCL competitor in the Cybersecurity or CX managed services layer. Multi-vendor ecosystem suggests strategic partnership openness.",
+    "derivedSignal": "No incumbent competitor in managed security or CX → High-confidence displacement and expansion opportunity"
   },
+
   "eventPresence": {
-    "signalLevel": "WEAK",
-    "summary": "Limited public conference participation visible.",
-    "derivedSignal": "Low presence → Indirect engagement preferred"
+    "signalLevel": "STRONG",
+    "summary": "Opening keynote speaker at Devoncroft Executive Summit (NAB Show 2025), speaker at Global NaaS and Connected America. High-profile industry presence — warmest engagement pathway in the tracked set.",
+    "derivedSignal": "Keynote speaker at major events → Highest-value engagement target, approach via event follow-up or peer introduction"
   },
+
   "contentInteraction": {
-    "signalLevel": "MODERATE",
-    "summary": "Engages with operational efficiency and technology content.",
-    "derivedSignal": "Moderate engagement → Neutral / Convertible"
+    "signalLevel": "STRONG",
+    "summary": "Posts generate high engagement and attract peer-level responses from enterprise technology leaders. Content is substantive and reflects genuine market intelligence — not corporate messaging.",
+    "derivedSignal": "Peer-level, high-engagement content → Engage as a strategic peer, not a vendor, for highest resonance"
   },
+
   "opportunityAreas": [
-    { "area": "Managed Services", "type": "Strategic", "confidenceScore": 62 },
-    { "area": "Infrastructure / Cloud", "type": "Tactical", "confidenceScore": 58 },
-    { "area": "Cost Optimization", "type": "Strategic", "confidenceScore": 70 }
+    { "area": "Cybersecurity", "type": "Strategic", "confidenceScore": 84 },
+    { "area": "CX / AI", "type": "Strategic", "confidenceScore": 81 },
+    { "area": "Managed Services", "type": "Strategic", "confidenceScore": 79 },
+    { "area": "AI & Analytics", "type": "Emerging", "confidenceScore": 66 }
   ],
-  "overallClassification": "Neutral",
-  "dealInterestScore": 65
+
+  "overallClassification": "Pro",
+  "dealInterestScore": 83,
+
+  "hclClassificationReason": [
+    "Portfolio covers Cybersecurity, CX, and complex managed deals — direct match across multiple HCL service lines",
+    "High-visibility keynote speaker at NAB and Devoncroft — warmest engagement pathway in the five-profile set",
+    "No dominant HCL competitor in managed security or CX layer — high-confidence strategic opportunity"
+  ]
 }
