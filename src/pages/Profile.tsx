@@ -383,7 +383,7 @@ export default function Profile() {
       {(exec.careerJourney?.length ?? 0) > 0 ? (
         <div className="relative pl-6 mb-10">
           <div className="absolute left-2 top-1 bottom-1 w-px bg-[var(--border)]" />
-          {exec.careerJourney.map((c, i) => (
+          {(exec.careerJourney ?? []).map((c, i) => (
             <div key={i} className="relative mb-5 last:mb-0">
               <div className="absolute -left-[16px] top-1.5 w-2 h-2 rounded-full bg-[var(--accent)]" />
               <p className="text-sm font-medium">{c.role}</p>
