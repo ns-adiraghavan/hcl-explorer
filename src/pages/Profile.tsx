@@ -268,7 +268,7 @@ export default function Profile() {
           return (
             <div
               key={key}
-              className={`border border-[var(--border)] rounded-sm p-5 ${signalBorderClass(param.signalLevel)}`}
+              className={`border border-[var(--border)] rounded-sm p-6 ${signalBorderClass(param.signalLevel)}`}
               style={signalGradientStyle(param.signalLevel)}
             >
               <div className="flex items-center justify-between mb-2">
