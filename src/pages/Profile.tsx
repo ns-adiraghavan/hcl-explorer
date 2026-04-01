@@ -193,7 +193,7 @@ export default function Profile() {
           </p>
           <DealGauge score={fitScore} classification={exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'} label={`FIT: ${selectedLine.toUpperCase()}`} />
           <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
-            Showing fit score for {selectedLine} · Base score: {exec.hclScore}
+            Showing fit score for {selectedLine} · Base score: {exec.hclScore ?? profile?.dealInterestScore ?? 0}
           </p>
         </div>
       </div>
