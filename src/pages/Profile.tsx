@@ -285,7 +285,7 @@ export default function Profile() {
         {/* Vision quotes */}
         <div>
           <p className="text-sm mb-3">Vision & Philosophy</p>
-          {exec.visionQuotes.length > 0 ? (
+          {(exec.visionQuotes?.length ?? 0) > 0 ? (
             <div className="space-y-5">
               {exec.visionQuotes.map((q, i) => (
                 <blockquote key={i} className="relative pl-6 font-display italic text-base border-l-2 border-[var(--accent)]">
