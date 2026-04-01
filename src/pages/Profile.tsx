@@ -268,7 +268,7 @@ export default function Profile() {
           return (
             <div
               key={key}
-              className={`border border-[var(--border)] rounded-sm p-5 ${signalBorderClass(param.signalLevel)}`}
+              className={`border border-[var(--border)] rounded-sm p-6 ${signalBorderClass(param.signalLevel)}`}
               style={signalGradientStyle(param.signalLevel)}
             >
               <div className="flex items-center justify-between mb-2">
@@ -277,7 +277,7 @@ export default function Profile() {
                   {param.signalLevel}
                 </span>
               </div>
-              <p className="text-[12px] text-[var(--neutral)] leading-relaxed mb-3 line-clamp-2">{param.summary}</p>
+              <p className="text-[12px] text-[var(--neutral)] leading-relaxed mb-3">{param.summary}</p>
               <span className="font-mono text-[10px] bg-[var(--accent-light)] text-[var(--accent)] px-2 py-0.5 rounded-sm">
                 {param.derivedSignal}
               </span>
