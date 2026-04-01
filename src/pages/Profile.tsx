@@ -304,7 +304,7 @@ export default function Profile() {
         {/* Challenges */}
         <div>
           <p className="text-sm mb-3">Challenges</p>
-          {exec.challenges.length > 0 ? (
+          {(exec.challenges?.length ?? 0) > 0 ? (
             <ul className="space-y-2">
               {exec.challenges.map((c, i) => (
                 <li key={i} className="flex items-start gap-2 text-[13px]">
