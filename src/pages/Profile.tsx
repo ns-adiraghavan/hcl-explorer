@@ -123,7 +123,7 @@ export default function Profile() {
   const [selectedLine, setSelectedLine] = useState(defaultLine);
 
   const fitScore = useMemo(() => {
-    if (!profile) return exec?.hclScore ?? 0;
+    if (!profile) return (exec as any)?.hclScore ?? 0;
     return getServiceLineScore(profile, selectedLine);
   }, [profile, selectedLine, exec]);
 
@@ -162,9 +162,9 @@ export default function Profile() {
           <p className="text-base text-[var(--neutral)] mt-2">
             {exec.title} <span className="text-[var(--accent)]">·</span> <span className="text-[var(--ink)] font-medium">{exec.company}</span> <span className="text-[var(--accent)]">·</span> {exec.location}
           </p>
-          {exec.areasOfFocus.length > 0 && (
+          {(exec.areasOfFocus?.length ?? 0) > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
-              {exec.areasOfFocus.map((a) => (
+              {(exec.areasOfFocus ?? []).map((a) => (
                 <span key={a} className="font-mono text-[11px] border border-[var(--border)] rounded-full px-3 py-1">
                   {a}
                 </span>
@@ -191,9 +191,9 @@ export default function Profile() {
           <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--accent)] mb-2">
             FIT: {selectedLine.toUpperCase()}
           </p>
-          <DealGauge score={fitScore} classification={exec.hclClassification} label={`FIT: ${selectedLine.toUpperCase()}`} />
+          <DealGauge score={fitScore} classification={exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'} label={`FIT: ${selectedLine.toUpperCase()}`} />
           <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[200px]">
-            Showing fit score for {selectedLine} · Base score: {exec.hclScore}
+            Showing fit score for {selectedLine} · Base score: {exec.hclScore ?? profile?.dealInterestScore ?? 0}
           </p>
         </div>
       </div>
@@ -206,11 +206,11 @@ export default function Profile() {
         {/* Classification card */}
         <div className="border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)]">
           <p className="text-sm mb-4">Engagement Classification</p>
-          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${classificationBadge[exec.hclClassification]}`}>
-            {exec.hclClassification}
+          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${classificationBadge[(exec.hclClassification ?? profile?.overallClassification ?? 'Neutral')]}`}>
+            {exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'}
           </span>
           <ul className="space-y-2">
-            {exec.hclClassificationReason.map((r, i) => (
+            {(exec.hclClassificationReason ?? profile?.hclClassificationReason ?? []).map((r, i) => (
               <li key={i} className="text-[13px] text-[var(--neutral)] flex gap-2">
                 <span className="text-[var(--accent)] mt-0.5">•</span> {r}
               </li>
@@ -285,9 +285,9 @@ export default function Profile() {
         {/* Vision quotes */}
         <div>
           <p className="text-sm mb-3">Vision & Philosophy</p>
-          {exec.visionQuotes.length > 0 ? (
+          {(exec.visionQuotes?.length ?? 0) > 0 ? (
             <div className="space-y-5">
-              {exec.visionQuotes.map((q, i) => (
+              {(exec.visionQuotes ?? []).map((q, i) => (
                 <blockquote key={i} className="relative pl-6 font-display italic text-base border-l-2 border-[var(--accent)]">
                   <span className="absolute top-0 left-0 font-display text-[64px] leading-none text-[var(--accent)] opacity-30 pointer-events-none select-none" style={{ fontStyle: 'normal' }}>
                     &#x201C;
@@ -304,9 +304,9 @@ export default function Profile() {
         {/* Challenges */}
         <div>
           <p className="text-sm mb-3">Challenges</p>
-          {exec.challenges.length > 0 ? (
+          {(exec.challenges?.length ?? 0) > 0 ? (
             <ul className="space-y-2">
-              {exec.challenges.map((c, i) => (
+              {(exec.challenges ?? []).map((c, i) => (
                 <li key={i} className="flex items-start gap-2 text-[13px]">
                   <AlertTriangle className="w-3.5 h-3.5 text-[var(--risk)] mt-0.5 shrink-0" />
                   {c}
@@ -325,9 +325,9 @@ export default function Profile() {
       )}
 
       {/* Strategies */}
-      {exec.strategies.length > 0 && (
+      {(exec.strategies?.length ?? 0) > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {exec.strategies.map((s, i) => (
+          {(exec.strategies ?? []).map((s, i) => (
             <div key={i} className="border border-[var(--border)] rounded-sm p-4 bg-[var(--card-bg)]">
               <span className="font-mono text-[10px] text-[var(--neutral)]">{String(i + 1).padStart(2, "0")}</span>
               <p className="text-[13px] mt-1">{s}</p>
@@ -380,10 +380,10 @@ export default function Profile() {
       )}
 
       {/* Career timeline */}
-      {exec.careerJourney.length > 0 ? (
+      {(exec.careerJourney?.length ?? 0) > 0 ? (
         <div className="relative pl-6 mb-10">
           <div className="absolute left-2 top-1 bottom-1 w-px bg-[var(--border)]" />
-          {exec.careerJourney.map((c, i) => (
+          {(exec.careerJourney ?? []).map((c, i) => (
             <div key={i} className="relative mb-5 last:mb-0">
               <div className="absolute -left-[16px] top-1.5 w-2 h-2 rounded-full bg-[var(--accent)]" />
               <p className="text-sm font-medium">{c.role}</p>
@@ -399,9 +399,9 @@ export default function Profile() {
 
       {/* ─── SECTION 6: SOCIAL PULSE ─── */}
       <SectionHeader title="Social Pulse" />
-      {exec.socialPosts.length > 0 ? (
+      {(exec.socialPosts?.length ?? 0) > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {exec.socialPosts.map((post, i) => {
+          {(exec.socialPosts ?? []).map((post, i) => {
             const Icon = platformIcon[post.platform] ?? Globe;
             return (
               <div key={i} className="border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)]">
