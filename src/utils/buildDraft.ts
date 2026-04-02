@@ -1,5 +1,34 @@
 import type { Executive } from '@/types/executive';
-import type { HCLParameterProfile } from '@/types/hcl-parameters';
+import type { HCLParameterProfile, ParameterScore } from '@/types/hcl-parameters';
+
+const PARAM_KEYS: (keyof Pick<HCLParameterProfile, 'topicAffinity' | 'digitalActivity' | 'psychographicMindset' | 'publicPersona' | 'painPointIndicators' | 'contentInteraction' | 'eventPresence' | 'ecosystemVendorExposure'>)[] = [
+  'topicAffinity', 'digitalActivity', 'psychographicMindset', 'publicPersona',
+  'painPointIndicators', 'contentInteraction', 'eventPresence', 'ecosystemVendorExposure',
+];
+
+const PARAM_LABELS: Record<string, string> = {
+  topicAffinity: 'Topic Affinity',
+  digitalActivity: 'Digital Activity',
+  psychographicMindset: 'Psychographic & Mindset',
+  publicPersona: 'Public Persona',
+  painPointIndicators: 'Pain Point Indicators',
+  contentInteraction: 'Content Interaction',
+  eventPresence: 'Event & Presence',
+  ecosystemVendorExposure: 'Ecosystem & Vendor Exposure',
+};
+
+const SIGNAL_RANK: Record<string, number> = { STRONG: 3, MODERATE: 2, WEAK: 1 };
+
+export function getTopParameters(
+  profile: HCLParameterProfile,
+  n = 3
+): { key: string; label: string; param: ParameterScore }[] {
+  return PARAM_KEYS
+    .map((key) => ({ key, label: PARAM_LABELS[key], param: profile[key] as ParameterScore }))
+    .filter((p) => p.param)
+    .sort((a, b) => (SIGNAL_RANK[b.param.signalLevel] ?? 0) - (SIGNAL_RANK[a.param.signalLevel] ?? 0))
+    .slice(0, n);
+}
 
 export function getServiceLineScore(profile: HCLParameterProfile, serviceLine: string): number {
   const slLower = serviceLine.toLowerCase();

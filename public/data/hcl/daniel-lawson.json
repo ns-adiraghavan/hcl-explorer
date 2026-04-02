@@ -59,6 +59,11 @@
   "overallClassification": "Pro",
   "dealLikelihood": "Likely",
 
+  "competitorSignals": [
+    "No competitor employment history detected",
+    "Palo Alto and CrowdStrike in portfolio ecosystem — both have managed services relationships with Accenture and Deloitte that HCL competes with"
+  ],
+
   "hclClassificationReason": [
     "Portfolio covers Cybersecurity, CX, and complex managed deals — direct match across multiple HCL service lines",
     "High-visibility keynote speaker at NAB and Devoncroft — warmest engagement pathway in the five-profile set",

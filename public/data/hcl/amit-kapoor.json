@@ -58,6 +58,11 @@
   "overallClassification": "Pro",
   "dealLikelihood": "Likely",
 
+  "competitorSignals": [
+    "No competitor employment history detected",
+    "Cisco and VMware in partner ecosystem — both work with HCL competitors on enterprise networking deals"
+  ],
+
   "hclClassificationReason": [
     "Outcomes-first and partnership-oriented mindset directly aligns with HCL's managed services and co-innovation model",
     "Multi-vendor ecosystem with no dominant competitor creates a natural HCL engagement opportunity",

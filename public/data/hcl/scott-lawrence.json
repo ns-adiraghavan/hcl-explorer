@@ -59,6 +59,11 @@
   "overallClassification": "Pro",
   "dealLikelihood": "Strong",
 
+  "competitorSignals": [
+    "No competitor employment history detected",
+    "Microsoft and Google Cloud in product portfolio — both have preferred SI relationships with Accenture, Cognizant, and Infosys that represent displacement risk"
+  ],
+
   "hclClassificationReason": [
     "Broadest and deepest topic overlap in the tracked set — AI, CX, Security, and product strategy all map to HCL core capabilities",
     "AI-pragmatic CPO actively commercialising generative AI products — HCL's AI engineering practice is a direct fit",

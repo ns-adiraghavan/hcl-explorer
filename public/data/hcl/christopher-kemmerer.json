@@ -58,6 +58,11 @@
   "overallClassification": "Neutral",
   "dealLikelihood": "Possible",
 
+  "competitorSignals": [
+    "No competitor employment history detected",
+    "Cisco in technology partner ecosystem — potential overlap with Accenture and IBM Cisco practices"
+  ],
+
   "hclClassificationReason": [
     "IoT, edge computing, and AI-driven network management topics directly overlap with HCL's digital infrastructure capabilities",
     "Ecosystem-oriented approach and PoC-to-production challenge creates a natural HCL managed deployment entry point",

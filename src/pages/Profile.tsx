@@ -226,12 +226,43 @@ export default function Profile() {
         {/* Classification card */}
         <div className="border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)]">
           <p className="text-sm mb-4">Engagement Classification</p>
-          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${classificationBadge[(exec.hclClassification ?? profile?.overallClassification ?? 'Neutral')]}`}>
+          <span className={`inline-block font-mono text-xs uppercase tracking-wider px-3 py-1 rounded-full ${classificationBadge[(exec.hclClassification ?? profile?.overallClassification ?? 'Neutral')]}`}>
             {exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'}
           </span>
+
+          {/* Classification basis — parameter evidence */}
+          {profile && (() => {
+            const topParams = getTopParameters(profile, 3);
+            return topParams.length > 0 ? (
+              <div className="mt-3">
+                <p style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--neutral)' }}>
+                  Classification basis
+                </p>
+                <div className="space-y-3 mt-2">
+                  {topParams.map(({ key, label, param }) => (
+                    <div key={key}>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[13px]">{label}</span>
+                        <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[param.signalLevel]}`}>
+                          {param.signalLevel}
+                        </span>
+                      </div>
+                      <p className="text-[12px] italic text-[var(--neutral)] ml-2 mt-0.5">{param.derivedSignal}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null;
+          })()}
+
+          {/* Overall assessment */}
+          <div className="h-px bg-[var(--border)] my-4" />
+          <p style={{ fontFamily: '"DM Mono", monospace', fontSize: 8, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--neutral)', marginBottom: 8 }}>
+            Overall assessment
+          </p>
           <ul className="space-y-2">
             {(exec.hclClassificationReason ?? profile?.hclClassificationReason ?? []).map((r, i) => (
-              <li key={i} className="text-[13px] text-[var(--neutral)] flex gap-2">
+              <li key={i} className="text-[12px] text-[var(--neutral)] flex gap-2">
                 <span className="text-[var(--accent)] mt-0.5">•</span> {r}
               </li>
             ))}
