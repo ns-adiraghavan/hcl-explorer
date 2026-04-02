@@ -70,11 +70,6 @@ function bulletList(doc: jsPDF, y: number, items: string[], bulletColor = COLORS
   return y;
 }
 
-function wrappedText(doc: jsPDF, text: string, x: number, y: number, maxW: number, lineH: number): number {
-  const lines = doc.splitTextToSize(text, maxW);
-  doc.text(lines, x, y);
-  return y + lines.length * lineH;
-}
 
 function drawLikelihoodBar(doc: jsPDF, y: number, likelihood: string): number {
   const zones = ['Unlikely', 'Low', 'Possible', 'Likely', 'Strong'];
