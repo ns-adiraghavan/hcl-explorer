@@ -152,7 +152,6 @@ export default function Profile() {
           <ArrowLeft className="w-3.5 h-3.5" /> All Targets
         </button>
         <button
-          onClick={() => generateProfilePdf(exec, profile)}
           className="font-mono text-[11px] border border-[var(--border)] rounded-sm px-3 py-1.5 flex items-center gap-1.5 hover:bg-[var(--card-bg)] transition-colors"
         >
           <Download className="w-3.5 h-3.5" /> Download PDF
