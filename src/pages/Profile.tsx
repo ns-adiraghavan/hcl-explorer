@@ -191,7 +191,7 @@ export default function Profile() {
           )}
         </div>
         {/* Gauge + service line selector */}
-        <div className="shrink-0 w-full md:w-1/2">
+        <div className="shrink-0 w-[280px] flex flex-col justify-center">
           <DealGauge
             likelihood={dealLikelihood}
             serviceLine={selectedLine}
