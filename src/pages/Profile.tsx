@@ -123,10 +123,7 @@ export default function Profile() {
 
   const [selectedLine, setSelectedLine] = useState(defaultLine);
 
-  const fitScore = useMemo(() => {
-    if (!profile) return (exec as any)?.hclScore ?? 0;
-    return getServiceLineScore(profile, selectedLine);
-  }, [profile, selectedLine, exec]);
+  const dealLikelihood = profile?.dealLikelihood ?? 'Possible';
 
   if (loading) {
     return (
