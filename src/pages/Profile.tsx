@@ -8,7 +8,7 @@ import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
 import DealGauge from "@/components/DealGauge";
 import OutreachDraft from "@/components/OutreachDraft";
-import { getServiceLineScore } from "@/utils/buildDraft";
+import { getServiceLineScore, getTopParameters } from "@/utils/buildDraft";
 import BDIntelligence from "@/components/BDIntelligence";
 
 const classificationBadge: Record<string, string> = {
