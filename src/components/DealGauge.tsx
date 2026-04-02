@@ -100,7 +100,7 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
                 height: 12,
                 width: '100%',
                 backgroundColor: z.color,
-                opacity: i === activeIndex ? 1 : 0.18,
+                opacity: i === displayIndex ? 1 : 0.18,
                 borderRadius: 2,
               }}
             />
