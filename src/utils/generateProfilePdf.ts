@@ -102,12 +102,12 @@ export function generateProfilePdf(exec: Executive, profile: HCLParameterProfile
 
   // Classification badge
   const classification = exec.hclClassification ?? profile?.overallClassification ?? "Neutral";
-  const score = exec.hclScore ?? profile?.dealInterestScore ?? 0;
+  const likelihood = profile?.dealLikelihood ?? "Possible";
   y = checkPage(doc, y, 12);
   doc.setFontSize(8);
   const badgeColor = classification === "Pro" ? COLORS.accent : classification === "Anti" ? COLORS.risk : COLORS.neutral;
   doc.setFillColor(...badgeColor);
-  const badgeText = `${classification.toUpperCase()}  ·  Score: ${score}`;
+  const badgeText = `${classification.toUpperCase()}  ·  ${likelihood}`;
   const badgeW = doc.getTextWidth(badgeText) + 8;
   doc.roundedRect(MARGIN, y, badgeW, 5.5, 1.5, 1.5, "F");
   doc.setTextColor(...COLORS.white);

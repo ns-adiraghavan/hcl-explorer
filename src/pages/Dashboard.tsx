@@ -126,13 +126,10 @@ export default function Dashboard() {
               {/* Editorial break */}
               <div className="h-px bg-[var(--border)] mb-5" />
 
-              {/* Deal interest score */}
-              <p className="font-mono text-[52px] leading-none text-[var(--accent)] transition-colors duration-150 group-hover:text-[var(--ink)]">
-                {profile?.dealInterestScore ?? exec.hclScore}<span className="text-[24px] ml-0.5">%</span>
-              </p>
-              <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mt-1 mb-4">
-                Deal Interest
-              </p>
+              {/* Deal likelihood barometer */}
+              <div className="w-[60%]">
+                <DealGauge likelihood={profile?.dealLikelihood ?? 'Possible'} compact />
+              </div>
 
               {/* Opportunity tags */}
               {topOpps.length > 0 && (

@@ -193,16 +193,14 @@ export default function Profile() {
           )}
         </div>
         {/* Gauge + service line selector */}
-        <div className="shrink-0 text-center">
-          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--accent)] mb-2">
-            FIT: {selectedLine.toUpperCase()}
-          </p>
-          <DealGauge score={fitScore} classification={exec.hclClassification ?? profile?.overallClassification ?? 'Neutral'} label={`FIT: ${selectedLine.toUpperCase()}`} />
-          <p className="font-mono text-[10px] text-[var(--neutral)] mt-2 max-w-[240px]">
-            Showing fit score for {selectedLine} · Base: {exec.hclScore ?? profile?.dealInterestScore ?? 0}
-          </p>
+        <div className="shrink-0 w-[280px]">
+          <DealGauge
+            likelihood={dealLikelihood}
+            serviceLine={selectedLine}
+            opportunityAreas={profile?.opportunityAreas}
+          />
           {/* Service line pills */}
-          <div className="flex flex-wrap justify-center gap-1.5 mt-4 max-w-[320px]">
+          <div className="flex flex-wrap justify-center gap-1.5 mt-4">
             {SERVICE_LINES.map((line) => (
               <button
                 key={line}
