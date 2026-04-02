@@ -137,11 +137,11 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
           style={{
             fontFamily: '"DM Mono", monospace',
             fontSize: 11,
-            color: ZONES[activeIndex]?.color,
+            color: ZONES[displayIndex]?.color,
             marginTop: 4,
           }}
         >
-          {likelihood}
+          {ZONES[displayIndex]?.label ?? likelihood}
         </span>
       )}
 
