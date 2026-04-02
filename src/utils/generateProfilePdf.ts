@@ -90,10 +90,14 @@ function drawLikelihoodBar(doc: jsPDF, y: number, likelihood: string): number {
       doc.setFillColor(...color);
       doc.rect(x, y, segW, segH, "F");
     } else {
-      doc.setFillColor(color[0], color[1], color[2]);
-      doc.setGState(new doc.GState({ opacity: 0.18 }));
+      // Blend color toward white for inactive appearance
+      const faded: [number, number, number] = [
+        Math.round(color[0] + (255 - color[0]) * 0.82),
+        Math.round(color[1] + (255 - color[1]) * 0.82),
+        Math.round(color[2] + (255 - color[2]) * 0.82),
+      ];
+      doc.setFillColor(...faded);
       doc.rect(x, y, segW, segH, "F");
-      doc.setGState(new doc.GState({ opacity: 1 }));
     }
   }
 
