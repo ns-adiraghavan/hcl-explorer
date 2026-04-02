@@ -37,6 +37,9 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
       : null;
   const fitIndex = fitLikelihood ? ZONES.findIndex((z) => z.label === fitLikelihood) : -1;
 
+  // When a service line is selected, the bar highlights the fit zone instead
+  const displayIndex = fitIndex >= 0 ? fitIndex : activeIndex;
+
   return (
     <div className="flex flex-col items-center">
       {/* Title — hidden in compact mode */}
