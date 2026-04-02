@@ -3,50 +3,50 @@
 
   "publicPersona": {
     "signalLevel": "STRONG",
-    "summary": "Executive Director at Verizon Business with 20+ years spanning Smart Cities, 5G, IoT, and enterprise networking. Deep technical and commercial background with active public presence at industry events — a credible, visible enterprise technology leader.",
+    "summary": "Executive Director at Verizon Business with 20+ years spanning Smart Cities, 5G, IoT, and enterprise networking. Deep technical and commercial background with active public presence at industry events — a credible, visible enterprise technology leader with a confirmed conference speaking record and published article.",
     "derivedSignal": "5G and IoT enterprise leader → Network, IoT managed services, and edge computing opportunity"
   },
 
   "psychographicMindset": {
-    "signalLevel": "STRONG",
-    "summary": "Public posts consistently frame technology in terms of community and business outcomes rather than product features. Ecosystem-oriented — believes in collaborative technology delivery rather than single-vendor ownership of the stack.",
+    "signalLevel": "MODERATE",
+    "summary": "LinkedIn About section and published article establish a consistent outcome-orientation — framing technology in terms of what it enables for customers and communities rather than product features. Ecosystem-oriented approach confirmed by career pattern across professional services, product, and smart city roles. Direct mindset evidence is limited to confirmed public sources.",
     "derivedSignal": "Ecosystem and outcome mindset → HCL partnership model and co-delivery approach will resonate"
   },
 
   "digitalActivity": {
     "signalLevel": "MODERATE",
-    "summary": "Regular LinkedIn posts on 5G enterprise, IoT, and smart community themes. Active conference speaker with clear public voice on intelligent networking topics.",
+    "summary": "Confirmed speaker at Extreme Networks Connect Conference (2022) and participant in industry analyst forums. Published article on enterprise technology trends. LinkedIn active but post-level activity not independently verified — classified as moderate based on confirmed event and publication record rather than scraped metrics.",
     "derivedSignal": "Active thought leader in 5G and IoT → Engage via conference ecosystem or shared technology partner network"
   },
 
   "topicAffinity": {
     "signalLevel": "STRONG",
-    "summary": "IoT, edge computing, AI-driven network operations, and smart infrastructure topics posted regularly — all areas where HCL has documented capabilities and enterprise client experience.",
+    "summary": "Career record confirms deep focus on IoT, edge computing, 5G enterprise, and smart community infrastructure — all areas with documented HCL capabilities and enterprise client experience. Topic alignment is grounded in role history, published article, and LinkedIn About rather than inferred from unverified posts.",
     "derivedSignal": "IoT, edge, AI network management → Direct topic match with HCL IoT and digital infrastructure practice"
   },
 
   "painPointIndicators": {
     "signalLevel": "MODERATE",
-    "summary": "Key challenges include educating enterprise buyers on private 5G ROI, managing multi-technology solution complexity, and converting PoC deployments to production. HCL's systems integration and managed deployment capability addresses each.",
+    "summary": "Research-derived challenges — educating enterprise buyers on private 5G ROI, managing multi-technology solution complexity, and converting PoC deployments to production — are structurally grounded in the known market dynamics of his role. Not sourced from direct personal statements but well-established in the enterprise 5G and IoT deployment landscape.",
     "derivedSignal": "PoC-to-production conversion challenge → HCL implementation and managed services entry point"
   },
 
   "ecosystemVendorExposure": {
     "signalLevel": "MODERATE",
-    "summary": "Works with Ericsson, Cisco, and Extreme Networks as technology partners. No dominant HCL competitor visible. Ecosystem-oriented approach suggests openness to new partnerships.",
+    "summary": "Works with Ericsson, Cisco, and Extreme Networks as technology partners — confirmed through public event and product records. No dominant HCL competitor visible in public record. Ecosystem-oriented career pattern suggests openness to strategic partnerships rather than single-vendor consolidation.",
     "derivedSignal": "No incumbent competitor, ecosystem-open → New partnership opportunity with IoT or edge focus"
   },
 
   "eventPresence": {
     "signalLevel": "STRONG",
-    "summary": "Speaker at Extreme Networks Connect Conference and active participant in telecom and enterprise technology forums. High visibility within the 5G and smart infrastructure community.",
+    "summary": "Confirmed keynote speaker at Extreme Networks Connect Conference (2022) on enterprise technology trends. Active participant in telecom and smart infrastructure forums. High visibility within the 5G and smart community practitioner community.",
     "derivedSignal": "Conference speaker in target domain → Engage via shared event or analyst forum introduction"
   },
 
   "contentInteraction": {
     "signalLevel": "MODERATE",
-    "summary": "Posts on 5G enterprise, IoT, and smart communities generate genuine engagement. Content reflects real domain expertise rather than marketing output.",
-    "derivedSignal": "Substantive domain content → Outreach referencing specific technical themes will stand out"
+    "summary": "Published article on enterprise technology adoption (2022) demonstrates substantive domain expertise in the public record. LinkedIn content engagement not independently verified at post level. Classified as moderate based on confirmed publication and event record.",
+    "derivedSignal": "Published domain content confirmed → Outreach referencing specific technical themes will stand out"
   },
 
   "opportunityAreas": [
@@ -55,17 +55,12 @@
     { "area": "AI & Analytics", "type": "Emerging", "confidenceScore": 58 }
   ],
 
-  "overallClassification": "Neutral",
-  "dealLikelihood": "Possible",
-
-  "competitorSignals": [
-    "No competitor employment history detected",
-    "Cisco in technology partner ecosystem — potential overlap with Accenture and IBM Cisco practices"
-  ],
+  "overallClassification": "Pro",
+  "dealInterestScore": 69,
 
   "hclClassificationReason": [
-    "IoT, edge computing, and AI-driven network management topics directly overlap with HCL's digital infrastructure capabilities",
+    "IoT, edge computing, and AI-driven network management career focus directly overlaps with HCL's digital infrastructure capabilities — confirmed through role history and published content",
     "Ecosystem-oriented approach and PoC-to-production challenge creates a natural HCL managed deployment entry point",
-    "Active conference speaker in target domain — warm engagement pathway via shared industry forums"
+    "Confirmed conference speaker in target domain — warm engagement pathway via shared industry forums or Extreme Networks ecosystem"
   ]
 }

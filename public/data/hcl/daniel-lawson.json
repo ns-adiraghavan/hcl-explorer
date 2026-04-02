@@ -3,50 +3,50 @@
 
   "publicPersona": {
     "signalLevel": "STRONG",
-    "summary": "SVP of Global Solutions at Verizon Business Group, leading Security, CX, UC&C, and complex deal practices across Global Enterprise and Public Sector. One of the most senior and publicly visible executives in this tracked set — high influence and high reach.",
+    "summary": "SVP of Global Solutions at Verizon Business Group, leading Security, CX, UC&C, and complex deal practices across Global Enterprise and Public Sector. One of the most senior and publicly visible executives in this tracked set — confirmed keynote speaker at major industry events with a clear and consistent external voice.",
     "derivedSignal": "SVP-level, Security and CX portfolio owner → Cybersecurity, CX, and managed services strategic opportunity"
   },
 
   "psychographicMindset": {
     "signalLevel": "STRONG",
-    "summary": "Posts reflect a relationship-first, outcome-oriented leadership philosophy grounded in 20+ years of enterprise customer engagement. Comfortable with complexity and long sales cycles — the opposite of a transactional buyer.",
+    "summary": "Confirmed LinkedIn posts and Devoncroft bio establish a relationship-first, outcome-oriented leadership philosophy grounded in 20+ years of enterprise customer engagement. Posts reflect genuine market intelligence rather than corporate messaging — comfortable with complexity, long sales cycles, and peer-level dialogue.",
     "derivedSignal": "Relationship and outcome orientation → HCL's long-term managed services partnership model is a fit"
   },
 
   "digitalActivity": {
     "signalLevel": "STRONG",
-    "summary": "High LinkedIn activity generating 700–1,200 likes per post. Active speaker at major industry events including NAB Show and Devoncroft Executive Summit. One of the most digitally active profiles in this tracked set.",
-    "derivedSignal": "High-visibility thought leader → Reference specific content and events in outreach for warm, personalised engagement"
+    "summary": "Confirmed LinkedIn activity with posts on media and broadcast connectivity, telecom market dynamics, and enterprise technology — all generating substantial professional engagement. Active speaker at NAB Show and Devoncroft Executive Summit (2025). One of the most publicly active profiles in this tracked set.",
+    "derivedSignal": "High-visibility thought leader → Reference specific confirmed posts and events in outreach for warm, personalised engagement"
   },
 
   "topicAffinity": {
     "signalLevel": "STRONG",
-    "summary": "Portfolio responsibility covers Cybersecurity, CX/Contact Centre, UC&C, and complex enterprise deals — all directly mapped to HCL service lines. Topic alignment is among the highest in the five-profile set.",
+    "summary": "Portfolio responsibility confirmed to cover Cybersecurity, CX/Contact Centre, UC&C, and complex enterprise deals — all directly mapped to HCL service lines. Topic alignment grounded in verified Devoncroft speaker bio and LinkedIn About, not inferred from unverified posts.",
     "derivedSignal": "Direct portfolio match across Security, CX, and managed services → Immediate and strategic multi-line opportunity"
   },
 
   "painPointIndicators": {
     "signalLevel": "STRONG",
-    "summary": "Key challenges include competing with pure-play security and CX specialists, converting enterprise customers from point-product to platform buying, and maintaining growth against AT&T. HCL's integrated managed services and AI capabilities address each.",
+    "summary": "Key challenges — competing with pure-play security and CX specialists, converting enterprise customers from point-product to platform buying, and maintaining growth against AT&T — are structurally grounded in his role and confirmed through public market context. The Devoncroft keynote on scalable infrastructure confirms active engagement with connectivity investment decisions.",
     "derivedSignal": "Platform consolidation and competitive pressure → HCL integrated managed services and AI differentiation"
   },
 
   "ecosystemVendorExposure": {
     "signalLevel": "STRONG",
-    "summary": "Works with Palo Alto Networks, CrowdStrike, Cisco, Genesys, and AWS across portfolio. No dominant HCL competitor in the Cybersecurity or CX managed services layer. Multi-vendor ecosystem suggests strategic partnership openness.",
+    "summary": "Works with Palo Alto Networks, CrowdStrike, Cisco, Genesys, and AWS across portfolio — confirmed through public product and partner records. No dominant HCL competitor identified in the managed security or CX layer. Multi-vendor ecosystem suggests strategic partnership openness.",
     "derivedSignal": "No incumbent competitor in managed security or CX → High-confidence displacement and expansion opportunity"
   },
 
   "eventPresence": {
     "signalLevel": "STRONG",
-    "summary": "Opening keynote speaker at Devoncroft Executive Summit (NAB Show 2025), speaker at Global NaaS and Connected America. High-profile industry presence — warmest engagement pathway in the tracked set.",
+    "summary": "Confirmed opening keynote speaker at 2025 Devoncroft Executive Summit (NAB Show, April 2025). Also confirmed at Global NaaS and Connected America events. Highest-verified conference profile in this tracked set.",
     "derivedSignal": "Keynote speaker at major events → Highest-value engagement target, approach via event follow-up or peer introduction"
   },
 
   "contentInteraction": {
     "signalLevel": "STRONG",
-    "summary": "Posts generate high engagement and attract peer-level responses from enterprise technology leaders. Content is substantive and reflects genuine market intelligence — not corporate messaging.",
-    "derivedSignal": "Peer-level, high-engagement content → Engage as a strategic peer, not a vendor, for highest resonance"
+    "summary": "Confirmed LinkedIn posts on telecom market dynamics, broadcast connectivity, and enterprise technology attract substantive professional engagement. Content reflects genuine market intelligence rather than corporate communications. Engagement volume not independently confirmed at post level but role seniority and confirmed event record support STRONG classification.",
+    "derivedSignal": "Peer-level, high-resonance content → Engage as a strategic peer, not a vendor, for highest resonance"
   },
 
   "opportunityAreas": [
@@ -57,16 +57,11 @@
   ],
 
   "overallClassification": "Pro",
-  "dealLikelihood": "Likely",
-
-  "competitorSignals": [
-    "No competitor employment history detected",
-    "Palo Alto and CrowdStrike in portfolio ecosystem — both have managed services relationships with Accenture and Deloitte that HCL competes with"
-  ],
+  "dealInterestScore": 83,
 
   "hclClassificationReason": [
-    "Portfolio covers Cybersecurity, CX, and complex managed deals — direct match across multiple HCL service lines",
-    "High-visibility keynote speaker at NAB and Devoncroft — warmest engagement pathway in the five-profile set",
-    "No dominant HCL competitor in managed security or CX layer — high-confidence strategic opportunity"
+    "Portfolio covers Cybersecurity, CX, and complex managed deals — confirmed through Devoncroft bio and LinkedIn About, direct match across multiple HCL service lines",
+    "Confirmed opening keynote speaker at NAB and Devoncroft (2025) — warmest and best-evidenced engagement pathway in the five-profile set",
+    "No dominant HCL competitor in managed security or CX layer confirmed in public record — high-confidence strategic opportunity"
   ]
 }

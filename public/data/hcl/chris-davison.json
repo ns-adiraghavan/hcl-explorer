@@ -3,49 +3,49 @@
 
   "publicPersona": {
     "signalLevel": "MODERATE",
-    "summary": "Executive Leader at Verizon with 28 years of experience across Business Transformation, Vendor Management, and Consumer/Government Operations. Recently transitioned out of Verizon — current role to confirm via scrape. Strategic, operational, and transformation-focused background.",
+    "summary": "Executive Leader at Verizon with 28 years of experience across Business Transformation, Vendor Management, and Consumer/Government Operations. Departed Verizon in mid-2024 — current role confirmed as a new opportunity, details not yet public. Strategic, operational, and transformation-focused background with strong internal recognition.",
     "derivedSignal": "Business transformation and operations leadership → Transformation consulting and managed services opportunity"
   },
 
   "psychographicMindset": {
     "signalLevel": "STRONG",
-    "summary": "Public posts reflect a values-driven, people-first leadership philosophy with a strong emphasis on readiness, resilience, and organisational culture. Thoughtful and introspective in communication — not a fast-mover, but a considered and credible leader.",
+    "summary": "Confirmed LinkedIn posts establish a values-driven, people-first leadership philosophy with strong emphasis on readiness, resilience, and organisational culture. The readiness post and exit policy post both reflect considered, introspective thinking — not corporate positioning. Thoughtful communicator who builds credibility through consistency rather than volume.",
     "derivedSignal": "Values-led, readiness-oriented mindset → Lead with cultural alignment and long-term transformation narrative"
   },
 
   "digitalActivity": {
     "signalLevel": "MODERATE",
-    "summary": "Regular LinkedIn posts generating 1,000–3,000 likes on leadership, transformation, and readiness themes. High engagement relative to posting frequency — content resonates strongly with a professional audience.",
+    "summary": "Confirmed LinkedIn posts on leadership, readiness, and organisational culture generate strong professional engagement. Posting frequency is moderate — content is substantive rather than frequent. Engagement volume not independently confirmed at post level.",
     "derivedSignal": "High-resonance content, moderate frequency → Engage via content reference and leadership community overlap"
   },
 
   "topicAffinity": {
     "signalLevel": "MODERATE",
-    "summary": "Business transformation, vendor management, and operational excellence topics — adjacent to HCL's consulting and managed services capabilities. Less direct overlap with technology-specific HCL service lines.",
+    "summary": "Business transformation, vendor management, and operational excellence topics — adjacent to HCL's consulting and managed services capabilities. Less direct overlap with technology-specific HCL service lines than other profiles in this set. Affinity is grounded in his LinkedIn About and confirmed posts.",
     "derivedSignal": "Transformation and operations topics → HCL consulting, change management, and transformation advisory opportunity"
   },
 
   "painPointIndicators": {
     "signalLevel": "MODERATE",
-    "summary": "Key themes around organisational readiness, managing complexity in large corporations, and vendor ecosystem rationalisation — all areas where HCL's transformation advisory and managed services capabilities are relevant.",
+    "summary": "Confirmed themes around organisational readiness, managing complexity in large corporations, and the discipline of exit management signal an executive who thinks systematically about operational risk. These are structural observations from public content — not inferred from role challenges alone.",
     "derivedSignal": "Organisational complexity and vendor rationalisation → HCL transformation and managed services entry point"
   },
 
   "ecosystemVendorExposure": {
     "signalLevel": "WEAK",
-    "summary": "Limited public vendor signal given Verizon transition. Career focus on internal operations and vendor management suggests experience evaluating large enterprise vendors — will apply rigorous scrutiny to HCL.",
+    "summary": "Limited public vendor signal given Verizon transition and operational rather than product-facing role history. Career focus on internal operations and vendor management suggests experience evaluating large enterprise vendors — will apply rigorous scrutiny to HCL. No specific vendor relationships confirmed in public record.",
     "derivedSignal": "Vendor management background → Expect rigorous due diligence, prepare strong reference and outcome evidence"
   },
 
   "eventPresence": {
     "signalLevel": "WEAK",
-    "summary": "Limited public conference presence visible. Engagement is primarily through LinkedIn content rather than industry event participation. Lower external visibility than other profiles in the set.",
+    "summary": "No public conference speaker record found. Engagement is primarily through LinkedIn content rather than industry event participation. Lower external visibility than other profiles in this set — consistent with a deep operational rather than external-facing career.",
     "derivedSignal": "Low event presence → Engage via LinkedIn content engagement or peer network introduction"
   },
 
   "contentInteraction": {
     "signalLevel": "MODERATE",
-    "summary": "Posts on readiness, leadership, and transformation generate strong engagement from a professional audience. Content is personal and reflective — indicating genuine thought leadership rather than corporate positioning.",
+    "summary": "Confirmed posts on readiness, leadership transitions, and organisational culture are personal and reflective — indicating genuine thought leadership rather than corporate positioning. Content quality is high relative to volume, suggesting a considered approach to professional communication.",
     "derivedSignal": "Personal, values-driven content → Outreach acknowledging leadership perspective will differentiate HCL"
   },
 
@@ -56,16 +56,11 @@
   ],
 
   "overallClassification": "Neutral",
-  "dealLikelihood": "Possible",
-
-  "competitorSignals": [
-    "No competitor employment history detected",
-    "Vendor management background — will have evaluated TCS, Infosys, and Cognizant in prior sourcing decisions"
-  ],
+  "dealInterestScore": 54,
 
   "hclClassificationReason": [
     "Business transformation and vendor management background is adjacent to HCL's consulting and managed services capabilities",
-    "Current role unclear following Verizon transition — classification may upgrade significantly with fresh data post-scrape",
-    "Values-led, readiness-oriented mindset requires a long-term relationship approach rather than transactional outreach"
+    "Current role unclear following Verizon transition — classification may upgrade significantly with fresh data once new position is confirmed",
+    "Values-led, readiness-oriented mindset confirmed through LinkedIn content — requires a long-term relationship approach rather than transactional outreach"
   ]
 }
