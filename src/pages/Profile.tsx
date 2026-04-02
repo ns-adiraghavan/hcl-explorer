@@ -215,7 +215,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      </div>
 
       <div className="h-px bg-[var(--border)] mb-10" />
 
