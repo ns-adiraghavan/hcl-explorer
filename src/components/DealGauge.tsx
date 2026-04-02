@@ -113,7 +113,7 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
         <div className="flex w-full" style={{ gap: 2 }}>
           {ZONES.map((z, i) => (
             <div key={z.label} className="flex-1 flex justify-center">
-              {i === activeIndex && (
+              {i === displayIndex && (
                 <span
                   style={{
                     fontFamily: '"DM Mono", monospace',
