@@ -33,10 +33,21 @@ function deriveDecisionTags(insights: string[]): string[] {
 }
 
 // ─── CARD 1: COMPETITIVE EXPOSURE ───
-function CompetitiveExposure({ exec }: { exec: Executive }) {
+function CompetitiveExposure({ exec, profile }: Props) {
   const competitorRoles = exec.careerJourney.filter((c) =>
     HCL_COMPETITORS.some((comp) => c.company.toLowerCase().includes(comp.toLowerCase()))
   );
+
+  // Scan competitorsPartners for ecosystem mentions
+  const ecosystemMentions: { competitor: string; source: string }[] = [];
+  (exec.competitorsPartners ?? []).forEach((cp) => {
+    const cpLower = cp.toLowerCase();
+    HCL_COMPETITORS.forEach((comp) => {
+      if (cpLower.includes(comp.toLowerCase()) && !ecosystemMentions.some((e) => e.competitor === comp)) {
+        ecosystemMentions.push({ competitor: comp, source: cp });
+      }
+    });
+  });
 
   // videoGallery is optional — check if it exists
   const videoGallery = (exec as any).videoGallery as { title?: string; source: string; date: string; tier: string }[] | undefined;
@@ -44,20 +55,28 @@ function CompetitiveExposure({ exec }: { exec: Executive }) {
     (v) => v.tier === 'conference' && HCL_COMPETITORS.some((comp) => v.source.toLowerCase().includes(comp.toLowerCase()))
   );
 
-  const hasData = competitorRoles.length > 0 || conferenceOverlaps.length > 0;
+  const competitorSignals = (profile as any)?.competitorSignals as string[] | undefined;
+
+  const hasData = competitorRoles.length > 0 || conferenceOverlaps.length > 0 || ecosystemMentions.length > 0 || (competitorSignals?.length ?? 0) > 0;
 
   return (
     <CardShell title="Competitive Exposure">
-      {competitorRoles.map((role, i) => (
-        <div key={i} className="mb-3 last:mb-0">
-          <div className="flex items-center gap-2 mb-0.5">
-            <span className="text-[13px]">{role.company}</span>
-            <span className="font-mono text-[9px] bg-[#FFF3CD] text-[#856404] px-2 py-0.5 rounded-full uppercase">Former Employer</span>
-          </div>
-          <p className="font-mono text-[10px] text-[var(--neutral)]">{role.from} – {role.to}</p>
-          <p className="text-[12px] italic text-[var(--neutral)] mt-0.5">Possible incumbent familiarity</p>
-        </div>
-      ))}
+      {/* HIGH CONFIDENCE: Career history */}
+      {competitorRoles.length > 0 && (
+        <>
+          <p style={{ fontFamily: '"DM Mono", monospace', fontSize: 8, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--neutral)', marginBottom: 6 }}>HIGH CONFIDENCE</p>
+          {competitorRoles.map((role, i) => (
+            <div key={i} className="mb-3 last:mb-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-[13px]">{role.company}</span>
+                <span className="font-mono text-[9px] bg-[#FFF3CD] text-[#856404] px-2 py-0.5 rounded-full uppercase">Former Employer</span>
+              </div>
+              <p className="font-mono text-[10px] text-[var(--neutral)]">{role.from} – {role.to}</p>
+              <p className="text-[12px] italic text-[var(--neutral)] mt-0.5">Possible incumbent familiarity</p>
+            </div>
+          ))}
+        </>
+      )}
 
       {conferenceOverlaps.map((evt, i) => (
         <div key={`evt-${i}`} className="mb-3 last:mb-0">
@@ -69,12 +88,45 @@ function CompetitiveExposure({ exec }: { exec: Executive }) {
         </div>
       ))}
 
+      {/* MEDIUM CONFIDENCE: Ecosystem mentions from competitorsPartners */}
+      {ecosystemMentions.length > 0 && (
+        <>
+          {(competitorRoles.length > 0 || conferenceOverlaps.length > 0) && <div className="h-px bg-[var(--border)] my-3" />}
+          <p style={{ fontFamily: '"DM Mono", monospace', fontSize: 8, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--neutral)', marginBottom: 6 }}>MEDIUM CONFIDENCE</p>
+          {ecosystemMentions.map((em, i) => (
+            <div key={`eco-${i}`} className="mb-3 last:mb-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-[13px]">{em.competitor}</span>
+                <span className="font-mono text-[9px] bg-[#E8F0EB] text-[var(--accent)] px-2 py-0.5 rounded-full uppercase">Ecosystem Mention</span>
+              </div>
+              <p className="text-[12px] italic text-[var(--neutral)] mt-0.5">Referenced in executive's ecosystem/vendor context</p>
+            </div>
+          ))}
+        </>
+      )}
+
+      {/* INFERRED: competitorSignals from HCL profile */}
+      {competitorSignals && competitorSignals.length > 0 && (
+        <>
+          {(competitorRoles.length > 0 || conferenceOverlaps.length > 0 || ecosystemMentions.length > 0) && <div className="h-px bg-[var(--border)] my-3" />}
+          <p style={{ fontFamily: '"DM Mono", monospace', fontSize: 8, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--neutral)', marginBottom: 6 }}>INFERRED</p>
+          {competitorSignals.map((sig, i) => (
+            <div key={`sig-${i}`} className="mb-3 last:mb-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="font-mono text-[9px] bg-[#FFF9E6] text-[#856404] px-2 py-0.5 rounded-full uppercase">Inferred Signal</span>
+              </div>
+              <p className="text-[12px] italic text-[var(--neutral)] mt-0.5">{sig}</p>
+            </div>
+          ))}
+        </>
+      )}
+
       {!hasData && (
         <p className="text-[13px] italic text-[var(--neutral)]">No competitor exposure detected in public record</p>
       )}
 
       <p className="font-mono text-[10px] text-[var(--neutral)] mt-4">
-        Based on: career history + public event records
+        Based on: career history + ecosystem partners + inferred signals
       </p>
     </CardShell>
   );
