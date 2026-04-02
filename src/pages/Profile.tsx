@@ -272,18 +272,22 @@ export default function Profile() {
           <p className="text-sm mb-4">Identified Opportunities</p>
           {profile?.opportunityAreas.length ? (
             <div className="space-y-4">
-              {profile.opportunityAreas.map((o) => (
-                <div key={o.area}>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm">{o.area}</span>
-                    <span className="font-mono text-[10px] text-[var(--neutral)] uppercase">{o.type}</span>
+              {profile.opportunityAreas.map((o) => {
+                const signal: "STRONG" | "MODERATE" | "WEAK" = o.confidenceScore >= 70 ? "STRONG" : o.confidenceScore >= 50 ? "MODERATE" : "WEAK";
+                return (
+                  <div
+                    key={o.area}
+                    className={`rounded-sm border p-3 ${signalBorderClass(signal)}`}
+                    style={signalGradientStyle(signal)}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm">{o.area}</span>
+                      <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[signal]}`}>{signal}</span>
+                    </div>
+                    <span className="font-mono text-[10px] text-[var(--neutral)] uppercase mt-1 inline-block">{o.type}</span>
                   </div>
-                  <div className="h-1 bg-[var(--border)] rounded-full overflow-hidden">
-                    <div className="h-full bg-[var(--accent)] rounded-full" style={{ width: `${o.confidenceScore}%` }} />
-                  </div>
-                  <p className="font-mono text-[10px] text-[var(--neutral)] mt-0.5 text-right">{o.confidenceScore}%</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <p className="text-sm italic text-[var(--neutral)]">No opportunities identified yet.</p>
