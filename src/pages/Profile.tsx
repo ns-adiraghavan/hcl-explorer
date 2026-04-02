@@ -282,7 +282,7 @@ export default function Profile() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-sm">{o.area}</span>
-                      {signalBadge(signal)}
+                      <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[signal]}`}>{signal}</span>
                     </div>
                     <span className="font-mono text-[10px] text-[var(--neutral)] uppercase mt-1 inline-block">{o.type}</span>
                   </div>
