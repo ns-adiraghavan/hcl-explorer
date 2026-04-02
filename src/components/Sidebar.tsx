@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { getAllExecutives } from "@/services/api";
 import type { Executive } from "@/types/executive";
 import { LayoutDashboard, Menu, X } from "lucide-react";
+import netscribesLogo from "@/assets/netscribes-logo-white.png";
 
 function getInitials(name: string) {
   return name
