@@ -22,32 +22,21 @@
     "Global Leadership"
   ],
 
-  "recommendations": [
-    {
-      "text": "Chris is a proven executive who combines strategic clarity with genuine focus on people development. He has consistently delivered results across very different business contexts — consumer, enterprise, and government — which is rare. His ability to lead through transformation while maintaining team culture is exceptional.",
-      "from": "Senior Executive, Verizon",
-      "relationship": "worked directly"
-    }
-  ],
-
   "socialPosts": [
     {
       "platform": "linkedin",
-      "text": "Readiness was something I learned and practiced over 28 years at Verizon. It was ingrained in our culture. It showed up in a big way when the pandemic struck in 2020 and Verizon was ranked #1 by Forbes Magazine as a top employer responding to the global disaster. With disruption being the norm — whether tech, economic, or social — being ready is not an option. It is an antidote to the decision paralysis that slows down many large corporations.",
-      "date": "2025-10-08",
-      "engagement": "1,847 likes"
+      "text": "Readiness was something I learned and practiced over the 28 years at Verizon. It was ingrained in our culture. It showed up in a big way when the pandemic struck in 2020 and Verizon was ranked #1 by Forbes Magazine as a top employer responding to this global disaster. And with disruption being the norm — whether tech, economic, or social — being ready is not an option. It is also an antidote to the decision paralysis that slows down many large corporations.",
+      "date": "2025-10-08"
     },
     {
       "platform": "linkedin",
       "text": "How often do we have clear exit policies in place from the moment of hiring, ensuring that expectations are set from day one? It is not a question of if — it is a question of when. A well-managed exit is crucial not just for the organisation but also for the individual. Leaving with professionalism and grace ensures smooth transitions and preserves strong relationships.",
-      "date": "2025-07-14",
-      "engagement": "1,203 likes"
+      "date": "2025-07-14"
     },
     {
       "platform": "linkedin",
-      "text": "I am completing my first week at a new opportunity and I want to express how much the Verizon chapter meant. 28 years. Multiple transformations. Thousands of colleagues. The relationships and lessons from that journey are something I carry forward. Grateful for every challenge and every person who made it possible.",
-      "date": "2024-05-13",
-      "engagement": "3,412 likes"
+      "text": "After completing my first week, it is with a lot of excitement that I announce that I have decided to undertake a new opportunity. I want to express how much the Verizon chapter meant. 28 years. Multiple transformations. Thousands of colleagues. The relationships and lessons from that journey are something I carry forward.",
+      "date": "2024-05-13"
     }
   ],
 
@@ -62,9 +51,8 @@
   ],
 
   "visionQuotes": [
-    "Readiness is not a response to disruption — it is an antidote to the decision paralysis that slows down large corporations.",
-    "Innovation gives us the opportunity to make the lives of those around us better.",
-    "Leadership impact, employee development, and employee satisfaction are not soft metrics — they are the foundation of sustainable performance."
+    "Readiness is not just a response to disruption — it is an antidote to the decision paralysis that slows down many large corporations.",
+    "Leadership impact, employee development, and employee satisfaction are the foundation of sustainable performance."
   ],
 
   "strategies": [
@@ -109,7 +97,7 @@
   "productsTechnologies": [
     "Verizon enterprise and consumer operations platforms",
     "Vendor management and strategic sourcing systems",
-    "Business transformation and Lean Six Sigma methodologies",
+    "Business transformation methodologies",
     "Consumer and business digital service platforms",
     "Government operations technology infrastructure"
   ],
@@ -190,15 +178,15 @@
 
   "education": [
     {
-      "degree": "Bachelor's Degree (field to confirm via scrape)",
-      "institution": "Monroe College (per public record)",
+      "degree": "Bachelor's Degree",
+      "institution": "Monroe College",
       "years": "Early 1990s"
     }
   ],
 
   "awards": [
     "Verizon Credo Award — multiple occasions (Verizon's highest performance and leadership recognition)",
-    "Verizon ranked #1 Forbes top employer responding to COVID-19 (under leadership during 2020)"
+    "Verizon ranked #1 Forbes top employer responding to COVID-19 (2020)"
   ],
 
   "annualRevenue": "$30 billion (Verizon Business Group)",

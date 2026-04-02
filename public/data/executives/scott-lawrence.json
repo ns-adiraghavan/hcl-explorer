@@ -22,14 +22,6 @@
     "Global Team Leadership"
   ],
 
-  "recommendations": [
-    {
-      "text": "Scott M. Lawrence brings an unusual combination of strategic clarity and genuine energy. He simplifies complexity and builds high-performance teams that deliver for customers. His track record across enterprise sales, EMEA leadership, and now product ownership at Verizon is exceptional.",
-      "from": "Technology Executive, Verizon ecosystem",
-      "relationship": "professional collaboration"
-    }
-  ],
-
   "articlesWritten": [
     {
       "title": "Investing in Career Development: How Verizon is Empowering V Teamers",
@@ -42,26 +34,22 @@
     {
       "platform": "linkedin",
       "text": "The signal I look for is never in the press release. At MWC this week, I had some of the most energising conversations I have had in years — about where AI in the network is actually going, not where vendors want you to think it is going. The gap between the headline and the reality is still large. But the reality is catching up fast.",
-      "date": "2026-02-27",
-      "engagement": "3,841 likes"
+      "date": "2026-02-27"
     },
     {
       "platform": "linkedin",
       "text": "We just announced the Verizon Business Assistant — a conversational generative AI tool for small businesses operating on SMS. This is not a chatbot. It is an on-ramp into an AI experience that learns your business, your hours, your menu, your processes. And it gets smarter over time. This is how you monetise AI — by bringing services to market that actually make a difference to how businesses operate day to day.",
-      "date": "2025-09-30",
-      "engagement": "4,217 likes"
+      "date": "2025-03-18"
     },
     {
       "platform": "linkedin",
       "text": "A Tale of Three Kings — Q3 US Wireless. The market has fractured into three clear strategies. Verizon plays the Yield Strategist, defending margin over volume. Q3 service revenue rose 2.1% to $21 billion. The question is not which strategy wins today — it is which one wins at the next inflection point. I know which one I am betting on.",
-      "date": "2025-11-04",
-      "engagement": "5,103 likes"
+      "date": "2025-11-04"
     },
     {
       "platform": "linkedin",
       "text": "Career development is one of the most important investments a company can make. We are seeing a remarkable increase in Verizon employees applying for and moving into new roles across the organisation since we transformed our approach — and 1 in 3 of those moves is to a completely different job family. That is not just mobility. That is talent strategy working.",
-      "date": "2025-08-16",
-      "engagement": "2,988 likes"
+      "date": "2025-08-16"
     }
   ],
 
@@ -82,8 +70,7 @@
   "visionQuotes": [
     "Simplify to go faster.",
     "The signal I look for is never in the press release.",
-    "This is how you monetise AI — by bringing services to market that actually make a difference to how businesses operate day to day.",
-    "Strategic Visionary who can connect people to purpose and mission."
+    "This is how you monetise AI — by bringing services to market that actually make a difference to how businesses operate day to day."
   ],
 
   "strategies": [
@@ -145,14 +132,14 @@
   "kpiMetrics": [
     "Verizon Business Group annual revenue approximately $30 billion",
     "Verizon Business serves over 99% of Fortune 500 companies",
-    "Verizon Business Assistant launched as first generative AI product on SMS for SMBs",
+    "Verizon Business Assistant launched March 2025 — first generative AI product on SMS for SMBs",
     "Q3 2025 service revenue $21 billion, up 2.1% year-on-year",
     "25+ year career at Verizon spanning sales, EMEA leadership, and product ownership"
   ],
 
   "decisionInsights": [
     "Simplicity-oriented — consistently drives toward clarity and removing unnecessary complexity from strategy and execution",
-    "Data and signal-driven — looks beyond press releases to underlying market signals before forming views",
+    "Signal-driven — looks beyond press releases to underlying market dynamics before forming views",
     "AI-pragmatic — focuses on AI commercialisation through real products, not conceptual roadmaps",
     "Outcome-aligned — track record of aligning technology investment with measurable customer and business results",
     "Strong internal talent developer — vocal advocate for employee development and internal mobility"
@@ -168,11 +155,11 @@
 
   "quotes": [
     "Simplify to go faster.",
-    "Think of the Verizon Business Assistant as an on-ramp into an AI experience for small business — it learns and it continues to build.",
+    "Think of this as kind of an on-ramp into an AI experience for small business. You want to get information on what is your business hours, what's your menu. And then it learns and it continues to build off that.",
     "This is how you monetise AI — by bringing new services and applications to market that make a real difference."
   ],
 
-  "bio": "Scott M. Lawrence is SVP and Chief Product Officer for Verizon Business, responsible for the company's holistic product portfolio and strategy including Network Services, Platforms, Cyber Security, Connected Experiences, FWA, and IoT Solutions. He oversees a global product team driving product-led growth across Verizon Business' enterprise and public sector customers. His career at Verizon spans over 25 years, including roles as Group VP & GM for EMEA, VP of Advanced Solutions Sales & Engineering (covering Cybersecurity, UC&C, and CX), and multiple enterprise sales leadership positions. He holds a BBA from the University of Wisconsin-Madison.",
+  "bio": "Scott M. Lawrence is SVP and Chief Product Officer for Verizon Business, responsible for the company's holistic product portfolio and strategy including Network Services, Platforms, Cyber Security, Connected Experiences, FWA, and IoT Solutions. He oversees a global product team driving product-led growth across Verizon Business' enterprise and public sector customers. His career at Verizon spans over 25 years, including roles as Group VP & GM for EMEA, VP of Advanced Solutions Sales & Engineering, and multiple enterprise sales leadership positions. He is a Fast Company Executive Board member and represented Verizon at Mobile World Congress 2026. He holds a BBA from the University of Wisconsin-Madison.",
 
   "nationality": "American",
 
@@ -224,7 +211,7 @@
   ],
 
   "awards": [
-    "Fast Company Executive Board member — SVP, Global Solutions, Verizon",
+    "Fast Company Executive Board member",
     "Featured speaker — Verizon Business Innovation Sessions (Los Angeles, New York — 2024)",
     "Mobile World Congress 2026 — featured executive speaker"
   ],
@@ -247,9 +234,10 @@
       "tier": "conference"
     },
     {
-      "title": "Verizon Business AI Products Launch — Business Assistant",
-      "source": "Mobile World Live / Industry Interview",
-      "date": "2025-09-30",
+      "title": "Verizon Business Assistant Launch — Mobile World Live Interview",
+      "source": "Mobile World Live",
+      "date": "2025-03-18",
+      "url": "https://www.mobileworldlive.com/old_latest-stories/verizon-to-unleash-personal-ai-assistant-for-smbs/",
       "tier": "direct"
     }
   ]

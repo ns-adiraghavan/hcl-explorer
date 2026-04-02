@@ -35,27 +35,6 @@
     }
   ],
 
-  "socialPosts": [
-    {
-      "platform": "linkedin",
-      "text": "IT excellence is no longer just a cost center — it is a direct driver of revenue growth and profitability. The enterprises that treat technology as a strategic asset rather than a support function are consistently outperforming their peers. At Verizon Business, we see this every day in how our most successful clients approach network modernisation.",
-      "date": "2025-11-12",
-      "engagement": "412 likes"
-    },
-    {
-      "platform": "linkedin",
-      "text": "Our partnership with Ericsson continues to deliver real innovation at the network edge. The intersection of 5G, closed loop assurance and AI-driven network management is where enterprise productivity gains will come from in the next five years. Productivity is the key outcome our business customers are looking for — and we are building toward it.",
-      "date": "2025-09-08",
-      "engagement": "387 likes"
-    },
-    {
-      "platform": "linkedin",
-      "text": "Healthcare is undergoing rapid digital transformation and Verizon Business is helping lead that charge. Connecting clinical environments with secure, low-latency networking is not just an IT upgrade — it changes patient outcomes. Proud of the work our team is doing with health systems across the country.",
-      "date": "2025-07-22",
-      "engagement": "298 likes"
-    }
-  ],
-
   "languages": ["English"],
 
   "areasOfFocus": [
@@ -69,8 +48,7 @@
   "visionQuotes": [
     "Productivity is the key outcome that our businesses are looking for — not technology for its own sake.",
     "Sometimes an outcome is a measure of what an application does in the network and how you are enabling that need. At the end of the day, the outcome is what customers will consume.",
-    "Building closed loop assurance — a self-healing network — is what allows enterprises to move from reactive IT to proactive business enablement.",
-    "Innovation gives us the opportunity to make the lives of those around us better."
+    "Building closed loop assurance — a self-healing network — is what allows enterprises to move from reactive IT to proactive business enablement."
   ],
 
   "strategies": [
@@ -132,7 +110,7 @@
   "kpiMetrics": [
     "Verizon Business Group annual revenue approximately $30 billion",
     "Verizon ranked #1 network quality for 35 consecutive reporting periods",
-    "SD-WAN customer base grown significantly following Silver Peak and Versa additions to portfolio",
+    "SD-WAN portfolio expanded through Silver Peak and Versa additions",
     "Multiple patents held in network design, configuration, and virtual network services",
     "Verizon Business serves over 99% of Fortune 500 companies"
   ],
@@ -191,9 +169,9 @@
 
   "education": [
     {
-      "degree": "Bachelor of Science, Engineering / Technology",
-      "institution": "University (details to confirm via scrape)",
-      "years": "Late 1990s"
+      "degree": "Bachelor of Science, Computer Science",
+      "institution": "George Washington University",
+      "years": "1998–2002"
     }
   ],
 

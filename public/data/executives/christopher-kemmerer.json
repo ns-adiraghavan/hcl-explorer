@@ -22,34 +22,11 @@
     "Executive Leadership"
   ],
 
-  "recommendations": [
-    {
-      "text": "Chris has a tremendous track record of building teams and driving innovation to set a clear path for Verizon, their customers, and their partners to remain competitive in the future. His ability to connect technology to business outcomes is exceptional.",
-      "from": "Technology Industry Peer, Verizon ecosystem",
-      "relationship": "industry collaboration"
-    }
-  ],
-
   "articlesWritten": [
     {
       "title": "How Billion-Dollar Enterprises Are Leading the Way on New Tech Trends",
       "date": "2022-06-08",
       "excerpt": "Tech leaders across professional sports leagues are adopting new technology to improve both business operations and consumer experiences — and there are lessons for all enterprises in how they approach disruption."
-    }
-  ],
-
-  "socialPosts": [
-    {
-      "platform": "linkedin",
-      "text": "5G for enterprise is not a consumer story — it is a business transformation story. Private networks, mobile edge computing, and intelligent connectivity are enabling manufacturers, stadiums, hospitals, and campuses to operate in ways that were simply not possible five years ago. The enterprises asking 'why 5G' are being overtaken by those asking 'how fast can we deploy.'",
-      "date": "2025-10-14",
-      "engagement": "623 likes"
-    },
-    {
-      "platform": "linkedin",
-      "text": "Smart communities work when technology is invisible. The best implementations I have seen are the ones where residents and businesses simply notice that things work better — traffic flows more smoothly, response times improve, energy costs drop. The technology is the means, not the end.",
-      "date": "2025-07-29",
-      "engagement": "489 likes"
     }
   ],
 
@@ -61,12 +38,6 @@
     "IoT & Edge Computing",
     "Enterprise Digital Transformation",
     "AI-Driven Network Operations"
-  ],
-
-  "visionQuotes": [
-    "Technology only has value when it enables customers to achieve their goals — everything else is noise.",
-    "Smart communities work when the technology becomes invisible and the outcomes become the story.",
-    "5G is not an upgrade to 4G. It is a platform for entirely new categories of enterprise capability."
   ],
 
   "strategies": [
@@ -149,10 +120,6 @@
     "Rapid technology evolution requiring constant portfolio refresh and partner ecosystem management"
   ],
 
-  "quotes": [
-    "The question is no longer whether 5G matters for enterprise. The question is which enterprises will move fast enough to use it as a competitive advantage."
-  ],
-
   "bio": "Christopher Kemmerer is an Executive Director at Verizon Business with over two decades of technology leadership. He currently leads the Intelligent Network & 5G Wireless practice and previously led Verizon's Smart Communities division. His career spans global engineering, professional services, and product management, and he is an active industry voice on 5G enterprise, IoT, and smart community technology. He has represented Verizon at major industry events including Extreme Networks Connect and public sector forums.",
 
   "nationality": "American",
@@ -205,7 +172,6 @@
   ],
 
   "awards": [
-    "Verizon internal leadership recognition across multiple tenure periods",
     "Featured speaker — Extreme Networks Connect Conference (2022)",
     "Industry panel participant — technology analyst and trade forums"
   ],
