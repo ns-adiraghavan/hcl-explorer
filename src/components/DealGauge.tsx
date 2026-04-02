@@ -37,6 +37,9 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
       : null;
   const fitIndex = fitLikelihood ? ZONES.findIndex((z) => z.label === fitLikelihood) : -1;
 
+  // When a service line is selected, the bar highlights the fit zone instead
+  const displayIndex = fitIndex >= 0 ? fitIndex : activeIndex;
+
   return (
     <div className="flex flex-col items-center">
       {/* Title — hidden in compact mode */}
@@ -86,7 +89,7 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
               style={{
                 height: 2,
                 width: '100%',
-                backgroundColor: i === activeIndex ? z.color : 'transparent',
+                backgroundColor: i === displayIndex ? z.color : 'transparent',
                 borderRadius: 1,
                 marginBottom: 2,
               }}
@@ -97,7 +100,7 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
                 height: 12,
                 width: '100%',
                 backgroundColor: z.color,
-                opacity: i === activeIndex ? 1 : 0.18,
+                opacity: i === displayIndex ? 1 : 0.18,
                 borderRadius: 2,
               }}
             />
@@ -110,7 +113,7 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
         <div className="flex w-full" style={{ gap: 2 }}>
           {ZONES.map((z, i) => (
             <div key={z.label} className="flex-1 flex justify-center">
-              {i === activeIndex && (
+              {i === displayIndex && (
                 <span
                   style={{
                     fontFamily: '"DM Mono", monospace',
@@ -134,11 +137,11 @@ export default function DealGauge({ likelihood, serviceLine, opportunityAreas, c
           style={{
             fontFamily: '"DM Mono", monospace',
             fontSize: 11,
-            color: ZONES[activeIndex]?.color,
+            color: ZONES[displayIndex]?.color,
             marginTop: 4,
           }}
         >
-          {likelihood}
+          {ZONES[displayIndex]?.label ?? likelihood}
         </span>
       )}
 
