@@ -58,6 +58,11 @@
   "overallClassification": "Neutral",
   "dealLikelihood": "Possible",
 
+  "competitorSignals": [
+    "No competitor employment history detected",
+    "Vendor management background — will have evaluated TCS, Infosys, and Cognizant in prior sourcing decisions"
+  ],
+
   "hclClassificationReason": [
     "Business transformation and vendor management background is adjacent to HCL's consulting and managed services capabilities",
     "Current role unclear following Verizon transition — classification may upgrade significantly with fresh data post-scrape",
