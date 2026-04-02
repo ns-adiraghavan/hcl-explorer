@@ -182,9 +182,7 @@ export default function Profile() {
             <div className="mt-5">
               <p className="font-display italic text-[15px] text-[var(--neutral)] leading-relaxed">
                 <span className="text-[var(--accent)] text-xl mr-1">&#x201C;</span>
-                {exec.recommendations[0].text.length > 160
-                  ? `${exec.recommendations[0].text.slice(0, 160)}…`
-                  : exec.recommendations[0].text}
+                {exec.recommendations[0].text}
               </p>
               <p className="font-mono text-[10px] text-[var(--neutral)] mt-1">
                 — {exec.recommendations[0].from}
