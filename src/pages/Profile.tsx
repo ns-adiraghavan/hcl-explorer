@@ -160,7 +160,7 @@ export default function Profile() {
       </div>
 
       {/* ─── SECTION 1: IDENTITY HEADER ─── */}
-      <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
+      <div className="flex flex-col md:flex-row items-stretch gap-8 mb-8">
         <div className="flex-1 min-w-0">
           {/* Accent eyebrow line */}
           <div className="w-12 h-px bg-[var(--accent)] mb-3" />
@@ -191,7 +191,7 @@ export default function Profile() {
           )}
         </div>
         {/* Gauge + service line selector */}
-        <div className="shrink-0 w-full md:w-1/2">
+        <div className="shrink-0 w-[280px] flex flex-col justify-center">
           <DealGauge
             likelihood={dealLikelihood}
             serviceLine={selectedLine}
