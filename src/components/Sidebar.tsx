@@ -117,7 +117,7 @@ export default function Sidebar() {
         <button onClick={() => setMobileOpen(true)}>
           <Menu className="w-5 h-5" />
         </button>
-        <span className="font-display text-base ml-3">CXOWorld</span>
+        <img src={netscribesLogo} alt="Netscribes" className="h-4 ml-3" />
       </div>
 
       {/* Mobile overlay */}
