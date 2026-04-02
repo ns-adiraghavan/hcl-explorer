@@ -18,7 +18,7 @@ export function getServiceLineScore(profile: HCLParameterProfile, serviceLine: s
     }
   }
 
-  return Math.round(profile.dealInterestScore * 0.6);
+  return 50;
 }
 
 export function buildDraft(

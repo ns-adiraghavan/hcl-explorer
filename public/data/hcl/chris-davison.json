@@ -56,7 +56,7 @@
   ],
 
   "overallClassification": "Neutral",
-  "dealInterestScore": 54,
+  "dealLikelihood": "Possible",
 
   "hclClassificationReason": [
     "Business transformation and vendor management background is adjacent to HCL's consulting and managed services capabilities",

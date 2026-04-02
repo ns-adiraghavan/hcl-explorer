@@ -57,7 +57,7 @@
   ],
 
   "overallClassification": "Pro",
-  "dealInterestScore": 91,
+  "dealLikelihood": "Strong",
 
   "hclClassificationReason": [
     "Broadest and deepest topic overlap in the tracked set — AI, CX, Security, and product strategy all map to HCL core capabilities",
