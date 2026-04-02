@@ -26,9 +26,8 @@ function SidebarContent({ onNavigate, executives }: { onNavigate: (path: string)
   return (
     <>
       {/* Logo */}
-      <div className="px-5 pt-6 pb-4 flex items-center gap-2">
-        <div className="w-0.5 h-4 bg-accent shrink-0" />
-        <h1 className="font-display text-[22px] leading-tight">CXOWorld</h1>
+      <div className="px-5 pt-6 pb-4">
+        <img src={netscribesLogo} alt="Netscribes" className="h-5" />
       </div>
       <p className="px-5 font-mono text-[10px] uppercase tracking-[0.2em] text-accent mb-4">
         HCL Intelligence View
