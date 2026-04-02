@@ -1,97 +1,160 @@
-import { useState, useEffect } from 'react';
+type Likelihood = 'Unlikely' | 'Low' | 'Possible' | 'Likely' | 'Strong';
 
 interface DealGaugeProps {
-  score: number;
-  classification: "Pro" | "Neutral" | "Anti";
-  label?: string;
+  likelihood: Likelihood;
+  serviceLine?: string;
+  opportunityAreas?: { area: string; confidenceScore: number }[];
+  compact?: boolean;
 }
 
-const classificationColor: Record<string, string> = {
-  Pro: "#1A4D3A",
-  Neutral: "#B8860B",
-  Anti: "#C0392B",
-};
+const ZONES: { label: Likelihood; color: string }[] = [
+  { label: 'Unlikely', color: '#C0392B' },
+  { label: 'Low', color: '#E67E22' },
+  { label: 'Possible', color: '#B8860B' },
+  { label: 'Likely', color: '#7FB069' },
+  { label: 'Strong', color: '#1A4D3A' },
+];
 
-export default function DealGauge({ score, classification, label }: DealGaugeProps) {
-  const cx = 100;
-  const cy = 100;
-  const r = 70;
-  const stroke = 14;
-  const color = classificationColor[classification];
+function getServiceLineLikelihood(
+  serviceLine: string,
+  opportunityAreas: { area: string; confidenceScore: number }[]
+): Likelihood {
+  const match = opportunityAreas.find((o) =>
+    o.area.toLowerCase().includes(serviceLine.split(' ')[0].toLowerCase()) ||
+    serviceLine.toLowerCase().includes(o.area.split(' ')[0].toLowerCase())
+  );
+  if (!match || match.confidenceScore < 50) return 'Low';
+  if (match.confidenceScore >= 75) return 'Likely';
+  return 'Possible';
+}
 
-  const halfCircumference = Math.PI * r;
-  const filled = (score / 100) * halfCircumference;
+export default function DealGauge({ likelihood, serviceLine, opportunityAreas, compact }: DealGaugeProps) {
+  const activeIndex = ZONES.findIndex((z) => z.label === likelihood);
 
-  const needleAngle = Math.PI - (score / 100) * Math.PI;
-  const nx = cx + r * Math.cos(needleAngle);
-  const ny = cy - r * Math.sin(needleAngle);
-
-  // Fade on score change
-  const [visible, setVisible] = useState(true);
-  useEffect(() => {
-    setVisible(false);
-    const t = requestAnimationFrame(() => {
-      requestAnimationFrame(() => setVisible(true));
-    });
-    return () => cancelAnimationFrame(t);
-  }, [score]);
-
-  const displayLabel = label ?? 'HCL DEAL INTEREST';
+  const fitLikelihood =
+    serviceLine && opportunityAreas
+      ? getServiceLineLikelihood(serviceLine, opportunityAreas)
+      : null;
+  const fitIndex = fitLikelihood ? ZONES.findIndex((z) => z.label === fitLikelihood) : -1;
 
   return (
-    <svg viewBox="0 0 200 120" className="w-full max-w-[200px]">
-      {/* Background arc */}
-      <path
-        d={`M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx + r} ${cy}`}
-        fill="none"
-        stroke="#E5E2DB"
-        strokeWidth={stroke}
-        strokeLinecap="round"
-      />
-      {/* Filled arc */}
-      <path
-        d={`M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx + r} ${cy}`}
-        fill="none"
-        stroke={color}
-        strokeWidth={stroke}
-        strokeLinecap="round"
-        strokeDasharray={`${filled} ${halfCircumference}`}
-      />
-      {/* Needle */}
-      <line x1={cx} y1={cy} x2={nx} y2={ny} stroke={color} strokeWidth={2} strokeLinecap="round" />
-      <circle cx={cx} cy={cy} r={4} fill={color} />
+    <div className="flex flex-col items-center">
+      {/* Title — hidden in compact mode */}
+      {!compact && (
+        <p
+          className="mb-2"
+          style={{
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 8,
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: 'var(--neutral)',
+          }}
+        >
+          HCL Deal Likelihood
+        </p>
+      )}
 
-      {/* Score with fade */}
-      <text
-        x={cx}
-        y={cy - 10}
-        textAnchor="middle"
-        className="fill-[var(--ink)]"
-        style={{
-          fontFamily: '"DM Mono", monospace',
-          fontSize: 32,
-          fontWeight: 700,
-          opacity: visible ? 1 : 0,
-          transition: 'opacity 150ms ease',
-        }}
-      >
-        {score}
-      </text>
+      {/* Fit indicator row (▲) */}
+      {fitLikelihood && !compact && (
+        <div className="flex w-full" style={{ gap: 2 }}>
+          {ZONES.map((z, i) => (
+            <div key={z.label} className="flex-1 flex justify-center" style={{ height: 14 }}>
+              {i === fitIndex && (
+                <span
+                  style={{
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: 10,
+                    color: 'var(--accent)',
+                    lineHeight: 1,
+                  }}
+                >
+                  ▲
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
-      {/* Label */}
-      <text
-        x={cx}
-        y={cy + 6}
-        textAnchor="middle"
-        fill="#8A8A7A"
-        style={{ fontFamily: '"DM Mono", monospace', fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase" }}
-      >
-        {displayLabel}
-      </text>
+      {/* Bar segments */}
+      <div className="flex w-full" style={{ gap: 2 }}>
+        {ZONES.map((z, i) => (
+          <div key={z.label} className="flex-1 flex flex-col items-center">
+            {/* Active border indicator */}
+            <div
+              style={{
+                height: 2,
+                width: '100%',
+                backgroundColor: i === activeIndex ? z.color : 'transparent',
+                borderRadius: 1,
+                marginBottom: 2,
+              }}
+            />
+            {/* Segment */}
+            <div
+              style={{
+                height: 12,
+                width: '100%',
+                backgroundColor: z.color,
+                opacity: i === activeIndex ? 1 : 0.18,
+                borderRadius: 2,
+              }}
+            />
+          </div>
+        ))}
+      </div>
 
-      {/* Min/Max */}
-      <text x={cx - r - 2} y={cy + 14} textAnchor="middle" fill="#8A8A7A" style={{ fontFamily: '"DM Mono", monospace', fontSize: 9 }}>0</text>
-      <text x={cx + r + 2} y={cy + 14} textAnchor="middle" fill="#8A8A7A" style={{ fontFamily: '"DM Mono", monospace', fontSize: 9 }}>100</text>
-    </svg>
+      {/* Active zone label */}
+      {!compact && (
+        <div className="flex w-full" style={{ gap: 2 }}>
+          {ZONES.map((z, i) => (
+            <div key={z.label} className="flex-1 flex justify-center">
+              {i === activeIndex && (
+                <span
+                  style={{
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: 10,
+                    fontWeight: 700,
+                    color: z.color,
+                    marginTop: 4,
+                  }}
+                >
+                  {z.label}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Compact: label below bar */}
+      {compact && (
+        <span
+          style={{
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 11,
+            color: ZONES[activeIndex]?.color,
+            marginTop: 4,
+          }}
+        >
+          {likelihood}
+        </span>
+      )}
+
+      {/* Service line fit label */}
+      {serviceLine && !compact && (
+        <p
+          style={{
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 9,
+            color: 'var(--neutral)',
+            marginTop: 4,
+          }}
+        >
+          Fit: {serviceLine}
+        </p>
+      )}
+    </div>
   );
 }

@@ -24,6 +24,6 @@ export interface HCLParameterProfile {
 
   opportunityAreas: OpportunityArea[];
   overallClassification: 'Pro' | 'Neutral' | 'Anti';
-  dealInterestScore: number;
+  dealLikelihood: 'Unlikely' | 'Low' | 'Possible' | 'Likely' | 'Strong';
   hclClassificationReason: string[];
 }

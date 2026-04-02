@@ -55,8 +55,8 @@
     { "area": "AI & Analytics", "type": "Emerging", "confidenceScore": 58 }
   ],
 
-  "overallClassification": "Pro",
-  "dealInterestScore": 69,
+  "overallClassification": "Neutral",
+  "dealLikelihood": "Possible",
 
   "hclClassificationReason": [
     "IoT, edge computing, and AI-driven network management topics directly overlap with HCL's digital infrastructure capabilities",
