@@ -1,201 +1,83 @@
 {
-  "id": "amit-kapoor",
-  "name": "Amit Kapoor",
-  "title": "Director, Product Management & Partner Strategy",
-  "company": "Verizon Business",
-  "location": "Clarksburg, MD, United States",
-  "linkedIn": "https://www.linkedin.com/in/amit-kapoor-a07348/",
-  "lastUpdated": "2026-04-01",
-
-  "aboutBio": "Executive professional with 20+ years of experience in product management and partner relations. I help organizations meet technical and business objectives by defining technology, partner and customer strategies. I have led organizations in product management and partner relations to gain market share, grow revenues and innovate technology. At Verizon, I focus on how advanced networking — SD-WAN, virtual network services, and 5G — can be turned into real enterprise productivity gains. I am a firm believer that the outcome is what customers will consume, and that technology only matters when it delivers measurable results.",
-
-  "skills": [
-    "Product Management",
-    "Partner Strategy",
-    "SD-WAN",
-    "Virtual Network Services",
-    "5G Enterprise",
-    "Network Technology",
-    "Business Development",
-    "Cloud Networking",
-    "IoT",
-    "Enterprise Solutions"
-  ],
-
-  "recommendations": [
+  "executiveId": "amit-kapoor",
+  "publicPersona": {
+    "signalLevel": "STRONG",
+    "summary": "Director of Product Management and Partner Strategy at Verizon Business with 20+ years in network technology. Technical depth combined with commercial acumen \u2014 rare combination that signals a buyer who evaluates both capability and business case rigorously.",
+    "derivedSignal": "Technical product leader at major telco \u2192 Network services, managed services, and AI/cloud opportunity"
+  },
+  "psychographicMindset": {
+    "signalLevel": "STRONG",
+    "summary": "Public posts reflect an outcomes-first, productivity-focused mindset. Language consistently frames technology in terms of enterprise results rather than features. Strong partnership orientation \u2014 values co-development over pure vendor relationships.",
+    "derivedSignal": "Outcomes and partnership orientation \u2192 HCL's managed services and co-innovation model will resonate"
+  },
+  "digitalActivity": {
+    "signalLevel": "MODERATE",
+    "summary": "Regular LinkedIn activity with substantive posts on network technology, 5G, and enterprise productivity. Engagement is moderate \u2014 not a high-volume poster but content is thoughtful and industry-relevant.",
+    "derivedSignal": "Moderate active presence \u2192 Engage via content reference and industry forum overlap"
+  },
+  "topicAffinity": {
+    "signalLevel": "STRONG",
+    "summary": "Posts on SD-WAN, 5G enterprise, AI-driven network management, and healthcare connectivity directly overlap with HCL's network services, managed services, and AI infrastructure capabilities.",
+    "derivedSignal": "Direct topic match on network, AI, and enterprise tech \u2192 Immediate managed services opportunity"
+  },
+  "painPointIndicators": {
+    "signalLevel": "MODERATE",
+    "summary": "Key challenges include competing with hyperscaler networking, translating complex network technology into business value, and managing partner ecosystem complexity \u2014 all areas where HCL's integration and managed services capabilities are relevant.",
+    "derivedSignal": "Partner ecosystem and integration complexity \u2192 HCL managed services and systems integration entry point"
+  },
+  "ecosystemVendorExposure": {
+    "signalLevel": "STRONG",
+    "summary": "Works with Cisco, VMware, Ericsson, AWS, and Azure as technology partners. No HCL competitor dominance detected. Multi-vendor environment with active partner management creates natural HCL entry point.",
+    "derivedSignal": "Multi-vendor, no incumbent competitor \u2192 Greenfield or complementary engagement opportunity"
+  },
+  "eventPresence": {
+    "signalLevel": "MODERATE",
+    "summary": "Represented Verizon at FedScoop and Ericsson forums. Active in industry events without being a top-tier conference speaker. Accessible through industry engagement channels.",
+    "derivedSignal": "Industry event participant \u2192 Engage via ONUG, enterprise networking or telecom forums"
+  },
+  "contentInteraction": {
+    "signalLevel": "MODERATE",
+    "summary": "Engages with enterprise networking, 5G, and AI content. Interaction is focused and relevant \u2014 indicates genuine professional interest rather than passive scrolling.",
+    "derivedSignal": "Relevant, focused engagement \u2192 Reference shared topics in outreach for warm entry"
+  },
+  "opportunityAreas": [
     {
-      "text": "Amit is a rare breed of engineer that bridges both his technologist and business acumen characteristics. Amit is extremely technical and will roll his sleeves up and get his hands dirty, all the while building relationships with his customers and closing the deal.",
-      "from": "Senior Director, Verizon Business",
-      "relationship": "worked directly over multiple years"
+      "area": "Managed Services",
+      "type": "Strategic",
+      "confidenceScore": 74
     },
     {
-      "text": "Amit is a very conscientious manager who is astute with both a broad range of technical knowledge and expertise coupled with years of commercial acumen.",
-      "from": "Technology Partner, Verizon ecosystem",
-      "relationship": "partner engagement"
+      "area": "AI / Cloud",
+      "type": "Tactical",
+      "confidenceScore": 68
+    },
+    {
+      "area": "Infrastructure / Network",
+      "type": "Strategic",
+      "confidenceScore": 71
     }
   ],
-
-  "languages": ["English"],
-
-  "areasOfFocus": [
-    "Virtual Network Services & SD-WAN",
-    "5G Enterprise Solutions",
-    "Product & Partner Strategy",
-    "Cloud Networking",
-    "Enterprise Digital Transformation"
+  "overallClassification": "Pro",
+  "dealInterestScore": 72,
+  "hclClassificationReason": [
+    "Outcomes-first and partnership-oriented mindset directly aligns with HCL's managed services and co-innovation model",
+    "Multi-vendor ecosystem with no dominant competitor creates a natural HCL engagement opportunity",
+    "Topic affinity across SD-WAN, AI-driven networking, and enterprise productivity overlaps strongly with HCL capabilities"
   ],
-
-  "visionQuotes": [
-    "Productivity is the key outcome that our businesses are looking for — not technology for its own sake.",
-    "Sometimes an outcome is a measure of what an application does in the network and how you are enabling that need. At the end of the day, the outcome is what customers will consume.",
-    "Building closed loop assurance — a self-healing network — is what allows enterprises to move from reactive IT to proactive business enablement."
-  ],
-
-  "strategies": [
-    "Position Verizon's virtual network services as productivity tools, not infrastructure products",
-    "Build partner ecosystems that allow enterprises to adopt SD-WAN and 5G without operational disruption",
-    "Leverage AI and machine intelligence to create self-healing, automated network environments for enterprise customers",
-    "Drive product strategy that connects network capability to measurable business outcomes",
-    "Develop interoperability frameworks that allow Verizon to co-go-to-market effectively with technology partners"
-  ],
-
-  "challenges": [
-    "Competing with hyperscaler-native networking propositions from AWS, Azure, and Google Cloud",
-    "Translating complex network technology — SD-WAN, MEC, private 5G — into clear business value narratives",
-    "Managing a large, multi-vendor partner ecosystem with varying capability and commitment levels",
-    "Keeping pace with the rapid evolution of enterprise networking requirements driven by cloud and AI adoption",
-    "Differentiating Verizon's product portfolio in a market where connectivity is increasingly commoditised"
-  ],
-
-  "opportunities": [
-    "Scale private 5G and mobile edge computing propositions for enterprise manufacturing and logistics clients",
-    "Expand SD-WAN market share by embedding AI-driven network assurance as a standard feature",
-    "Build deeper integration between Verizon network products and the major cloud platforms",
-    "Develop outcome-based commercial models for network services tied to customer productivity metrics",
-    "Grow healthcare and public sector vertical network programmes leveraging Verizon's security and compliance credentials"
-  ],
-
-  "trendsInsights": [
-    "Enterprise SD-WAN adoption is accelerating as organisations move multi-cloud workloads and require intelligent traffic management",
-    "Private 5G is moving from pilot to production in manufacturing, logistics, and healthcare environments",
-    "AI-driven network management is reducing mean time to resolution and enabling proactive rather than reactive operations",
-    "The boundary between network and cloud is dissolving — enterprises expect seamless, software-defined connectivity across both",
-    "Partner ecosystems are becoming critical differentiators as no single vendor can deliver the full enterprise technology stack"
-  ],
-
-  "competitorsPartners": [
-    "AT&T Business, T-Mobile for Business (primary US telecom competitors)",
-    "Ericsson (key technology partner — 5G and closed loop assurance)",
-    "Cisco, VMware (SD-WAN technology partners)",
-    "AWS, Microsoft Azure, Google Cloud (cloud ecosystem partners)",
-    "Silver Peak (SD-WAN portfolio addition)"
-  ],
-
-  "productsTechnologies": [
-    "Verizon SD-WAN (Cisco IWAN, Viptela, Versa, Silver Peak)",
-    "Virtual Network Services platform",
-    "Private 5G and mobile edge computing",
-    "Secure networking and SASE solutions",
-    "AI-driven closed loop network assurance"
-  ],
-
-  "targetMarkets": [
-    "Large enterprise and Fortune 500 IT organisations",
-    "Healthcare systems requiring secure, compliant networking",
-    "Manufacturing and logistics with private 5G and IoT requirements",
-    "Public sector and government agencies",
-    "Technology and media companies with high-bandwidth network demands"
-  ],
-
-  "kpiMetrics": [
-    "Verizon Business Group annual revenue approximately $30 billion",
-    "Verizon ranked #1 network quality for 35 consecutive reporting periods",
-    "SD-WAN portfolio expanded through Silver Peak and Versa additions",
-    "Multiple patents held in network design, configuration, and virtual network services",
-    "Verizon Business serves over 99% of Fortune 500 companies"
-  ],
-
-  "decisionInsights": [
-    "Outcome-first framing — evaluates technology partnerships based on measurable enterprise productivity impact",
-    "Technical depth combined with commercial awareness — equally comfortable in engineering and business conversations",
-    "Partner-oriented — values co-development and ecosystem collaboration over zero-sum vendor competition",
-    "Data-driven decision making — uses network performance and customer outcome metrics to prioritise product investments",
-    "Long-term relationship builder — career history of sustained partnerships across multiple technology cycles"
-  ],
-
-  "risksThreats": [
-    "Hyperscaler networking products increasingly competing with telco SD-WAN and virtual network services",
-    "Price commoditisation in enterprise connectivity making value differentiation harder",
-    "Partner ecosystem complexity increasing coordination overhead and slowing go-to-market velocity",
-    "AI-native networking startups disrupting established telco product paradigms",
-    "Enterprise buyer preference shifting toward platform consolidation with fewer, larger vendors"
-  ],
-
-  "quotes": [
-    "At Verizon, one of the key things we are trying to do is build what's called closed loop assurance — a self-healing network that allows an application to have a brownout and then have the entire orchestration engine self-heal based on assurance metrics.",
-    "Productivity is the key outcome that our businesses are looking for."
-  ],
-
-  "bio": "Amit Kapoor is a Director of Product Management and Partner Strategy at Verizon Business with over 20 years of experience in network technology, product management, and commercial leadership. He has led Verizon's Virtual Network Services practice including SD-WAN product strategy and partner development, and has represented Verizon in industry forums on topics including 5G enterprise, closed loop assurance, and AI-driven network management. He holds multiple patents in network design and virtual network services.",
-
-  "nationality": "American",
-
-  "careerJourney": [
-    {
-      "role": "Director, Product Management & Partner Strategy",
-      "company": "Verizon Business",
-      "from": "2018",
-      "to": "Present"
-    },
-    {
-      "role": "Director, Virtual Network Services",
-      "company": "Verizon Business",
-      "from": "2013",
-      "to": "2018"
-    },
-    {
-      "role": "Senior Manager, Product Management",
-      "company": "Verizon Business",
-      "from": "2008",
-      "to": "2013"
-    },
-    {
-      "role": "Product Manager, Enterprise Networking",
-      "company": "Verizon Business",
-      "from": "2003",
-      "to": "2008"
-    }
-  ],
-
-  "education": [
-    {
-      "degree": "Bachelor of Science, Computer Science",
-      "institution": "George Washington University",
-      "years": "1998–2002"
-    }
-  ],
-
-  "awards": [
-    "Multiple Verizon patents in network design and virtual network configuration",
-    "ONUG (Open Networking User Group) speaker and contributor"
-  ],
-
-  "annualRevenue": "$30 billion (Verizon Business Group)",
-  "teamSize": "105,000+ (Verizon total)",
-
   "videoGallery": [
+    {
+      "title": "The Power of Partnership at the WAN Edge with Verizon",
+      "source": "TelecomTV",
+      "date": "2021-02-23",
+      "url": "https://www.youtube.com/watch?v=mQbnbNt9RpE",
+      "tier": "direct"
+    },
     {
       "title": "Talking Closed Loop Assurance with Verizon's Amit Kapoor",
       "source": "Ericsson Blog / Industry Interview",
       "date": "2018-12-01",
       "url": "https://www.ericsson.com/en/blog/2018/12/talking-closed-loop-assurance-with-verizons-amit-kapoor",
       "tier": "direct"
-    },
-    {
-      "title": "FedScoop Federal IT Modernisation Forum",
-      "source": "FedScoop",
-      "date": "2025-05-14",
-      "tier": "conference"
     }
   ]
 }
