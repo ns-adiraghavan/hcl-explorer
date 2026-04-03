@@ -58,6 +58,13 @@ export interface Executive {
   }[];
   volunteering?: string[];
   languages?: string[];
+  videoGallery?: {
+    title: string;
+    source: string;
+    date: string;
+    url?: string;
+    tier: string;
+  }[];
 
   hclScore: number;
   hclClassification: 'Pro' | 'Neutral' | 'Anti';
