@@ -497,7 +497,7 @@ export default function Profile() {
                       <p className="text-sm">{article.title}</p>
                     )}
                     {article.excerpt && (
-                      <p className="text-[13px] text-[var(--neutral)] truncate mt-0.5">{article.excerpt}</p>
+                      <p className="text-[13px] text-[var(--neutral)] mt-0.5">{article.excerpt}</p>
                     )}
                   </div>
                   <span className="font-mono text-[10px] text-[var(--neutral)] shrink-0">{article.date}</span>
