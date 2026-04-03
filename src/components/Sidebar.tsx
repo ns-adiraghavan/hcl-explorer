@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { getAllExecutives } from "@/services/api";
 import type { Executive } from "@/types/executive";
-import { LayoutDashboard, Menu, X } from "lucide-react";
+import { LayoutDashboard, LogOut, Menu, X } from "lucide-react";
 import netscribesLogo from "@/assets/netscribes-logo-white.png";
 
 function getInitials(name: string) {
@@ -90,6 +90,13 @@ function SidebarContent({ onNavigate, executives }: { onNavigate: (path: string)
         >
           <LayoutDashboard className="w-4 h-4 text-sidebar-muted" />
           <span className="font-sans text-[13px]">Dashboard</span>
+        </button>
+        <button
+          onClick={() => onNavigate("/login")}
+          className="w-full flex items-center gap-3 px-2 py-2 rounded-sm text-left transition-colors border-l-2 border-transparent hover:bg-sidebar-active/50"
+        >
+          <LogOut className="w-4 h-4 text-sidebar-muted" />
+          <span className="font-sans text-[13px]">Log Out</span>
         </button>
       </div>
     </>
