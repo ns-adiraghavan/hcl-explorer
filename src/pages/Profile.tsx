@@ -463,7 +463,7 @@ export default function Profile() {
                   <span className="font-mono text-[10px] text-[var(--neutral)] ml-auto">{post.date}</span>
                 </div>
                 <p className="text-[13px] leading-relaxed">
-                  {post.text.length > 120 ? `${post.text.slice(0, 120)}…` : post.text}
+                  {post.text}
                 </p>
                 {post.engagement && (
                   <p className="font-mono text-[10px] text-[var(--neutral)] mt-2">{post.engagement}</p>
@@ -497,7 +497,7 @@ export default function Profile() {
                       <p className="text-sm">{article.title}</p>
                     )}
                     {article.excerpt && (
-                      <p className="text-[13px] text-[var(--neutral)] truncate mt-0.5">{article.excerpt}</p>
+                      <p className="text-[13px] text-[var(--neutral)] mt-0.5">{article.excerpt}</p>
                     )}
                   </div>
                   <span className="font-mono text-[10px] text-[var(--neutral)] shrink-0">{article.date}</span>
