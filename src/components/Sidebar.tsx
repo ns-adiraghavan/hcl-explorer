@@ -5,7 +5,8 @@ import type { Executive } from "@/types/executive";
 import { LayoutDashboard, LogOut, Menu, X } from "lucide-react";
 import netscribesLogo from "@/assets/netscribes-logo-white.png";
 
-function getInitials(name: string) {
+function getInitials(name: string | undefined | null): string {
+  if (!name) return "??";
   return name
     .split(" ")
     .map((n) => n[0])
