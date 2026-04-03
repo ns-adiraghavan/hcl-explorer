@@ -1,74 +1,181 @@
 {
-  "executiveId": "daniel-lawson",
-  "publicPersona": {
-    "signalLevel": "STRONG",
-    "summary": "SVP of Global Solutions at Verizon Business Group, leading Security, CX, UC&C, and complex deal practices across Global Enterprise and Public Sector. One of the most senior and publicly visible executives in this tracked set \u2014 high influence and high reach.",
-    "derivedSignal": "SVP-level, Security and CX portfolio owner \u2192 Cybersecurity, CX, and managed services strategic opportunity"
-  },
-  "psychographicMindset": {
-    "signalLevel": "STRONG",
-    "summary": "Posts reflect a relationship-first, outcome-oriented leadership philosophy grounded in 20+ years of enterprise customer engagement. Comfortable with complexity and long sales cycles \u2014 the opposite of a transactional buyer.",
-    "derivedSignal": "Relationship and outcome orientation \u2192 HCL's long-term managed services partnership model is a fit"
-  },
-  "digitalActivity": {
-    "signalLevel": "STRONG",
-    "summary": "High LinkedIn activity generating 700\u20131,200 likes per post. Active speaker at major industry events including NAB Show and Devoncroft Executive Summit. One of the most digitally active profiles in this tracked set.",
-    "derivedSignal": "High-visibility thought leader \u2192 Reference specific content and events in outreach for warm, personalised engagement"
-  },
-  "topicAffinity": {
-    "signalLevel": "STRONG",
-    "summary": "Portfolio responsibility covers Cybersecurity, CX/Contact Centre, UC&C, and complex enterprise deals \u2014 all directly mapped to HCL service lines. Topic alignment is among the highest in the five-profile set.",
-    "derivedSignal": "Direct portfolio match across Security, CX, and managed services \u2192 Immediate and strategic multi-line opportunity"
-  },
-  "painPointIndicators": {
-    "signalLevel": "STRONG",
-    "summary": "Key challenges include competing with pure-play security and CX specialists, converting enterprise customers from point-product to platform buying, and maintaining growth against AT&T. HCL's integrated managed services and AI capabilities address each.",
-    "derivedSignal": "Platform consolidation and competitive pressure \u2192 HCL integrated managed services and AI differentiation"
-  },
-  "ecosystemVendorExposure": {
-    "signalLevel": "STRONG",
-    "summary": "Works with Palo Alto Networks, CrowdStrike, Cisco, Genesys, and AWS across portfolio. No dominant HCL competitor in the Cybersecurity or CX managed services layer. Multi-vendor ecosystem suggests strategic partnership openness.",
-    "derivedSignal": "No incumbent competitor in managed security or CX \u2192 High-confidence displacement and expansion opportunity"
-  },
-  "eventPresence": {
-    "signalLevel": "STRONG",
-    "summary": "Opening keynote speaker at Devoncroft Executive Summit (NAB Show 2025), speaker at Global NaaS and Connected America. High-profile industry presence \u2014 warmest engagement pathway in the tracked set.",
-    "derivedSignal": "Keynote speaker at major events \u2192 Highest-value engagement target, approach via event follow-up or peer introduction"
-  },
-  "contentInteraction": {
-    "signalLevel": "STRONG",
-    "summary": "Posts generate high engagement and attract peer-level responses from enterprise technology leaders. Content is substantive and reflects genuine market intelligence \u2014 not corporate messaging.",
-    "derivedSignal": "Peer-level, high-engagement content \u2192 Engage as a strategic peer, not a vendor, for highest resonance"
-  },
-  "opportunityAreas": [
+  "id": "daniel-lawson",
+  "name": "Daniel Lawson",
+  "title": "Senior Vice President, Global Solutions",
+  "company": "Verizon Business",
+  "location": "Dallas, TX, United States",
+  "linkedIn": "https://www.linkedin.com/in/daniel-lawson-6a26611/",
+  "lastUpdated": "2026-04-01",
+  "aboutBio": "Senior Vice President of Global Solutions in the Verizon Business Group. I lead a team of Specialized Sellers across Security, UC&C, and CX; Complex Deal Executives; Global Technology GTM Activation Partners; Pre-Sales Solution Architects; and Engineers to drive revenue and enable growth across Global Enterprise and Public Sector through opportunity ownership, solution design, and thought leadership. Global Solutions serves as the voice of the market, the customer, and the field back into the Verizon ecosystem. With 20+ years at Verizon, I have led the Signature client segment, run the Network, Applications, and Innovation team, and supported financial, manufacturing, and healthcare industry customers. I have extensive background in enterprise networking, mobility, IoT, cloud, managed services, unified communications, contact centre, and security technologies.",
+  "skills": [
+    "Enterprise Sales Leadership",
+    "Solution Architecture",
+    "Cybersecurity",
+    "Unified Communications & Collaboration",
+    "Customer Experience (CX)",
+    "IoT & Mobility",
+    "Cloud & Managed Services",
+    "Complex Deal Management",
+    "Business Strategy",
+    "Public Sector Technology"
+  ],
+  "socialPosts": [
     {
-      "area": "Cybersecurity",
-      "type": "Strategic",
-      "confidenceScore": 84
+      "platform": "linkedin",
+      "text": "Kickstarting the Devoncroft Partners Executive Summit today \u2014 proud to be delivering the opening remarks on scalable infrastructure, reduced latency, and next-generation connectivity for the media and entertainment industry. Verizon Business is committed to enabling the future of broadcast and content delivery.",
+      "date": "2025-04-05"
     },
     {
-      "area": "CX / AI",
-      "type": "Strategic",
-      "confidenceScore": 81
+      "platform": "linkedin",
+      "text": "Telecoms were the only companies to rally yesterday on the S&P 500 communication services sector. Verizon, AT&T, and T-Mobile. That says something important about the underlying resilience of connectivity infrastructure in an uncertain macro environment. Networks are essential \u2014 and the market is starting to recognise that again.",
+      "date": "2025-03-18"
     },
     {
-      "area": "Managed Services",
-      "type": "Strategic",
-      "confidenceScore": 79
-    },
-    {
-      "area": "AI & Analytics",
-      "type": "Emerging",
-      "confidenceScore": 66
+      "platform": "linkedin",
+      "text": "NAB 2025 \u2014 and our amazing team of engineers and technologists are demonstrating what next-generation broadcast connectivity looks like in practice. Not slides. Live demos. This is how you show a customer what is possible.",
+      "date": "2025-04-06"
     }
   ],
-  "overallClassification": "Pro",
-  "dealInterestScore": 83,
-  "hclClassificationReason": [
-    "Portfolio covers Cybersecurity, CX, and complex managed deals \u2014 direct match across multiple HCL service lines",
-    "High-visibility keynote speaker at NAB and Devoncroft \u2014 warmest engagement pathway in the five-profile set",
-    "No dominant HCL competitor in managed security or CX layer \u2014 high-confidence strategic opportunity"
+  "languages": [
+    "English"
   ],
+  "areasOfFocus": [
+    "Global Enterprise & Public Sector Sales",
+    "Cybersecurity Solutions",
+    "Customer Experience & Contact Centre",
+    "Complex Deal Architecture",
+    "Network & Application Innovation"
+  ],
+  "visionQuotes": [
+    "Global Solutions serves as the voice of the market, the customer, and the field back into the Verizon ecosystem."
+  ],
+  "strategies": [
+    "Organise Global Solutions as a portfolio of specialised capabilities \u2014 Security, CX, UC&C \u2014 rather than a generalist sales motion",
+    "Position Pre-Sales Architects as trusted advisors who design outcomes, not just configure products",
+    "Use complex deal structures to win large enterprise and public sector accounts that commodity approaches cannot address",
+    "Build thought leadership through industry events and forums to establish Verizon Business as a strategic partner, not a vendor",
+    "Leverage 20+ years of enterprise relationship depth to create trusted access at the CIO and CISO level"
+  ],
+  "challenges": [
+    "Managing a large, multi-capability sales organisation across Security, CX, UC&C, and complex deals simultaneously",
+    "Competing with pure-play specialists in Cybersecurity and CX who have more focused product narratives",
+    "Converting enterprise and public sector customers from point-product purchasing to strategic platform relationships",
+    "Maintaining Verizon Business revenue growth against aggressive competition from AT&T, T-Mobile, and cloud-native competitors",
+    "Aligning a diverse global team across different time zones, cultures, and customer segments"
+  ],
+  "opportunities": [
+    "Expand Cybersecurity managed services into enterprise accounts currently using point products",
+    "Grow Contact Centre as a Service (CCaaS) offering as enterprises move away from on-premise contact centre infrastructure",
+    "Win large public sector contracts leveraging Verizon's network reliability and security credentials",
+    "Build AI-powered solutions practices that address emerging enterprise demand for AI integration services",
+    "Deepen media and broadcast sector relationships following Devoncroft partnership and NAB presence"
+  ],
+  "trendsInsights": [
+    "Enterprise cybersecurity spend is shifting from perimeter defence to zero-trust and managed detection and response",
+    "Contact centre technology is undergoing rapid disruption from AI-driven automation and cloud migration",
+    "Public sector technology modernisation is accelerating following COVID-era digital service failures",
+    "Complex enterprise deals increasingly require integrated solution architectures spanning network, security, and application layers",
+    "Media and broadcast industry is investing heavily in IP-based infrastructure replacing legacy broadcast technology"
+  ],
+  "competitorsPartners": [
+    "AT&T Business, T-Mobile for Business (primary telecom competitors)",
+    "Palo Alto Networks, CrowdStrike (cybersecurity ecosystem partners)",
+    "Cisco (UC&C and networking partner)",
+    "Genesys, NICE, Five9 (CX and contact centre partners)",
+    "AWS, Microsoft Azure (cloud platform partners)"
+  ],
+  "productsTechnologies": [
+    "Verizon Business Cybersecurity managed services",
+    "Connected Experiences / Contact Centre as a Service",
+    "Unified Communications & Collaboration platform",
+    "Complex enterprise network solutions",
+    "IoT and mobility management platforms"
+  ],
+  "targetMarkets": [
+    "Global enterprise accounts across financial services, manufacturing, and healthcare",
+    "US federal and state government agencies",
+    "Media, broadcast, and entertainment industry",
+    "Retail and consumer businesses requiring CX transformation",
+    "Healthcare systems requiring secure communications and networking"
+  ],
+  "kpiMetrics": [
+    "Verizon Business Group annual revenue approximately $30 billion",
+    "Global Solutions team spanning Security, CX, UC&C and complex deal practices",
+    "20+ years of Verizon enterprise sales and solutions leadership",
+    "Active supporter of American Heart Association and Alzheimer's research in Dallas",
+    "Opening keynote speaker, 2025 Devoncroft Executive Summit at NAB Show"
+  ],
+  "decisionInsights": [
+    "Outcome-focused \u2014 evaluates solution investments based on customer organisational impact, not product features",
+    "Deeply relationship-oriented \u2014 20+ years at Verizon reflects long-term trust building over transactional selling",
+    "Comfortable with complexity \u2014 specifically leads the complex deal practice suggesting appetite for sophisticated engagements",
+    "Industry voice \u2014 active conference speaker suggests openness to market dialogue and peer engagement",
+    "Financially rigorous \u2014 MBA in Finance and Accounting from SMU underpins commercial discipline in deal structures"
+  ],
+  "risksThreats": [
+    "Pure-play cybersecurity and CX competitors with more focused product narratives threatening Verizon's integrated approach",
+    "Economic uncertainty reducing enterprise technology spending and extending sales cycles",
+    "AT&T Business aggressively competing for the same Global Enterprise and Public Sector accounts",
+    "AI-native competitors entering the contact centre and security markets with disruptive propositions",
+    "Talent retention risk in a highly competitive enterprise sales market"
+  ],
+  "quotes": [
+    "Global Solutions serves as the voice of the market, the customer and the field back into the Verizon ecosystem.",
+    "Live content production and experiential events are evolving rapidly, demanding innovative approaches to content creation, distribution, and fan engagement."
+  ],
+  "bio": "Daniel Lawson is Senior Vice President of Global Solutions at Verizon Business Group, responsible for leading the primary technology practice areas including Cybersecurity, Connected Experiences, and High Density Networking, as well as Complex Deal Executives, Global Technology Partners, and Pre-Sales Solution Architects driving revenue across Global Enterprise and Public Sector. With over 20 years at Verizon, he has held leadership roles across Solutions Architecture, Network Applications and Innovation, and Signature client segments. He delivered the Opening Remarks at the 2025 Devoncroft Executive Summit at NAB Show. He holds a BSc in Applied Mathematics from Texas A&M University and an MBA in Finance and Accounting from Southern Methodist University.",
+  "nationality": "American",
+  "careerJourney": [
+    {
+      "role": "Senior Vice President, Global Solutions",
+      "company": "Verizon Business",
+      "from": "2023",
+      "to": "Present"
+    },
+    {
+      "role": "Vice President, Solutions Architecture",
+      "company": "Verizon Business",
+      "from": "2019",
+      "to": "2023"
+    },
+    {
+      "role": "Managing Director, Global Presales Solutions",
+      "company": "Verizon Business",
+      "from": "2015",
+      "to": "2019"
+    },
+    {
+      "role": "Managing Director, Network Applications & Innovation",
+      "company": "Verizon Business",
+      "from": "2010",
+      "to": "2015"
+    },
+    {
+      "role": "Director, Signature Client Solutions",
+      "company": "Verizon Business",
+      "from": "2004",
+      "to": "2010"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Business Administration, Finance & Accounting",
+      "institution": "Southern Methodist University (Cox School of Business)",
+      "years": "2002\u20132004"
+    },
+    {
+      "degree": "Bachelor of Science, Applied Mathematics",
+      "institution": "Texas A&M University",
+      "years": "1998\u20132002"
+    }
+  ],
+  "awards": [
+    "Devoncroft Partners Executive Summit \u2014 Opening Keynote Speaker (2025)",
+    "NAB Show featured presenter \u2014 Verizon Business (2025)",
+    "Active supporter: American Heart Association and Alzheimer's research (Dallas)"
+  ],
+  "annualRevenue": "$30 billion (Verizon Business Group)",
+  "teamSize": "105,000+ (Verizon total)",
   "videoGallery": [
     {
       "title": "Connectivity Driving Manufacturing Transformation Across the Product Lifecycle",
