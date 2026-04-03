@@ -522,6 +522,60 @@ export default function Profile() {
         </>
       )}
 
+      {/* ─── VIDEO GALLERY ─── */}
+      {exec.videoGallery && exec.videoGallery.length > 0 && (
+        <>
+          <div className="h-px bg-[var(--border)] mb-10" />
+          <SectionHeader title="Video Gallery" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+            {exec.videoGallery.map((video, i) => {
+              const isYouTube = video.url?.includes('youtube.com/watch?v=');
+              const videoId = isYouTube ? video.url!.split('v=')[1] : null;
+              const tierSignal = video.tier === 'direct' ? 'STRONG' : video.tier === 'conference' ? 'MODERATE' : 'WEAK';
+
+              if (isYouTube && videoId) {
+                return (
+                  <div key={i} className="border border-[var(--border)] rounded-sm bg-[var(--card-bg)] overflow-hidden">
+                    <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        className="absolute top-0 left-0 w-full h-full"
+                        allowFullScreen
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-sm font-medium">{video.title}</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="font-mono text-[10px] text-[var(--neutral)]">{video.source} · {video.date}</span>
+                        <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[tierSignal]}`}>{tierSignal}</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <div key={i} className="border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)]">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm font-medium">{video.title}</p>
+                    {video.url && (
+                      <a href={video.url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-[var(--neutral)] hover:text-[var(--accent)]">
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="font-mono text-[10px] text-[var(--neutral)]">{video.source} · {video.date}</span>
+                    <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[tierSignal]}`}>{tierSignal}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
       <div className="h-px bg-[var(--border)] mb-10" />
 
       {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
