@@ -224,7 +224,7 @@ function GrowthPriorities({ exec, profile }: Props) {
             {hclOverlap.map((o) => (
               <div key={o.area} className="flex items-center justify-between">
                 <span className="text-[13px]">{o.area}</span>
-                <span className="font-mono text-[10px] text-[var(--accent)]">{o.confidenceScore}%</span>
+                <span className="font-mono text-[10px] text-[var(--accent)]">{o.type}</span>
               </div>
             ))}
           </div>
