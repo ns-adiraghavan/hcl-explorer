@@ -216,19 +216,6 @@ function GrowthPriorities({ exec, profile }: Props) {
         <p className="text-[13px] italic text-[var(--neutral)]">Growth priorities pending enrichment</p>
       )}
 
-      {hclOverlap.length > 0 && (
-        <>
-          <div className="h-px bg-[var(--border)] my-4" />
-          <div className="space-y-1.5">
-            {hclOverlap.map((o) => (
-              <div key={o.area} className="flex items-center justify-between">
-                <span className="text-[13px]">{o.area}</span>
-                <span className="font-mono text-[10px] text-[var(--accent)]">{o.type}</span>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
     </CardShell>
   );
 }
