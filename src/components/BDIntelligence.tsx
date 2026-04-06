@@ -219,7 +219,6 @@ function GrowthPriorities({ exec, profile }: Props) {
       {hclOverlap.length > 0 && (
         <>
           <div className="h-px bg-[var(--border)] my-4" />
-          <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--neutral)] mb-2">HCL-Identified Overlap</p>
           <div className="space-y-1.5">
             {hclOverlap.map((o) => (
               <div key={o.area} className="flex items-center justify-between">
