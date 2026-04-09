@@ -29,6 +29,12 @@ const platformIcon: Record<string, React.ElementType> = {
   instagram: Globe,
 };
 
+const platformDisplayName: Record<string, string> = {
+  linkedin: "professional network",
+  twitter: "twitter",
+  instagram: "instagram",
+};
+
 const parameterLabels: { key: keyof Pick<HCLParameterProfile, "publicPersona" | "psychographicMindset" | "digitalActivity" | "topicAffinity" | "painPointIndicators" | "ecosystemVendorExposure" | "eventPresence" | "contentInteraction">; label: string }[] = [
   { key: "publicPersona", label: "Public Persona" },
   { key: "psychographicMindset", label: "Psychographic & Mindset" },
@@ -473,7 +479,7 @@ export default function Profile() {
               <div key={i} className="border border-[var(--border)] rounded-sm p-5 bg-[var(--card-bg)]">
                 <div className="flex items-center gap-2 mb-2">
                   <Icon className="w-3.5 h-3.5 text-[var(--neutral)]" />
-                  <span className="font-mono text-[10px] uppercase text-[var(--neutral)]">{post.platform}</span>
+                  <span className="font-mono text-[10px] uppercase text-[var(--neutral)]">{platformDisplayName[post.platform] ?? post.platform}</span>
                   <span className="font-mono text-[10px] text-[var(--neutral)] ml-auto">{post.date}</span>
                 </div>
                 <p className="text-[13px] leading-relaxed">
