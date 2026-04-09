@@ -29,6 +29,12 @@ const platformIcon: Record<string, React.ElementType> = {
   instagram: Globe,
 };
 
+const platformDisplayName: Record<string, string> = {
+  linkedin: "professional network",
+  twitter: "twitter",
+  instagram: "instagram",
+};
+
 const parameterLabels: { key: keyof Pick<HCLParameterProfile, "publicPersona" | "psychographicMindset" | "digitalActivity" | "topicAffinity" | "painPointIndicators" | "ecosystemVendorExposure" | "eventPresence" | "contentInteraction">; label: string }[] = [
   { key: "publicPersona", label: "Public Persona" },
   { key: "psychographicMindset", label: "Psychographic & Mindset" },
