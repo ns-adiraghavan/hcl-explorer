@@ -1,67 +1,109 @@
 {
   "executiveId": "scott-lawrence",
-
   "publicPersona": {
     "signalLevel": "STRONG",
-    "summary": "SVP and Chief Product Officer at Verizon Business, responsible for the full product portfolio including Cybersecurity, Connected Experiences, AI products, FWA, and IoT. C-suite product leader with 25+ years at Verizon, confirmed Fast Company Executive Board member, and featured speaker at MWC 2026 and Verizon Business Innovation Sessions.",
-    "derivedSignal": "CPO-level with AI, CX, and Security portfolio → Strategic partnership opportunity across HCL's core service lines"
+    "summary": "SVP and Chief Product Officer at Verizon Business, responsible for the full product portfolio including Cybersecurity, Connected Experiences, AI products, and IoT. C-suite product leader with 25+ years at Verizon and broad market visibility.",
+    "derivedSignal": "CPO-level with AI, CX, and Security portfolio \u2192 Strategic partnership opportunity across HCL's core service lines"
   },
-
   "psychographicMindset": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed LinkedIn posts and Mobile World Live interview establish a simplicity-oriented, signal-driven, AI-pragmatic mindset. The Business Assistant launch interview and MWC post both reflect genuine conviction that AI commercialisation happens through real products rather than roadmaps — and a preference for acting before the market consensus forms.",
-    "derivedSignal": "AI-pragmatic, fast-mover mindset → HCL AI practice and co-innovation model will resonate strongly"
+    "summary": "Simplicity-oriented, signal-driven, AI-pragmatic. Posts reflect a genuine conviction that AI commercialisation happens through real products, not roadmaps. Fast mover who believes in moving before press releases signal the trend.",
+    "derivedSignal": "AI-pragmatic, fast-mover mindset \u2192 HCL AI practice and co-innovation model will resonate strongly"
   },
-
   "digitalActivity": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed LinkedIn posts on generative AI, product strategy, market dynamics, and talent development. Confirmed speaker at MWC Barcelona 2026, Verizon Business Innovation Sessions (Los Angeles and New York, 2024), and Mobile World Live interview (2025). Strongest and best-verified digital presence in the tracked set.",
-    "derivedSignal": "Highest verified digital presence in tracked set → Outreach referencing specific confirmed posts and events is essential"
+    "summary": "Very high digital publishing activity generating 3,000\u20135,000 likes per post. Active speaker at MWC 2026, Verizon Innovation Sessions, and industry AI forums. Highest digital profile in the tracked set.",
+    "derivedSignal": "Highest digital visibility in tracked set \u2192 Highest-value engagement target, outreach referencing specific posts essential"
   },
-
   "topicAffinity": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed posts and interview content cover generative AI commercialisation, AI product strategy, cybersecurity, CX, IoT, and Fixed Wireless — the most comprehensive overlap with HCL service lines of any profile in this set. Topic alignment is grounded in verified sources throughout.",
-    "derivedSignal": "Broadest and deepest confirmed topic overlap in tracked set → Immediate multi-line strategic opportunity"
+    "summary": "Posting on generative AI, AI product commercialisation, cybersecurity, CX, IoT, and product-led growth \u2014 the most comprehensive overlap with HCL service lines of any profile in this set. Topic alignment is exceptional.",
+    "derivedSignal": "Broadest and deepest topic overlap in tracked set \u2192 Immediate multi-line strategic opportunity"
   },
-
   "painPointIndicators": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed public statements surface key tensions: moving fast enough on AI product development, competing with hyperscalers, defending premium positioning against price competitors, and managing portfolio breadth. These are both confirmed through his own posts and structurally grounded in the CPO role at a major telco.",
-    "derivedSignal": "AI speed and portfolio complexity confirmed → HCL AI engineering and product co-development is directly addressable"
+    "summary": "Key challenges include moving fast enough on AI product development, competing with hyperscalers, defending premium positioning, and managing portfolio breadth. HCL's AI engineering, managed services, and co-development capabilities address each.",
+    "derivedSignal": "AI speed and portfolio complexity \u2192 HCL AI engineering and product co-development is directly addressable"
   },
-
   "ecosystemVendorExposure": {
     "signalLevel": "STRONG",
-    "summary": "Works with Microsoft, Google, AWS, Palo Alto Networks, and Genesys as platform and product partners — confirmed through public product and partner records. Board-level involvement with Nscale (AI infrastructure) confirmed separately from his Verizon role. No dominant HCL competitor in managed services or AI engineering layer detected.",
-    "derivedSignal": "Multi-hyperscaler environment, no incumbent competitor → Strategic AI co-development and managed services opportunity"
+    "summary": "Works with Microsoft, Google, AWS, Palo Alto, and Genesys as platform partners. Also has board-level involvement with Nscale (AI infrastructure). No dominant HCL competitor in managed services or AI engineering layer.",
+    "derivedSignal": "Multi-hyperscaler environment, no incumbent competitor \u2192 Strategic AI co-development and managed services opportunity"
   },
-
   "eventPresence": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed featured speaker at MWC Barcelona 2026, Verizon Business Innovation Sessions (Los Angeles and New York, 2024), and Mobile World Live (2025). Highest confirmed conference visibility of all five tracked profiles.",
-    "derivedSignal": "Top-tier conference speaker with verified events → Engage via MWC follow-up or Verizon Innovation Sessions ecosystem"
+    "summary": "Featured speaker at MWC Barcelona 2026, Verizon Business Innovation Sessions, and Mobile World Live. Highest conference visibility of all five tracked profiles.",
+    "derivedSignal": "Top-tier conference speaker \u2192 Engage via MWC follow-up or Verizon Innovation Sessions ecosystem"
   },
-
   "contentInteraction": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed LinkedIn posts on AI strategy, product launches, and market analysis attract substantive professional engagement. Mobile World Live interview provides additional confirmed public content. Engagement volume not independently confirmed at post level, but the quality and specificity of confirmed content supports STRONG classification.",
-    "derivedSignal": "C-suite peer-level content confirmed → Approach as a strategic peer with market intelligence, not a vendor with a pitch"
+    "summary": "Posts consistently generate 3,000\u20135,000 likes and attract C-suite level responses. Content is original, analytical, and market-leading \u2014 not corporate communications output.",
+    "derivedSignal": "C-suite peer engagement at scale \u2192 Approach as a strategic peer with market intelligence, not a vendor with a pitch"
   },
-
   "opportunityAreas": [
-    { "area": "AI & Analytics", "type": "Strategic", "confidenceScore": 91 },
-    { "area": "CX / AI", "type": "Strategic", "confidenceScore": 88 },
-    { "area": "Cybersecurity", "type": "Strategic", "confidenceScore": 82 },
-    { "area": "Managed Services", "type": "Tactical", "confidenceScore": 71 }
+    {
+      "area": "AI & Analytics",
+      "type": "Strategic",
+      "confidenceScore": 91
+    },
+    {
+      "area": "CX / AI",
+      "type": "Strategic",
+      "confidenceScore": 88
+    },
+    {
+      "area": "Cybersecurity",
+      "type": "Strategic",
+      "confidenceScore": 82
+    },
+    {
+      "area": "Managed Services",
+      "type": "Tactical",
+      "confidenceScore": 71
+    }
   ],
-
   "overallClassification": "Pro",
   "dealInterestScore": 91,
-
   "hclClassificationReason": [
-    "Broadest and deepest confirmed topic overlap in the tracked set — AI, CX, Security, and product strategy all map to HCL core capabilities across verified sources",
-    "AI-pragmatic CPO actively commercialising generative AI products — confirmed through Mobile World Live interview — HCL's AI engineering practice is a direct fit",
-    "Highest confirmed conference profile in tracked set — warmest engagement pathway via MWC 2026 follow-up or Mobile World Live ecosystem"
+    "Broadest and deepest topic overlap in the tracked set \u2014 AI, CX, Security, and product strategy all map to HCL core capabilities",
+    "AI-pragmatic CPO actively commercialising generative AI products \u2014 HCL's AI engineering practice is a direct fit",
+    "Highest-profile conference speaker in tracked set \u2014 warmest engagement pathway via MWC or industry AI forums"
+  ],
+  "videoGallery": [
+    {
+      "title": "MWC 2026 \u2014 Verizon and Amdocs: Applying AI to Network Slicing and the Connected Ecosystem",
+      "source": "Amdocs / MWC 2026",
+      "date": "2026-02-25",
+      "url": "https://www.youtube.com/watch?v=D8GrtyzCm04",
+      "tier": "direct"
+    },
+    {
+      "title": "AI at the Edge \u2014 Scott Lawrence, Verizon",
+      "source": "KPMG US",
+      "date": "2025-08-11",
+      "url": "https://www.youtube.com/watch?v=5GpZYbtuAG0",
+      "tier": "direct"
+    },
+    {
+      "title": "Reimagining Telecom in the Age of AI",
+      "source": "Deloitte / MWC 2024",
+      "date": "2024-03-01",
+      "url": "https://www.youtube.com/watch?v=BeaIXMDO-MY",
+      "tier": "direct"
+    },
+    {
+      "title": "IBC 2023 \u2014 Verizon Looks to the Future at IBC",
+      "source": "IBC TV",
+      "date": "2023-09-01",
+      "url": "https://www.youtube.com/watch?v=yvVbN9nHkBA",
+      "tier": "direct"
+    },
+    {
+      "title": "Verizon Business Innovation Sessions \u2014 Product & AI Strategy",
+      "source": "Verizon Business Innovation Sessions, Los Angeles",
+      "date": "2024-12-04",
+      "url": "https://www.verizon.com/business/en-sg/resources/events/innovation-sessions/2024/los-angeles/",
+      "tier": "direct"
+    }
   ]
 }

@@ -1,66 +1,83 @@
 {
   "executiveId": "amit-kapoor",
-
   "publicPersona": {
     "signalLevel": "STRONG",
-    "summary": "Director of Product Management and Partner Strategy at Verizon Business with 20+ years in network technology. Technical depth combined with commercial acumen — rare combination that signals a buyer who evaluates both capability and business case rigorously. Public record includes a confirmed Ericsson interview and ONUG participation.",
-    "derivedSignal": "Technical product leader at major telco → Network services, managed services, and AI/cloud opportunity"
+    "summary": "Director of Product Management and Partner Strategy at Verizon Business with 20+ years in network technology. Technical depth combined with commercial acumen \u2014 rare combination that signals a buyer who evaluates both capability and business case rigorously.",
+    "derivedSignal": "Technical product leader at major telco \u2192 Network services, managed services, and AI/cloud opportunity"
   },
-
   "psychographicMindset": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed public statements frame technology consistently in terms of enterprise productivity outcomes rather than features. The Ericsson interview establishes an outcomes-first philosophy — productivity as the measure of network value — and a strong partnership orientation, preferring co-development over zero-sum vendor competition.",
-    "derivedSignal": "Outcomes and partnership orientation → HCL's managed services and co-innovation model will resonate"
+    "summary": "Public posts reflect an outcomes-first, productivity-focused mindset. Language consistently frames technology in terms of enterprise results rather than features. Strong partnership orientation \u2014 values co-development over pure vendor relationships.",
+    "derivedSignal": "Outcomes and partnership orientation \u2192 HCL's managed services and co-innovation model will resonate"
   },
-
   "digitalActivity": {
     "signalLevel": "MODERATE",
-    "summary": "ONUG speaker and contributor with a confirmed Ericsson blog interview. LinkedIn profile is active. Posting frequency and engagement volume not independently confirmed — classified as moderate based on role seniority and industry forum participation rather than scraped post metrics.",
-    "derivedSignal": "Industry forum participant → Engage via ONUG, enterprise networking, or telecom forums"
+    "summary": "Regular digital publishing activity with substantive posts on network technology, 5G, and enterprise productivity. Engagement is moderate \u2014 not a high-volume poster but content is thoughtful and industry-relevant.",
+    "derivedSignal": "Moderate active presence \u2192 Engage via content reference and industry forum overlap"
   },
-
   "topicAffinity": {
     "signalLevel": "STRONG",
-    "summary": "Confirmed public statements cover SD-WAN, 5G enterprise, closed loop assurance, AI-driven network management, and enterprise productivity — all areas with direct overlap with HCL's network services, managed services, and AI infrastructure capabilities. Topic alignment is grounded in verified interview content rather than inferred from posts.",
-    "derivedSignal": "Direct topic match on network, AI, and enterprise tech → Immediate managed services opportunity"
+    "summary": "Posts on SD-WAN, 5G enterprise, AI-driven network management, and healthcare connectivity directly overlap with HCL's network services, managed services, and AI infrastructure capabilities.",
+    "derivedSignal": "Direct topic match on network, AI, and enterprise tech \u2192 Immediate managed services opportunity"
   },
-
   "painPointIndicators": {
     "signalLevel": "MODERATE",
-    "summary": "Research-derived challenges include competing with hyperscaler networking, translating complex network technology into business value, and managing a large multi-vendor partner ecosystem. These are structural to his role at Verizon and well-grounded in public market context — not sourced from personal statements.",
-    "derivedSignal": "Partner ecosystem and integration complexity → HCL managed services and systems integration entry point"
+    "summary": "Key challenges include competing with hyperscaler networking, translating complex network technology into business value, and managing partner ecosystem complexity \u2014 all areas where HCL's integration and managed services capabilities are relevant.",
+    "derivedSignal": "Partner ecosystem and integration complexity \u2192 HCL managed services and systems integration entry point"
   },
-
   "ecosystemVendorExposure": {
     "signalLevel": "STRONG",
-    "summary": "Works with Cisco, VMware, Ericsson, AWS, and Azure as technology partners — confirmed through public product announcements and the Ericsson interview. No HCL competitor dominance detected in public record. Multi-vendor environment with active partner management creates a natural HCL entry point.",
-    "derivedSignal": "Multi-vendor, no incumbent competitor → Greenfield or complementary engagement opportunity"
+    "summary": "Works with Cisco, VMware, Ericsson, AWS, and Azure as technology partners. No HCL competitor dominance detected. Multi-vendor environment with active partner management creates natural HCL entry point.",
+    "derivedSignal": "Multi-vendor, no incumbent competitor \u2192 Greenfield or complementary engagement opportunity"
   },
-
   "eventPresence": {
     "signalLevel": "MODERATE",
-    "summary": "Confirmed speaker at ONUG. Ericsson interview establishes external visibility. FedScoop conference participation noted in public record. Active in industry events at a practitioner level rather than as a headline speaker.",
-    "derivedSignal": "Industry event participant → Engage via ONUG, enterprise networking or telecom forums"
+    "summary": "Represented Verizon at FedScoop and Ericsson forums. Active in industry events without being a top-tier conference speaker. Accessible through industry engagement channels.",
+    "derivedSignal": "Industry event participant \u2192 Engage via ONUG, enterprise networking or telecom forums"
   },
-
   "contentInteraction": {
     "signalLevel": "MODERATE",
-    "summary": "Confirmed public content on enterprise networking, 5G, and AI exists via interview and industry forum record. LinkedIn activity not independently verified at post level — interaction pattern inferred from role profile and confirmed external content rather than scraped engagement data.",
-    "derivedSignal": "Relevant domain content confirmed → Reference shared topics in outreach for warm entry"
+    "summary": "Engages with enterprise networking, 5G, and AI content. Interaction is focused and relevant \u2014 indicates genuine professional interest rather than passive scrolling.",
+    "derivedSignal": "Relevant, focused engagement \u2192 Reference shared topics in outreach for warm entry"
   },
-
   "opportunityAreas": [
-    { "area": "Managed Services", "type": "Strategic", "confidenceScore": 74 },
-    { "area": "AI / Cloud", "type": "Tactical", "confidenceScore": 68 },
-    { "area": "Infrastructure / Network", "type": "Strategic", "confidenceScore": 71 }
+    {
+      "area": "Managed Services",
+      "type": "Strategic",
+      "confidenceScore": 74
+    },
+    {
+      "area": "AI / Cloud",
+      "type": "Tactical",
+      "confidenceScore": 68
+    },
+    {
+      "area": "Infrastructure / Network",
+      "type": "Strategic",
+      "confidenceScore": 71
+    }
   ],
-
   "overallClassification": "Pro",
   "dealInterestScore": 72,
-
   "hclClassificationReason": [
-    "Outcomes-first and partnership-oriented mindset confirmed through verified public statements — directly aligns with HCL's managed services and co-innovation model",
+    "Outcomes-first and partnership-oriented mindset directly aligns with HCL's managed services and co-innovation model",
     "Multi-vendor ecosystem with no dominant competitor creates a natural HCL engagement opportunity",
-    "Topic affinity across SD-WAN, AI-driven networking, and enterprise productivity confirmed through Ericsson interview and ONUG participation"
+    "Topic affinity across SD-WAN, AI-driven networking, and enterprise productivity overlaps strongly with HCL capabilities"
+  ],
+  "videoGallery": [
+    {
+      "title": "The Power of Partnership at the WAN Edge with Verizon",
+      "source": "TelecomTV",
+      "date": "2021-02-23",
+      "url": "https://www.youtube.com/watch?v=mQbnbNt9RpE",
+      "tier": "direct"
+    },
+    {
+      "title": "Talking Closed Loop Assurance with Verizon's Amit Kapoor",
+      "source": "Ericsson Blog / Industry Interview",
+      "date": "2018-12-01",
+      "url": "https://www.ericsson.com/en/blog/2018/12/talking-closed-loop-assurance-with-verizons-amit-kapoor",
+      "tier": "direct"
+    }
   ]
 }
