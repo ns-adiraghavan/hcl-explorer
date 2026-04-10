@@ -108,26 +108,6 @@ export default function Profile() {
     load();
   }, [id]);
 
-  const SERVICE_LINES = [
-    'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
-    'Managed Services', 'Security & Compliance', 'Infrastructure',
-  ];
-
-  const defaultLine = useMemo(() => {
-    if (!profile?.opportunityAreas.length) return SERVICE_LINES[0];
-    const topArea = profile.opportunityAreas.reduce((best, o) =>
-      o.confidenceScore > best.confidenceScore ? o : best
-    );
-    const match = SERVICE_LINES.find((sl) =>
-      sl.toLowerCase().includes(topArea.area.split(' ')[0].toLowerCase()) ||
-      topArea.area.toLowerCase().includes(sl.split(' ')[0].toLowerCase())
-    );
-    return match ?? SERVICE_LINES[0];
-  }, [profile]);
-
-  const [selectedLine, setSelectedLine] = useState(defaultLine);
-
-  const dealLikelihood = profile?.dealLikelihood ?? 'Possible';
 
   if (loading) {
     return (
