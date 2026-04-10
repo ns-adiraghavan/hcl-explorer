@@ -1,14 +1,12 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { ExternalLink, Download } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
+import { ArrowLeft, Globe, MessageCircle } from "lucide-react";
 
 import { getExecutive, getHCLProfile } from "@/services/api";
 import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
-import DealGauge from "@/components/DealGauge";
-import OutreachDraft from "@/components/OutreachDraft";
-import { getServiceLineScore, getTopParameters } from "@/utils/buildDraft";
+import { getTopParameters } from "@/utils/buildDraft";
 import BDIntelligence from "@/components/BDIntelligence";
 
 const classificationBadge: Record<string, string> = {
