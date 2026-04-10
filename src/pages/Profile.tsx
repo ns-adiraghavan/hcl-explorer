@@ -195,30 +195,6 @@ export default function Profile() {
             </div>
           )}
         </div>
-        {/* Gauge + service line selector */}
-        <div className="shrink-0 w-[280px] flex flex-col justify-center">
-          <DealGauge
-            likelihood={dealLikelihood}
-            serviceLine={selectedLine}
-            opportunityAreas={profile?.opportunityAreas}
-          />
-          {/* Service line pills */}
-          <div className="flex flex-wrap justify-center gap-1.5 mt-4">
-            {SERVICE_LINES.map((line) => (
-              <button
-                key={line}
-                onClick={() => setSelectedLine(line)}
-                className={`font-mono text-[10px] px-3 py-1 rounded-full border transition-colors duration-150 ${
-                  selectedLine === line
-                    ? 'bg-[var(--accent)] text-[var(--accent-light)] border-[var(--accent)]'
-                    : 'bg-[var(--card-bg)] text-[var(--neutral)] border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--ink)]'
-                }`}
-              >
-                {line}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div className="h-px bg-[var(--border)] mb-10" />
@@ -582,11 +558,6 @@ export default function Profile() {
         </>
       )}
 
-      <div className="h-px bg-[var(--border)] mb-10" />
-
-      {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
-      <SectionHeader title="Outreach Draft" />
-      <OutreachDraft exec={exec} profile={profile} selectedLine={selectedLine} onLineChange={setSelectedLine} />
     </div>
   );
 }
