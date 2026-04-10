@@ -125,10 +125,6 @@ export default function Dashboard() {
               {/* Editorial break */}
               <div className="h-px bg-[var(--border)] mb-5" />
 
-              {/* Deal likelihood barometer */}
-              <div className="w-[60%]">
-                <DealGauge likelihood={profile?.dealLikelihood ?? 'Possible'} compact />
-              </div>
 
               {/* Opportunity tags */}
               {topOpps.length > 0 && (
