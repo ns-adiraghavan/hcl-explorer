@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllExecutives } from "@/services/api";
-import DealGauge from "@/components/DealGauge";
 import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
 
@@ -126,10 +125,6 @@ export default function Dashboard() {
               {/* Editorial break */}
               <div className="h-px bg-[var(--border)] mb-5" />
 
-              {/* Deal likelihood barometer */}
-              <div className="w-[60%]">
-                <DealGauge likelihood={profile?.dealLikelihood ?? 'Possible'} compact />
-              </div>
 
               {/* Opportunity tags */}
               {topOpps.length > 0 && (
