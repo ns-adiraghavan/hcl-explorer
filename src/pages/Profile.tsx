@@ -1,14 +1,12 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { ExternalLink, Download } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, AlertTriangle, Globe, MessageCircle } from "lucide-react";
+import { ArrowLeft, Globe, MessageCircle } from "lucide-react";
 
 import { getExecutive, getHCLProfile } from "@/services/api";
 import type { Executive } from "@/types/executive";
 import type { HCLParameterProfile } from "@/types/hcl-parameters";
-import DealGauge from "@/components/DealGauge";
-import OutreachDraft from "@/components/OutreachDraft";
-import { getServiceLineScore, getTopParameters } from "@/utils/buildDraft";
+import { getTopParameters } from "@/utils/buildDraft";
 import BDIntelligence from "@/components/BDIntelligence";
 
 const classificationBadge: Record<string, string> = {
@@ -110,26 +108,6 @@ export default function Profile() {
     load();
   }, [id]);
 
-  const SERVICE_LINES = [
-    'AI & Analytics', 'Cloud Transformation', 'CX & Digital',
-    'Managed Services', 'Security & Compliance', 'Infrastructure',
-  ];
-
-  const defaultLine = useMemo(() => {
-    if (!profile?.opportunityAreas.length) return SERVICE_LINES[0];
-    const topArea = profile.opportunityAreas.reduce((best, o) =>
-      o.confidenceScore > best.confidenceScore ? o : best
-    );
-    const match = SERVICE_LINES.find((sl) =>
-      sl.toLowerCase().includes(topArea.area.split(' ')[0].toLowerCase()) ||
-      topArea.area.toLowerCase().includes(sl.split(' ')[0].toLowerCase())
-    );
-    return match ?? SERVICE_LINES[0];
-  }, [profile]);
-
-  const [selectedLine, setSelectedLine] = useState(defaultLine);
-
-  const dealLikelihood = profile?.dealLikelihood ?? 'Possible';
 
   if (loading) {
     return (
@@ -194,30 +172,6 @@ export default function Profile() {
               </p>
             </div>
           )}
-        </div>
-        {/* Gauge + service line selector */}
-        <div className="shrink-0 w-[280px] flex flex-col justify-center">
-          <DealGauge
-            likelihood={dealLikelihood}
-            serviceLine={selectedLine}
-            opportunityAreas={profile?.opportunityAreas}
-          />
-          {/* Service line pills */}
-          <div className="flex flex-wrap justify-center gap-1.5 mt-4">
-            {SERVICE_LINES.map((line) => (
-              <button
-                key={line}
-                onClick={() => setSelectedLine(line)}
-                className={`font-mono text-[10px] px-3 py-1 rounded-full border transition-colors duration-150 ${
-                  selectedLine === line
-                    ? 'bg-[var(--accent)] text-[var(--accent-light)] border-[var(--accent)]'
-                    : 'bg-[var(--card-bg)] text-[var(--neutral)] border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--ink)]'
-                }`}
-              >
-                {line}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -351,45 +305,7 @@ export default function Profile() {
 
       <div className="h-px bg-[var(--border)] mb-10" />
 
-      {/* ─── SECTION 4: PROFILE INSIGHTS ─── */}
       <SectionHeader title="Profile Insights" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        {/* Vision quotes */}
-        <div>
-          <p className="text-sm mb-3">Vision & Philosophy</p>
-          {(exec.visionQuotes?.length ?? 0) > 0 ? (
-            <div className="space-y-5">
-              {(exec.visionQuotes ?? []).map((q, i) => (
-                <blockquote key={i} className="relative pl-6 font-display italic text-base border-l-2 border-[var(--accent)]">
-                  <span className="absolute top-0 left-0 font-display text-[64px] leading-none text-[var(--accent)] opacity-30 pointer-events-none select-none" style={{ fontStyle: 'normal' }}>
-                    &#x201C;
-                  </span>
-                  {q}
-                </blockquote>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm italic text-[var(--neutral)]">No quotes captured yet.</p>
-          )}
-        </div>
-
-        {/* Challenges */}
-        <div>
-          <p className="text-sm mb-3">Challenges</p>
-          {(exec.challenges?.length ?? 0) > 0 ? (
-            <ul className="space-y-2">
-              {(exec.challenges ?? []).map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-[13px]">
-                  <AlertTriangle className="w-3.5 h-3.5 text-[var(--risk)] mt-0.5 shrink-0" />
-                  {c}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm italic text-[var(--neutral)]">No challenges documented yet.</p>
-          )}
-        </div>
-      </div>
 
       {/* About Bio — In Their Own Words */}
       {exec.aboutBio && !exec.aboutBio.startsWith('[') && (
@@ -582,11 +498,6 @@ export default function Profile() {
         </>
       )}
 
-      <div className="h-px bg-[var(--border)] mb-10" />
-
-      {/* ─── SECTION 7: OUTREACH DRAFT ─── */}
-      <SectionHeader title="Outreach Draft" />
-      <OutreachDraft exec={exec} profile={profile} selectedLine={selectedLine} onLineChange={setSelectedLine} />
     </div>
   );
 }

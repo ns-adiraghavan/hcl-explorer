@@ -225,7 +225,6 @@ export default function BDIntelligence({ exec, profile }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
       <CompetitiveExposure exec={exec} profile={profile} />
-      <DealSizeContext exec={exec} />
       <DecisionStyle exec={exec} />
       <GrowthPriorities exec={exec} profile={profile} />
     </div>
