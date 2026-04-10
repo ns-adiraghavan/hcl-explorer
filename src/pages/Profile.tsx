@@ -226,46 +226,6 @@ export default function Profile() {
           </ul>
         </div>
 
-        {/* Opportunity areas card */}
-        <div className="border border-[var(--border)] rounded-sm p-6 bg-[var(--card-bg)]">
-          <p className="text-sm mb-4">Identified Opportunities</p>
-          {profile?.opportunityAreas.length ? (
-            <div className="space-y-4">
-              {profile.opportunityAreas.map((o) => {
-                const signal: "STRONG" | "MODERATE" | "WEAK" = o.confidenceScore >= 70 ? "STRONG" : o.confidenceScore >= 50 ? "MODERATE" : "WEAK";
-                const area = o.area.toLowerCase();
-                const justification =
-                  (area.includes("managed services") || area.includes("infrastructure") || area.includes("network") || area.includes("vendor management"))
-                    ? profile.painPointIndicators?.derivedSignal
-                  : (area.includes("ai") || area.includes("cloud") || area.includes("analytics") || area.includes("iot") || area.includes("edge"))
-                    ? profile.topicAffinity?.derivedSignal
-                  : area.includes("cybersecurity")
-                    ? profile.ecosystemVendorExposure?.derivedSignal
-                  : (area.includes("cx") || area.includes("digital transformation"))
-                    ? profile.psychographicMindset?.derivedSignal
-                  : profile.publicPersona?.derivedSignal;
-                return (
-                  <div
-                    key={o.area}
-                    className={`rounded-sm border p-3 ${signalBorderClass(signal)}`}
-                    style={signalGradientStyle(signal)}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">{o.area}</span>
-                      <span className={`font-mono text-[8px] uppercase tracking-wider px-2 py-0.5 rounded-full ${signalBadge[signal]}`}>{signal}</span>
-                    </div>
-                    <span className="font-mono text-[10px] text-[var(--neutral)] uppercase mt-1 inline-block">{o.type}</span>
-                    {justification && (
-                      <span className="font-mono text-[10px] bg-[var(--accent-light)] text-[var(--accent)] px-2 py-0.5 rounded-sm mt-2 inline-block">{justification}</span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            <p className="text-sm italic text-[var(--neutral)]">No opportunities identified yet.</p>
-          )}
-        </div>
       </div>
 
       <div className="h-px bg-[var(--border)] mb-10" />
